@@ -7,16 +7,22 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>归档 - Hexo</title>
+<title>Linux如何配置静Ip - Hexo</title>
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+    <meta name="description" content="配置步骤修改&#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-eth0（eth0为网卡文件名称，一般都为ens33）[root@lzj ~]# vim &#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-eth0 [root@lzj ~]# cat &#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-eth0 TYPE&#x3D;Ether">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux如何配置静Ip">
+<meta property="og:url" content="http://yoursite.com/2019/03/01/Linux%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AE%E9%9D%99Ip/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="配置步骤修改&#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-eth0（eth0为网卡文件名称，一般都为ens33）[root@lzj ~]# vim &#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-eth0 [root@lzj ~]# cat &#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-eth0 TYPE&#x3D;Ether">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/lzj-9090.liu.io/images/og_image.png">
+<meta property="article:published_time" content="2019-02-28T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-03-29T15:31:36.220Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="网络">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/lzj-9090.liu.io/images/og_image.png">
 
@@ -76,7 +82,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/lzj-9090.liu.io/">
             
-                <img src="/lzj-9090.liu.io/images/logo.svg" alt="Hexo" height="28">
+                <img src="/lzj-9090.liu.io/images/logo.svg" alt="Linux如何配置静Ip" height="28">
             
             </a>
         </div>
@@ -87,7 +93,7 @@
                 <a class="navbar-item"
                 href="/lzj-9090.liu.io/">主页</a>
                 
-                <a class="navbar-item is-active"
+                <a class="navbar-item"
                 href="/lzj-9090.liu.io/archives">归档</a>
                 
                 <a class="navbar-item"
@@ -126,70 +132,129 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-content article ">
         
-<div class="card widget">
-    <div class="card-content">
-        <h3 class="tag is-link">
-        2020
-        </h3>
-        <div class="timeline">
-        
-            <article class="media">
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-02-28T16:00:00.000Z">2019-03-01</time>
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2020-03-19T16:00:00.000Z">2020-03-20</time>
-                        <a href="/lzj-9090.liu.io/2020/03/20/-%E5%B0%8F%E7%9F%A5%E8%AF%86/" class="title has-link-black-ter is-size-6 has-text-weight-normal">怎样在hexo上创建标签及其类别</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7%E5%A4%A7%E5%85%A8/">小技巧大全</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E8%BF%90%E7%BB%B4/">运维</a>
                 </div>
-            </article>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    1 分钟 读完 (大约 162 个字)
+                </span>
+                
+                
+            </div>
+        </div>
         
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                Linux如何配置静Ip
+            
+        </h1>
+        <div class="content">
+            <h2 id="配置步骤"><a href="#配置步骤" class="headerlink" title="配置步骤"></a>配置步骤</h2><h3 id="修改-etc-sysconfig-network-scripts-ifcfg-eth0（eth0为网卡文件名称，一般都为ens33）"><a href="#修改-etc-sysconfig-network-scripts-ifcfg-eth0（eth0为网卡文件名称，一般都为ens33）" class="headerlink" title="修改/etc/sysconfig/network-scripts/ifcfg-eth0（eth0为网卡文件名称，一般都为ens33）"></a>修改/etc/sysconfig/network-scripts/ifcfg-eth0（eth0为网卡文件名称，一般都为ens33）</h3><pre><code>[root@lzj ~]# vim /etc/sysconfig/network-scripts/ifcfg-eth0
+[root@lzj ~]# cat /etc/sysconfig/network-scripts/ifcfg-eth0
+TYPE=Ethernet               ---网卡类型
+#UUID=30930cb0-2d69-4f81-9526-60bed337e547
+BOOTPROTO=static            ----静态
+NAME=eth0                   ----eth0为此配置文件名
+DEVICE=eth0                 ----eth0为此文件配置文件名
+IPADDR=192.168.135.145      -----ip地址
+PREFIX=24                   -----相当于子网掩码                  
+GATEWAY=192.168.135.2       -----网关
+DNS1=192.168.135.2          -----DNS地址
+ONBOOT=yes
+[root@lzj ~]# </code></pre><h3 id="重启网卡"><a href="#重启网卡" class="headerlink" title="重启网卡"></a>重启网卡</h3><pre><code>[root@lzj ~]# systemctl restart network
+[root@lzj ~]# </code></pre><h3 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h3><pre><code>[root@lzj ~]# ifconfig
+.....
+eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+    inet 192.168.135.145  netmask 255.255.255.0  broadcast 192.168.135.255
+    inet6 fe80::20c:29ff:fe84:67f2  prefixlen 64  scopeid 0x20&lt;link&gt;
+    ether 00:0c:29:84:67:f2  txqueuelen 1000  (Ethernet)
+    RX packets 498  bytes 46129 (45.0 KiB)
+    RX errors 0  dropped 0  overruns 0  frame 0
+    TX packets 445  bytes 53121 (51.8 KiB)
+    TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+    ....</code></pre>
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/lzj-9090.liu.io/tags/Linux/" rel="tag">Linux</a>, <a class="has-link-grey -link" href="/lzj-9090.liu.io/tags/%E7%BD%91%E7%BB%9C/" rel="tag">网络</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<div class="notification is-danger">
+    You forgot to set the <code>qrcode</code> for Alipay. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                
+<div class="notification is-danger">
+    You forgot to set the <code>qrcode</code> for Wechat. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                <!-- Visit https://www.paypal.com/donate/buttons/ to get your donate button -->
+
+<div class="notification is-danger">
+    You forgot to set the <code>business</code> and <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                
+<div class="notification is-danger">
+    You forgot to set the <code>url</code> Patreon. Please set it in <code>_config.yml</code>.
+</div>
+
+                
         </div>
     </div>
 </div>
 
-    
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
         
-<div class="card widget">
-    <div class="card-content">
-        <h3 class="tag is-link">
-        2019
-        </h3>
-        <div class="timeline">
-        
-            <article class="media">
-                
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-02-28T16:00:00.000Z">2019-03-01</time>
-                        <a href="/lzj-9090.liu.io/2019/03/01/Linux%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AE%E9%9D%99Ip/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Linux如何配置静Ip</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E8%BF%90%E7%BB%B4/">运维</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/lzj-9090.liu.io/2020/03/20/-%E5%B0%8F%E7%9F%A5%E8%AF%86/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">怎样在hexo上创建标签及其类别</span>
+            </a>
         </div>
+        
+        
     </div>
 </div>
 
-    
+
+
 </div>
                 
 
@@ -651,7 +716,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/lzj-9090.liu.io/">
                 
-                    <img src="/lzj-9090.liu.io/images/logo.svg" alt="Hexo" height="28">
+                    <img src="/lzj-9090.liu.io/images/logo.svg" alt="Linux如何配置静Ip" height="28">
                 
                 </a>
                 <p class="is-size-7">
