@@ -7,21 +7,21 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>怎样在hexo上创建标签及其类别 - 一叶知秋</title>
+<title>ftp服务的搭建 - 一叶知秋</title>
 
 
-    <meta name="description" content="1、创建分类（前提bk为自己的hexo目录） 1.1 生成“分类”页添加到tpye属性进入博客目录，执行如下命令： $ cd source&#x2F;_posts&#x2F;执行如下命令生成“分类”属性 $ hexo new page categories  INFO  Checking dependencies INFO  Validating the configuration file INFO  Create">
+    <meta name="description" content="1、ftp简介网络文件的共享主流的主要有三种，分别为ftp、nfs、samba ftp用于internet上的控制文件的双向传输 上传和下载的操作    下载 上传    将主机中的内容拷贝到计算机上 将文件从计算机拷贝到主机上   2、ftp构架FTP工作应用层，其监听端口为tcp的21，其是一种C&#x2F;S架构的应用程序，其有多种客户端工具    客户端工具 服务端软件    ftp wu-ftpd">
 <meta property="og:type" content="article">
-<meta property="og:title" content="怎样在hexo上创建标签及其类别">
-<meta property="og:url" content="http://yoursite.com/2020/03/20/-%E5%B0%8F%E7%9F%A5%E8%AF%86/index.html">
+<meta property="og:title" content="ftp服务的搭建">
+<meta property="og:url" content="http://yoursite.com/2020/03/31/1%E3%80%81ftp%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="一叶知秋">
-<meta property="og:description" content="1、创建分类（前提bk为自己的hexo目录） 1.1 生成“分类”页添加到tpye属性进入博客目录，执行如下命令： $ cd source&#x2F;_posts&#x2F;执行如下命令生成“分类”属性 $ hexo new page categories  INFO  Checking dependencies INFO  Validating the configuration file INFO  Create">
+<meta property="og:description" content="1、ftp简介网络文件的共享主流的主要有三种，分别为ftp、nfs、samba ftp用于internet上的控制文件的双向传输 上传和下载的操作    下载 上传    将主机中的内容拷贝到计算机上 将文件从计算机拷贝到主机上   2、ftp构架FTP工作应用层，其监听端口为tcp的21，其是一种C&#x2F;S架构的应用程序，其有多种客户端工具    客户端工具 服务端软件    ftp wu-ftpd">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/lzj-9090.liu.io/images/og_image.png">
-<meta property="article:published_time" content="2020-03-19T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-03-29T16:15:57.028Z">
+<meta property="article:published_time" content="2020-03-30T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-03-31T14:15:01.302Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="-小知识">
+<meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/lzj-9090.liu.io/images/og_image.png">
 
@@ -81,7 +81,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/lzj-9090.liu.io/">
             
-                <img src="/lzj-9090.liu.io/images/logo.svg" alt="怎样在hexo上创建标签及其类别" height="28">
+                <img src="/lzj-9090.liu.io/images/logo.svg" alt="ftp服务的搭建" height="28">
             
             </a>
         </div>
@@ -137,17 +137,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-03-19T16:00:00.000Z">2020-03-20</time>
+                <time class="level-item has-text-grey" datetime="2020-03-30T16:00:00.000Z">2020-03-31</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7%E5%A4%A7%E5%85%A8/">小技巧大全</a>
+                <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E8%BF%90%E7%BB%B4/">运维</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 313 个字)
+                    5 分钟 读完 (大约 800 个字)
                 </span>
                 
                 
@@ -156,61 +156,209 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                怎样在hexo上创建标签及其类别
+                ftp服务的搭建
             
         </h1>
         <div class="content">
-            <h2 id="1、创建分类"><a href="#1、创建分类" class="headerlink" title="1、创建分类"></a>1、创建分类</h2><p>（前提bk为自己的hexo目录）</p>
-<h3 id="1-1-生成“分类”页添加到tpye属性"><a href="#1-1-生成“分类”页添加到tpye属性" class="headerlink" title="1.1 生成“分类”页添加到tpye属性"></a>1.1 生成“分类”页添加到tpye属性</h3><p>进入博客目录，执行如下命令：</p>
-<pre><code>$ cd source/_posts/</code></pre><p>执行如下命令生成“分类”属性</p>
-<pre><code>$ hexo new page categories
-
-INFO  Checking dependencies
-INFO  Validating the configuration file
-INFO  Created: ~\bk\source\categories\index.md</code></pre><h3 id="1-2、修改文件"><a href="#1-2、修改文件" class="headerlink" title="1.2、修改文件"></a>1.2、修改文件</h3><p>进入刚生成的\bk\source\categories\index.md中修改</p>
-<pre><code>---
-title: categories
-date: 2020-03-29 23:13:18
-type: &quot;categories&quot;   ----这是需要修改的内容，其他别动
----</code></pre><p>进入自己写的文章在开头添加</p>
-<pre><code>$ head -n 7 source/_posts/Linux如何配置静Ip.md
----
-title: Linux如何配置静Ip    ---标题
-date: 2019-3-1      ----时间
-categories:
-- 运维              ----类别
----
-。。。
-博客内容</code></pre><p>最后自己刷新重启</p>
-<h2 id="2、-创建标签"><a href="#2、-创建标签" class="headerlink" title="2、 创建标签"></a>2、 创建标签</h2><p>（创建标签与上述类似）</p>
-<h3 id="2-1、生成标签属性"><a href="#2-1、生成标签属性" class="headerlink" title="2.1、生成标签属性"></a>2.1、生成标签属性</h3><p>进入博客目录，执行如下命令生成“分类”属性，执行如下命令：</p>
-<pre><code>$ hexo new page tags
-
-INFO  Checking dependencies
-INFO  Validating the configuration file</code></pre><p>进入刚生成的\bk\source\tags中，修改index.md</p>
-<pre><code>$ cat source/tags/index.md
----
-title: tags
-date: 2020-03-29 23:28:13
-type: &quot;tags&quot;     ---修改内容
----</code></pre><p>在刚写的文章中添加标签</p>
-<pre><code>---
-title: Linux如何配置静Ip
-date: 2019-3-1
-categories:
-- 运维      ---这是上面的分类
-tags:
-- Linux
-- 网络      --这是标签
----</code></pre><p>最后重启即可</p>
-
+            <h1 id="1、ftp简介"><a href="#1、ftp简介" class="headerlink" title="1、ftp简介"></a>1、ftp简介</h1><p>网络文件的共享主流的主要有三种，分别为ftp、nfs、samba</p>
+<p>ftp用于internet上的控制文件的双向传输</p>
+<p>上传和下载的操作</p>
+<table>
+<thead>
+<tr>
+<th align="center">下载</th>
+<th align="center">上传</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">将主机中的内容拷贝到计算机上</td>
+<td align="center">将文件从计算机拷贝到主机上</td>
+</tr>
+</tbody></table>
+<h1 id="2、ftp构架"><a href="#2、ftp构架" class="headerlink" title="2、ftp构架"></a>2、ftp构架</h1><p>FTP工作应用层，其监听端口为tcp的21，其是一种C/S架构的应用程序，其有多种客户端工具</p>
+<table>
+<thead>
+<tr>
+<th align="center">客户端工具</th>
+<th align="center">服务端软件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">ftp</td>
+<td align="center">wu-ftpd</td>
+</tr>
+<tr>
+<td align="center">Iftp,Iftpget</td>
+<td align="center">proftpd</td>
+</tr>
+<tr>
+<td align="center">wget.curl</td>
+<td align="center">pureftp</td>
+</tr>
+<tr>
+<td align="center">filezilla</td>
+<td align="center">vsftpd</td>
+</tr>
+<tr>
+<td align="center">gftp</td>
+<td align="center">ServU</td>
+</tr>
+</tbody></table>
+<h1 id="3、ftp数据连接模式"><a href="#3、ftp数据连接模式" class="headerlink" title="3、ftp数据连接模式"></a>3、ftp数据连接模式</h1><h2 id="3-1、连接模式分类"><a href="#3-1、连接模式分类" class="headerlink" title="3.1、连接模式分类"></a>3.1、连接模式分类</h2><p>ftp有两种数据连接模式：命令连接和数据连接</p>
+<ul>
+<li><p>命令连接模式：是指文件管理命令，始终在线的持久性连接，直到用户退出登录为止（相当于通过命令连接ftp并且操作）</p>
+</li>
+<li><p>数据连接模式：是指数据传输，按需创建及其关闭</p>
+<h2 id="3-2、数据传输格式和传输模式"><a href="#3-2、数据传输格式和传输模式" class="headerlink" title="3.2、数据传输格式和传输模式"></a>3.2、数据传输格式和传输模式</h2><p><strong>数据传输格式有一下两种：</strong></p>
+<ul>
+<li>文件传输</li>
+<li>二进制传输</li>
+</ul>
+<p><strong>数据传输:</strong></p>
+<ul>
+<li>主动模式：由服务器端创建数据连接</li>
+<li>被动模式：由客户端创建数据连接</li>
+</ul>
+<p>说白了，就是客户端上传为被动</p>
+<h1 id="4、ftp的配置文件"><a href="#4、ftp的配置文件" class="headerlink" title="4、ftp的配置文件"></a>4、ftp的配置文件</h1><table>
+<thead>
+<tr>
+<th align="center">文件位置</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">/etc/vsftpd</td>
+<td align="center">配置文件目录</td>
+</tr>
+<tr>
+<td align="center">/etc/vsftpd</td>
+<td align="center">配置文件目录</td>
+</tr>
+<tr>
+<td align="center">/etc/vsftpd/vsftpd.conf</td>
+<td align="center">主配置文件</td>
+</tr>
+</tbody></table>
+<p><strong><em>vsftp常见配置文件参数：</em></strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">anoymous_enable=YES</td>
+<td align="center">启动匿名用户</td>
+</tr>
+<tr>
+<td align="center">anoymous_upload_enable=YES</td>
+<td align="center">允许匿名用户上传</td>
+</tr>
+<tr>
+<td align="center">anoymous_mkdir_write_enable=YES</td>
+<td align="center">允许用户创建目录，但是不能删除</td>
+</tr>
+<tr>
+<td align="center">anoymous_other_write_enable=YES</td>
+<td align="center">允许匿名用户创建和删除目录</td>
+</tr>
+<tr>
+<td align="center">local_enable=YES</td>
+<td align="center">启用本地用户登录</td>
+</tr>
+<tr>
+<td align="center">write_unask=022</td>
+<td align="center">ftp上传默认遮掩码</td>
+</tr>
+<tr>
+<td align="center">chroot_list_user=YES</td>
+<td align="center">禁锢所有本地ftp用户于其家目录中</td>
+</tr>
+<tr>
+<td align="center">chroot_list_enable=YES</td>
+<td align="center">开启禁锢文件列表，需要chroot_list_file一起使用</td>
+</tr>
+<tr>
+<td align="center">chroot_list_file=/etc/vsftpd/chroot_list</td>
+<td align="center">禁锢文件路径，在文件里面的用户将禁锢在其家目录中</td>
+</tr>
+<tr>
+<td align="center">allow_writeable_chroot=YES</td>
+<td align="center">被禁锢用户的家目录有写的权限</td>
+</tr>
+<tr>
+<td align="center">xferlog_enabel=YES</td>
+<td align="center">是否传输日志（记录ftp传输过程）</td>
+</tr>
+<tr>
+<td align="center">xferlog_enable=/var/log/xferlog</td>
+<td align="center">日志储存位置</td>
+</tr>
+<tr>
+<td align="center">chown_uploads=YES</td>
+<td align="center">是否改变上传文件的属主功能</td>
+</tr>
+<tr>
+<td align="center">chown_username=whoever</td>
+<td align="center">指定上传文件属主该为那个用户</td>
+</tr>
+<tr>
+<td align="center">pam_server_name=vsftp</td>
+<td align="center">指定vsftpd使用/etc/pam.d下的那个pam配置文件进行用户认证</td>
+</tr>
+<tr>
+<td align="center">userlist_enable=YES</td>
+<td align="center">是否启用控制用户登录列表文件：默认为：/etc/vsftpd/user_list文件</td>
+</tr>
+<tr>
+<td align="center">userlist_deny=YES</td>
+<td align="center">是否拒绝userlist指定的列表文件存在的用户登录ftp</td>
+</tr>
+<tr>
+<td align="center">max_clients=#</td>
+<td align="center">最大连接数</td>
+</tr>
+<tr>
+<td align="center">max_per_ip</td>
+<td align="center">同时ip请求数</td>
+</tr>
+<tr>
+<td align="center">anon_max_rate</td>
+<td align="center">匿名最大传输速录</td>
+</tr>
+<tr>
+<td align="center">local_max_rate</td>
+<td align="center">本地最大传输速率</td>
+</tr>
+<tr>
+<td align="center">message_file</td>
+<td align="center">访问目录时可以查看目录信息</td>
+</tr>
+<tr>
+<td align="center">data_connection_timeout=120</td>
+<td align="center">设置传输超时时间</td>
+</tr>
+<tr>
+<td align="center">idle_session_timeout=600</td>
+<td align="center">默认不活跃session时间</td>
+</tr>
+<tr>
+<td align="center">dirmessage_enable</td>
+<td align="center">启用某目录下的，message描述信息</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h1 id="5、vsftpd虚拟用户配置"><a href="#5、vsftpd虚拟用户配置" class="headerlink" title="5、vsftpd虚拟用户配置"></a>5、vsftpd虚拟用户配置</h1>
         </div>
         
         <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/lzj-9090.liu.io/tags/%E5%B0%8F%E7%9F%A5%E8%AF%86/" rel="tag">-小知识</a>
+                    <a class="has-link-grey -link" href="/lzj-9090.liu.io/tags/Linux/" rel="tag">Linux</a>
                 </div>
             </div>
         </div>
@@ -261,17 +409,10 @@ tags:
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/lzj-9090.liu.io/2020/03/31/1%E3%80%81ftp%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">ftp服务的搭建</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/lzj-9090.liu.io/2019/03/01/Linux%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AE%E9%9D%99Ip/">
-                <span class="level-item">Linux如何配置静Ip</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/lzj-9090.liu.io/2020/03/20/-%E5%B0%8F%E7%9F%A5%E8%AF%86/">
+                <span class="level-item">怎样在hexo上创建标签及其类别</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -818,7 +959,7 @@ tags:
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/lzj-9090.liu.io/">
                 
-                    <img src="/lzj-9090.liu.io/images/logo.svg" alt="怎样在hexo上创建标签及其类别" height="28">
+                    <img src="/lzj-9090.liu.io/images/logo.svg" alt="ftp服务的搭建" height="28">
                 
                 </a>
                 <p class="is-size-7">

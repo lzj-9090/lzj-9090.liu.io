@@ -145,6 +145,242 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-03-30T16:00:00.000Z">2020-03-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E8%BF%90%E7%BB%B4/">运维</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    5 分钟 读完 (大约 800 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/lzj-9090.liu.io/2020/03/31/1%E3%80%81ftp%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE/">ftp服务的搭建</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="1、ftp简介"><a href="#1、ftp简介" class="headerlink" title="1、ftp简介"></a>1、ftp简介</h1><p>网络文件的共享主流的主要有三种，分别为ftp、nfs、samba</p>
+<p>ftp用于internet上的控制文件的双向传输</p>
+<p>上传和下载的操作</p>
+<table>
+<thead>
+<tr>
+<th align="center">下载</th>
+<th align="center">上传</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">将主机中的内容拷贝到计算机上</td>
+<td align="center">将文件从计算机拷贝到主机上</td>
+</tr>
+</tbody></table>
+<h1 id="2、ftp构架"><a href="#2、ftp构架" class="headerlink" title="2、ftp构架"></a>2、ftp构架</h1><p>FTP工作应用层，其监听端口为tcp的21，其是一种C/S架构的应用程序，其有多种客户端工具</p>
+<table>
+<thead>
+<tr>
+<th align="center">客户端工具</th>
+<th align="center">服务端软件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">ftp</td>
+<td align="center">wu-ftpd</td>
+</tr>
+<tr>
+<td align="center">Iftp,Iftpget</td>
+<td align="center">proftpd</td>
+</tr>
+<tr>
+<td align="center">wget.curl</td>
+<td align="center">pureftp</td>
+</tr>
+<tr>
+<td align="center">filezilla</td>
+<td align="center">vsftpd</td>
+</tr>
+<tr>
+<td align="center">gftp</td>
+<td align="center">ServU</td>
+</tr>
+</tbody></table>
+<h1 id="3、ftp数据连接模式"><a href="#3、ftp数据连接模式" class="headerlink" title="3、ftp数据连接模式"></a>3、ftp数据连接模式</h1><h2 id="3-1、连接模式分类"><a href="#3-1、连接模式分类" class="headerlink" title="3.1、连接模式分类"></a>3.1、连接模式分类</h2><p>ftp有两种数据连接模式：命令连接和数据连接</p>
+<ul>
+<li><p>命令连接模式：是指文件管理命令，始终在线的持久性连接，直到用户退出登录为止（相当于通过命令连接ftp并且操作）</p>
+</li>
+<li><p>数据连接模式：是指数据传输，按需创建及其关闭</p>
+<h2 id="3-2、数据传输格式和传输模式"><a href="#3-2、数据传输格式和传输模式" class="headerlink" title="3.2、数据传输格式和传输模式"></a>3.2、数据传输格式和传输模式</h2><p><strong>数据传输格式有一下两种：</strong></p>
+<ul>
+<li>文件传输</li>
+<li>二进制传输</li>
+</ul>
+<p><strong>数据传输:</strong></p>
+<ul>
+<li>主动模式：由服务器端创建数据连接</li>
+<li>被动模式：由客户端创建数据连接</li>
+</ul>
+<p>说白了，就是客户端上传为被动</p>
+<h1 id="4、ftp的配置文件"><a href="#4、ftp的配置文件" class="headerlink" title="4、ftp的配置文件"></a>4、ftp的配置文件</h1><table>
+<thead>
+<tr>
+<th align="center">文件位置</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">/etc/vsftpd</td>
+<td align="center">配置文件目录</td>
+</tr>
+<tr>
+<td align="center">/etc/vsftpd</td>
+<td align="center">配置文件目录</td>
+</tr>
+<tr>
+<td align="center">/etc/vsftpd/vsftpd.conf</td>
+<td align="center">主配置文件</td>
+</tr>
+</tbody></table>
+<p><strong><em>vsftp常见配置文件参数：</em></strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">anoymous_enable=YES</td>
+<td align="center">启动匿名用户</td>
+</tr>
+<tr>
+<td align="center">anoymous_upload_enable=YES</td>
+<td align="center">允许匿名用户上传</td>
+</tr>
+<tr>
+<td align="center">anoymous_mkdir_write_enable=YES</td>
+<td align="center">允许用户创建目录，但是不能删除</td>
+</tr>
+<tr>
+<td align="center">anoymous_other_write_enable=YES</td>
+<td align="center">允许匿名用户创建和删除目录</td>
+</tr>
+<tr>
+<td align="center">local_enable=YES</td>
+<td align="center">启用本地用户登录</td>
+</tr>
+<tr>
+<td align="center">write_unask=022</td>
+<td align="center">ftp上传默认遮掩码</td>
+</tr>
+<tr>
+<td align="center">chroot_list_user=YES</td>
+<td align="center">禁锢所有本地ftp用户于其家目录中</td>
+</tr>
+<tr>
+<td align="center">chroot_list_enable=YES</td>
+<td align="center">开启禁锢文件列表，需要chroot_list_file一起使用</td>
+</tr>
+<tr>
+<td align="center">chroot_list_file=/etc/vsftpd/chroot_list</td>
+<td align="center">禁锢文件路径，在文件里面的用户将禁锢在其家目录中</td>
+</tr>
+<tr>
+<td align="center">allow_writeable_chroot=YES</td>
+<td align="center">被禁锢用户的家目录有写的权限</td>
+</tr>
+<tr>
+<td align="center">xferlog_enabel=YES</td>
+<td align="center">是否传输日志（记录ftp传输过程）</td>
+</tr>
+<tr>
+<td align="center">xferlog_enable=/var/log/xferlog</td>
+<td align="center">日志储存位置</td>
+</tr>
+<tr>
+<td align="center">chown_uploads=YES</td>
+<td align="center">是否改变上传文件的属主功能</td>
+</tr>
+<tr>
+<td align="center">chown_username=whoever</td>
+<td align="center">指定上传文件属主该为那个用户</td>
+</tr>
+<tr>
+<td align="center">pam_server_name=vsftp</td>
+<td align="center">指定vsftpd使用/etc/pam.d下的那个pam配置文件进行用户认证</td>
+</tr>
+<tr>
+<td align="center">userlist_enable=YES</td>
+<td align="center">是否启用控制用户登录列表文件：默认为：/etc/vsftpd/user_list文件</td>
+</tr>
+<tr>
+<td align="center">userlist_deny=YES</td>
+<td align="center">是否拒绝userlist指定的列表文件存在的用户登录ftp</td>
+</tr>
+<tr>
+<td align="center">max_clients=#</td>
+<td align="center">最大连接数</td>
+</tr>
+<tr>
+<td align="center">max_per_ip</td>
+<td align="center">同时ip请求数</td>
+</tr>
+<tr>
+<td align="center">anon_max_rate</td>
+<td align="center">匿名最大传输速录</td>
+</tr>
+<tr>
+<td align="center">local_max_rate</td>
+<td align="center">本地最大传输速率</td>
+</tr>
+<tr>
+<td align="center">message_file</td>
+<td align="center">访问目录时可以查看目录信息</td>
+</tr>
+<tr>
+<td align="center">data_connection_timeout=120</td>
+<td align="center">设置传输超时时间</td>
+</tr>
+<tr>
+<td align="center">idle_session_timeout=600</td>
+<td align="center">默认不活跃session时间</td>
+</tr>
+<tr>
+<td align="center">dirmessage_enable</td>
+<td align="center">启用某目录下的，message描述信息</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h1 id="5、vsftpd虚拟用户配置"><a href="#5、vsftpd虚拟用户配置" class="headerlink" title="5、vsftpd虚拟用户配置"></a>5、vsftpd虚拟用户配置</h1>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-02-28T16:00:00.000Z">2019-03-01</time>
                 
                 <div class="level-item">
@@ -206,6 +442,155 @@ eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
 
 
 
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-02-28T16:00:00.000Z">2019-03-01</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E8%BF%90%E7%BB%B4/">运维</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 分钟 读完 (大约 445 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/lzj-9090.liu.io/2019/03/01/1%E3%80%81http/">yum安装http</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="1、http"><a href="#1、http" class="headerlink" title="1、http"></a>1、http</h1><h2 id="1-1、yum安装的http的安装与使用"><a href="#1-1、yum安装的http的安装与使用" class="headerlink" title="1.1、yum安装的http的安装与使用"></a>1.1、yum安装的http的安装与使用</h2><h3 id="1-、yum-安装httpd"><a href="#1-、yum-安装httpd" class="headerlink" title="1.、yum 安装httpd"></a>1.、yum 安装httpd</h3><p><code>[root@lzj ssl]# yum install -y httpd</code></p>
+<p>配置文件</p>
+<p><code>[root@lzj ssl]# vim /etc/httpd/conf/httpd.conf</code></p>
+<p><code>DocumentRoot &quot;/var/www/html&quot;           这是文件路径默认为/var/www/html</code></p>
+<p>启动httpd</p>
+<p><code>[root@lzj ssl]# systemctl start httpd</code></p>
+<p>输入Ip访问</p>
+<p><img src="./images/http01.png" alt="xxx"></p>
+<h3 id="1-1-2、yum安装的httpd的配置文件"><a href="#1-1-2、yum安装的httpd的配置文件" class="headerlink" title="1.1.2、yum安装的httpd的配置文件"></a>1.1.2、yum安装的httpd的配置文件</h3><table>
+<thead>
+<tr>
+<th align="center">配置文件地址</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">/var/log/httpd/access.log&amp;var/log/error_log</td>
+<td align="center">正确日志&amp;错误日志</td>
+</tr>
+<tr>
+<td align="center">/var/www/html</td>
+<td align="center">站点目录</td>
+</tr>
+<tr>
+<td align="center">/usr/lib64/httpd/modules/</td>
+<td align="center">文件模块路径</td>
+</tr>
+<tr>
+<td align="center">/etc/httpd/conf/httpd.conf</td>
+<td align="center">主配置文件</td>
+</tr>
+<tr>
+<td align="center">/etc/httpd/conf.modules.d/*.conf</td>
+<td align="center">模块配置文件</td>
+</tr>
+<tr>
+<td align="center">/etc/httpd/conf.d/*.conf</td>
+<td align="center">辅助配置文件</td>
+</tr>
+</tbody></table>
+<h3 id="1-1-3、httpd的常见选项"><a href="#1-1-3、httpd的常见选项" class="headerlink" title="1.1.3、httpd的常见选项"></a>1.1.3、httpd的常见选项</h3><blockquote>
+<p>语法   :     httpd        [选项]</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">选项</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">-l</td>
+<td align="center">查看编译模块</td>
+</tr>
+<tr>
+<td align="center">-M</td>
+<td align="center">输出一个已经启用的模块</td>
+</tr>
+<tr>
+<td align="center">-V</td>
+<td align="center">显示版本</td>
+</tr>
+<tr>
+<td align="center">-X</td>
+<td align="center">以调试模式运行httpd</td>
+</tr>
+<tr>
+<td align="center">-t</td>
+<td align="center">检查配置文件是否有语法错误</td>
+</tr>
+</tbody></table>
+<p><code>[root@lzj ssl]# httpd -l
+  Compiled in modules:
+  core.c
+  mod_so.c
+  http_core.c
+  [root@lzj ssl]# httpd -v
+  Server version: Apache/2.4.38 (Unix)
+  Server built:   Mar  9 2020 17:09:44</code></p>
+<h2 id="1-2、curl命令"><a href="#1-2、curl命令" class="headerlink" title="1.2、curl命令"></a>1.2、curl命令</h2><p>curl是基于url语法在命令行方式下工作的文件传输工具，它支持FTP,FTPS,等协议。</p>
+<p>curl支持以下功能：</p>
+<ul>
+<li>https认证</li>
+<li>http的POST/PUT等方法</li>
+<li>ftp上传</li>
+<li>代理服务器</li>
+<li>cookies</li>
+<li>用户名/密码认证</li>
+<li>下载文件断电续传</li>
+<li>sockes5代理服务</li>
+<li>通过http代理服务器上传到ftp</li>
+</ul>
+<blockquote>
+<p>语法：curl [选项]    [url]</p>
+<p>常用选项：</p>
+<p>-A                设置代理发送服务器</p>
+<p>-basic         使用http基本认证</p>
+<p>–tcp-nodelay           使用TCP_NODRLAY选项</p>
+<p>-o                输出写到文件中</p>
+<p>-I                只显示报文信息</p>
+<p>–limit-rate<rate>        设置传输速度</rate></p>
+</blockquote>
+<p>使用curl下载文件</p>
+<p>``[root@lzj ssl]# curl -o myblog.html <a href="http://blog.51cto.com/itchentao`">http://blog.51cto.com/itchentao`</a><br>  <code>% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current</code><br>                                 <code>Dload  Upload   Total   Spent    Left  Speed</code><br><code>100   180    0   180    0     0     67      0 --:--:--  0:00:02 --:--:--    67</code><br>[root@lzj ssl]#` </p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
 
 </div>
                 
@@ -252,7 +637,7 @@ eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
                     </p>
                     <a href="/lzj-9090.liu.io/archives">
                         <p class="title has-text-weight-normal">
-                            2
+                            4
                         </p>
                     </a>
                 </div>
@@ -393,7 +778,7 @@ eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
                 <span class="level-item">运维</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">3</span>
             </span>
         </a></li>
             </ul>
@@ -406,7 +791,7 @@ eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/lzj-9090.liu.io/tags/%E5%B0%8F%E7%9F%A5%E8%AF%86/" style="font-size: 10px;">-小知识</a> <a href="/lzj-9090.liu.io/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/lzj-9090.liu.io/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 10px;">网络</a>
+        <a href="/lzj-9090.liu.io/tags/%E5%B0%8F%E7%9F%A5%E8%AF%86/" style="font-size: 10px;">-小知识</a> <a href="/lzj-9090.liu.io/tags/Linux/" style="font-size: 20px;">Linux</a> <a href="/lzj-9090.liu.io/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 10px;">网络</a>
     </div>
 </div>
     
@@ -418,6 +803,25 @@ eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/lzj-9090.liu.io/2020/03/31/1%E3%80%81ftp%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/lzj-9090.liu.io/images/thumbnail.svg" alt="ftp服务的搭建">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-30T16:00:00.000Z">2020-03-31</time></div>
+                    <a href="/lzj-9090.liu.io/2020/03/31/1%E3%80%81ftp%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE/" class="title has-link-black-ter is-size-6 has-text-weight-normal">ftp服务的搭建</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E8%BF%90%E7%BB%B4/">运维</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -457,6 +861,25 @@ eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
             </div>
         </article>
         
+        <article class="media">
+            
+            <a href="/lzj-9090.liu.io/2019/03/01/1%E3%80%81http/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/lzj-9090.liu.io/images/thumbnail.svg" alt="yum安装http">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-28T16:00:00.000Z">2019-03-01</time></div>
+                    <a href="/lzj-9090.liu.io/2019/03/01/1%E3%80%81http/" class="title has-link-black-ter is-size-6 has-text-weight-normal">yum安装http</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E8%BF%90%E7%BB%B4/">运维</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
     </div>
 </div>
         
@@ -474,7 +897,7 @@ eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
                     <span class="level-item">三月 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -485,7 +908,7 @@ eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
                     <span class="level-item">三月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -513,7 +936,7 @@ eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
                 <div class="control">
                     <a class="tags has-addons" href="/lzj-9090.liu.io/tags/Linux/">
                         <span class="tag">Linux</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 
@@ -548,6 +971,25 @@ eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
         
         <article class="media">
             
+            <a href="/lzj-9090.liu.io/2020/03/31/1%E3%80%81ftp%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/lzj-9090.liu.io/images/thumbnail.svg" alt="ftp服务的搭建">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-30T16:00:00.000Z">2020-03-31</time></div>
+                    <a href="/lzj-9090.liu.io/2020/03/31/1%E3%80%81ftp%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE/" class="title has-link-black-ter is-size-6 has-text-weight-normal">ftp服务的搭建</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E8%BF%90%E7%BB%B4/">运维</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/lzj-9090.liu.io/2020/03/20/-%E5%B0%8F%E7%9F%A5%E8%AF%86/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/lzj-9090.liu.io/images/thumbnail.svg" alt="怎样在hexo上创建标签及其类别">
@@ -584,6 +1026,25 @@ eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
             </div>
         </article>
         
+        <article class="media">
+            
+            <a href="/lzj-9090.liu.io/2019/03/01/1%E3%80%81http/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/lzj-9090.liu.io/images/thumbnail.svg" alt="yum安装http">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-28T16:00:00.000Z">2019-03-01</time></div>
+                    <a href="/lzj-9090.liu.io/2019/03/01/1%E3%80%81http/" class="title has-link-black-ter is-size-6 has-text-weight-normal">yum安装http</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E8%BF%90%E7%BB%B4/">运维</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
     </div>
 </div>
     
@@ -601,7 +1062,7 @@ eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
                     <span class="level-item">三月 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -612,7 +1073,7 @@ eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
                     <span class="level-item">三月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -640,7 +1101,7 @@ eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
                 <div class="control">
                     <a class="tags has-addons" href="/lzj-9090.liu.io/tags/Linux/">
                         <span class="tag">Linux</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 
