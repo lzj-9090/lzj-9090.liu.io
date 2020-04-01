@@ -7,20 +7,21 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>python全局变量 - 一叶知秋</title>
+<title>python全局变量和局部变量 - 一叶知秋</title>
 
 
-    <meta name="description" content="title: python全局变量和局部变量 date: 2020-4-1 categloes:  开发  tags:  python   全局变量和局部变量1、局部变量 局部变量就是python函数内定义的变量 其作用范围也就是函数内部有效而且优先，出了此函数就无效  操作1234567891011name&#x3D;&#39;全局&#39;def fun1():    name&#x3D;&#39;局部&#39;    print(&#39;fun1">
+    <meta name="description" content="全局变量和局部变量1、局部变量 局部变量就是python函数内定义的变量 其作用范围也就是函数内部有效而且优先，出了此函数就无效  操作1234567891011name&#x3D;&#39;全局&#39;def fun1():    name&#x3D;&#39;局部&#39;    print(&#39;fun1:&#39;,name)def fun2():    print(name)def main():    fun1()    fun2()if __n">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python全局变量">
+<meta property="og:title" content="python全局变量和局部变量">
 <meta property="og:url" content="http://yoursite.com/2020/04/01/python%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F/index.html">
 <meta property="og:site_name" content="一叶知秋">
-<meta property="og:description" content="title: python全局变量和局部变量 date: 2020-4-1 categloes:  开发  tags:  python   全局变量和局部变量1、局部变量 局部变量就是python函数内定义的变量 其作用范围也就是函数内部有效而且优先，出了此函数就无效  操作1234567891011name&#x3D;&#39;全局&#39;def fun1():    name&#x3D;&#39;局部&#39;    print(&#39;fun1">
+<meta property="og:description" content="全局变量和局部变量1、局部变量 局部变量就是python函数内定义的变量 其作用范围也就是函数内部有效而且优先，出了此函数就无效  操作1234567891011name&#x3D;&#39;全局&#39;def fun1():    name&#x3D;&#39;局部&#39;    print(&#39;fun1:&#39;,name)def fun2():    print(name)def main():    fun1()    fun2()if __n">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/lzj-9090.liu.io/images/og_image.png">
-<meta property="article:published_time" content="2020-04-01T11:44:37.572Z">
-<meta property="article:modified_time" content="2020-04-01T14:47:13.509Z">
+<meta property="article:published_time" content="2020-03-31T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-04-01T15:21:59.922Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/lzj-9090.liu.io/images/og_image.png">
 
@@ -80,7 +81,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/lzj-9090.liu.io/">
             
-                <img src="/lzj-9090.liu.io/images/logo.svg" alt="python全局变量" height="28">
+                <img src="/lzj-9090.liu.io/images/logo.svg" alt="python全局变量和局部变量" height="28">
             
             </a>
         </div>
@@ -136,13 +137,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-04-01T11:44:37.572Z">2020-04-01</time>
+                <time class="level-item has-text-grey" datetime="2020-03-31T16:00:00.000Z">2020-04-01</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E5%BC%80%E5%8F%91/">开发</a>
+                </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    3 分钟 读完 (大约 378 个字)
+                    2 分钟 读完 (大约 361 个字)
                 </span>
                 
                 
@@ -151,23 +156,11 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                python全局变量
+                python全局变量和局部变量
             
         </h1>
         <div class="content">
-            <hr>
-<p>title: python全局变量和局部变量</p>
-<p>date: 2020-4-1</p>
-<p>categloes:</p>
-<ul>
-<li>开发</li>
-</ul>
-<p>tags:</p>
-<ul>
-<li>python</li>
-</ul>
-<hr>
-<h1 id="全局变量和局部变量"><a href="#全局变量和局部变量" class="headerlink" title="全局变量和局部变量"></a>全局变量和局部变量</h1><h2 id="1、局部变量"><a href="#1、局部变量" class="headerlink" title="1、局部变量"></a>1、局部变量</h2><blockquote>
+            <h1 id="全局变量和局部变量"><a href="#全局变量和局部变量" class="headerlink" title="全局变量和局部变量"></a>全局变量和局部变量</h1><h2 id="1、局部变量"><a href="#1、局部变量" class="headerlink" title="1、局部变量"></a>1、局部变量</h2><blockquote>
 <p>局部变量就是python函数内定义的变量</p>
 <p>其作用范围也就是函数内部有效而且优先，出了此函数就无效</p>
 </blockquote>
@@ -198,6 +191,15 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">main: 全局</span><br><span class="line">fun1: 局部</span><br><span class="line">fun2 全局</span><br><span class="line">全局hhhhh</span><br><span class="line">[1, 2, 3, 4, 6]</span><br></pre></td></tr></table></figure>
 
 
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/lzj-9090.liu.io/tags/python/" rel="tag">python</a>
+                </div>
+            </div>
         </div>
         
         
@@ -241,17 +243,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/lzj-9090.liu.io/2020/04/01/python%E9%97%AD%E5%8C%85/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">python闭包</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/lzj-9090.liu.io/2020/03/31/1%E3%80%81ftp%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE/">
-                <span class="level-item">ftp服务的搭建</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/lzj-9090.liu.io/2020/04/01/python%E9%97%AD%E5%8C%85/">
+                <span class="level-item">python闭包</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -318,7 +313,7 @@
                     </p>
                     <a href="/lzj-9090.liu.io/categories">
                         <p class="title has-text-weight-normal">
-                            2
+                            3
                         </p>
                     </a>
                 </div>
@@ -330,7 +325,7 @@
                     </p>
                     <a href="/lzj-9090.liu.io/tags">
                         <p class="title has-text-weight-normal">
-                            3
+                            4
                         </p>
                     </a>
                 </div>
@@ -442,6 +437,14 @@
                 <span class="level-item tag">2</span>
             </span>
         </a></li><li>
+        <a class="level is-marginless" href="/lzj-9090.liu.io/categories/%E5%BC%80%E5%8F%91/">
+            <span class="level-start">
+                <span class="level-item">开发</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
         <a class="level is-marginless" href="/lzj-9090.liu.io/categories/%E8%BF%90%E7%BB%B4/">
             <span class="level-start">
                 <span class="level-item">运维</span>
@@ -460,7 +463,7 @@
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/lzj-9090.liu.io/tags/%E5%B0%8F%E7%9F%A5%E8%AF%86/" style="font-size: 10px;">-小知识</a> <a href="/lzj-9090.liu.io/tags/Linux/" style="font-size: 20px;">Linux</a> <a href="/lzj-9090.liu.io/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 10px;">网络</a>
+        <a href="/lzj-9090.liu.io/tags/%E5%B0%8F%E7%9F%A5%E8%AF%86/" style="font-size: 10px;">-小知识</a> <a href="/lzj-9090.liu.io/tags/Linux/" style="font-size: 20px;">Linux</a> <a href="/lzj-9090.liu.io/tags/python/" style="font-size: 15px;">python</a> <a href="/lzj-9090.liu.io/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 10px;">网络</a>
     </div>
 </div>
     
@@ -475,6 +478,25 @@
         
         <article class="media">
             
+            <a href="/lzj-9090.liu.io/2020/04/01/python%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/lzj-9090.liu.io/images/thumbnail.svg" alt="python全局变量和局部变量">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-31T16:00:00.000Z">2020-04-01</time></div>
+                    <a href="/lzj-9090.liu.io/2020/04/01/python%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F/" class="title has-link-black-ter is-size-6 has-text-weight-normal">python全局变量和局部变量</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E5%BC%80%E5%8F%91/">开发</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/lzj-9090.liu.io/2020/04/01/python%E9%97%AD%E5%8C%85/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/lzj-9090.liu.io/images/thumbnail.svg" alt="python闭包">
@@ -483,29 +505,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-01T13:21:45.166Z">2020-04-01</time></div>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-31T16:00:00.000Z">2020-04-01</time></div>
                     <a href="/lzj-9090.liu.io/2020/04/01/python%E9%97%AD%E5%8C%85/" class="title has-link-black-ter is-size-6 has-text-weight-normal">python闭包</a>
                     <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/lzj-9090.liu.io/2020/04/01/python%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/lzj-9090.liu.io/images/thumbnail.svg" alt="python全局变量">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-01T11:44:37.572Z">2020-04-01</time></div>
-                    <a href="/lzj-9090.liu.io/2020/04/01/python%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F/" class="title has-link-black-ter is-size-6 has-text-weight-normal">python全局变量</a>
-                    <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E5%BC%80%E5%8F%91/">开发</a>
                     </p>
                 </div>
             </div>
@@ -647,6 +650,13 @@
                     <a class="tags has-addons" href="/lzj-9090.liu.io/tags/Linux/">
                         <span class="tag">Linux</span>
                         <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/lzj-9090.liu.io/tags/python/">
+                        <span class="tag">python</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -681,6 +691,25 @@
         
         <article class="media">
             
+            <a href="/lzj-9090.liu.io/2020/04/01/python%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/lzj-9090.liu.io/images/thumbnail.svg" alt="python全局变量和局部变量">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-31T16:00:00.000Z">2020-04-01</time></div>
+                    <a href="/lzj-9090.liu.io/2020/04/01/python%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F/" class="title has-link-black-ter is-size-6 has-text-weight-normal">python全局变量和局部变量</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E5%BC%80%E5%8F%91/">开发</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/lzj-9090.liu.io/2020/04/01/python%E9%97%AD%E5%8C%85/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/lzj-9090.liu.io/images/thumbnail.svg" alt="python闭包">
@@ -689,29 +718,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-01T13:21:45.166Z">2020-04-01</time></div>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-31T16:00:00.000Z">2020-04-01</time></div>
                     <a href="/lzj-9090.liu.io/2020/04/01/python%E9%97%AD%E5%8C%85/" class="title has-link-black-ter is-size-6 has-text-weight-normal">python闭包</a>
                     <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/lzj-9090.liu.io/2020/04/01/python%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/lzj-9090.liu.io/images/thumbnail.svg" alt="python全局变量">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-01T11:44:37.572Z">2020-04-01</time></div>
-                    <a href="/lzj-9090.liu.io/2020/04/01/python%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F/" class="title has-link-black-ter is-size-6 has-text-weight-normal">python全局变量</a>
-                    <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E5%BC%80%E5%8F%91/">开发</a>
                     </p>
                 </div>
             </div>
@@ -857,6 +867,13 @@
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/lzj-9090.liu.io/tags/python/">
+                        <span class="tag">python</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/lzj-9090.liu.io/tags/%E7%BD%91%E7%BB%9C/">
                         <span class="tag">网络</span>
                         <span class="tag is-grey">1</span>
@@ -880,7 +897,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/lzj-9090.liu.io/">
                 
-                    <img src="/lzj-9090.liu.io/images/logo.svg" alt="python全局变量" height="28">
+                    <img src="/lzj-9090.liu.io/images/logo.svg" alt="python全局变量和局部变量" height="28">
                 
                 </a>
                 <p class="is-size-7">

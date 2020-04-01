@@ -7,21 +7,18 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>python闭包 - 一叶知秋</title>
+<title>标签: python - 一叶知秋</title>
 
 
-    <meta name="description" content="1、闭包的概念及作用 闭包是内部函数的一种，其满足的条件有：  其为内部函数 外部函数有返回值 其外部函数的返回值为内部函数的地址   举例：12345678def person_fun():    num_1&#x3D;1    def sum():        num_2&#x3D;3        print(num_1,num_2)    return sums1&#x3D;person_fun()s1()  结果1">
-<meta property="og:type" content="article">
-<meta property="og:title" content="python闭包">
-<meta property="og:url" content="http://yoursite.com/2020/04/01/python%E9%97%AD%E5%8C%85/index.html">
+    <meta name="description" content="一叶知秋的博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="一叶知秋">
+<meta property="og:url" content="http://yoursite.com/tags/python/index.html">
 <meta property="og:site_name" content="一叶知秋">
-<meta property="og:description" content="1、闭包的概念及作用 闭包是内部函数的一种，其满足的条件有：  其为内部函数 外部函数有返回值 其外部函数的返回值为内部函数的地址   举例：12345678def person_fun():    num_1&#x3D;1    def sum():        num_2&#x3D;3        print(num_1,num_2)    return sums1&#x3D;person_fun()s1()  结果1">
+<meta property="og:description" content="一叶知秋的博客">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/lzj-9090.liu.io/images/og_image.png">
-<meta property="article:published_time" content="2020-03-31T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-04-01T15:03:08.675Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/lzj-9090.liu.io/images/og_image.png">
 
@@ -81,7 +78,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/lzj-9090.liu.io/">
             
-                <img src="/lzj-9090.liu.io/images/logo.svg" alt="python闭包" height="28">
+                <img src="/lzj-9090.liu.io/images/logo.svg" alt="一叶知秋" height="28">
             
             </a>
         </div>
@@ -130,7 +127,93 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    <div class="card-content">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/lzj-9090.liu.io/tags">标签</a></li>
+            <li class="is-active"><a href="#" aria-current="page">python</a></li>
+        </ul>
+        </nav>
+    </div>
+</div>
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-03-31T16:00:00.000Z">2020-04-01</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E5%BC%80%E5%8F%91/">开发</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分钟 读完 (大约 361 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/lzj-9090.liu.io/2020/04/01/python%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F/">python全局变量和局部变量</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="全局变量和局部变量"><a href="#全局变量和局部变量" class="headerlink" title="全局变量和局部变量"></a>全局变量和局部变量</h1><h2 id="1、局部变量"><a href="#1、局部变量" class="headerlink" title="1、局部变量"></a>1、局部变量</h2><blockquote>
+<p>局部变量就是python函数内定义的变量</p>
+<p>其作用范围也就是函数内部有效而且优先，出了此函数就无效</p>
+</blockquote>
+<h3 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">name=<span class="string">'全局'</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun1</span><span class="params">()</span>:</span></span><br><span class="line">    name=<span class="string">'局部'</span></span><br><span class="line">    print(<span class="string">'fun1:'</span>,name)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun2</span><span class="params">()</span>:</span></span><br><span class="line">    print(name)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    fun1()</span><br><span class="line">    fun2()</span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">"__main__"</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+
+<p>结果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fun1: 局部</span><br><span class="line">fun2 全局</span><br></pre></td></tr></table></figure>
+
+<p>我们可以看出局部变量作用范围有限</p>
+<h2 id="2、全局变量"><a href="#2、全局变量" class="headerlink" title="2、全局变量"></a>2、全局变量</h2><blockquote>
+<p>从创建开始到程序结束都有效果</p>
+</blockquote>
+<h3 id="操作-1"><a href="#操作-1" class="headerlink" title="操作"></a>操作</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">name=<span class="string">'全局'</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun1</span><span class="params">()</span>:</span></span><br><span class="line">    name=<span class="string">'局部'</span></span><br><span class="line">    print(<span class="string">'fun1:'</span>,name)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun2</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'fun2'</span>,name)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'main:'</span>,name)</span><br><span class="line">    fun1()</span><br><span class="line">    fun2()</span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">"__main__"</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">main: 全局</span><br><span class="line">fun1: 局部</span><br><span class="line">fun2 全局</span><br></pre></td></tr></table></figure>
+
+<h2 id="global声明变量"><a href="#global声明变量" class="headerlink" title="global声明变量"></a>global声明变量</h2><blockquote>
+<p>在python中全局变量不像java或者c语言一样直接可在函数中修改全局变量</p>
+<p>所以，python中修改全局变量需要 用global声明(只限于全局变量为不可变）</p>
+</blockquote>
+<h3 id="操作-2"><a href="#操作-2" class="headerlink" title="操作"></a>操作</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">name=<span class="string">'全局'</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun1</span><span class="params">()</span>:</span></span><br><span class="line">    name=<span class="string">'局部'</span></span><br><span class="line">    print(<span class="string">'fun1:'</span>,name)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun2</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'fun2'</span>,name)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun3</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">global</span> name <span class="comment">#声明全局变量</span></span><br><span class="line">    name+=<span class="string">"hhhhh"</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'main:'</span>,name)</span><br><span class="line">    fun1()</span><br><span class="line">    fun2()</span><br><span class="line">    fun3()</span><br><span class="line">    print(name)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">"__main__"</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+
+<h3 id="结果-1"><a href="#结果-1" class="headerlink" title="结果"></a>结果</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">main: 全局</span><br><span class="line">fun1: 局部</span><br><span class="line">fun2 全局</span><br><span class="line">全局hhhhh</span><br></pre></td></tr></table></figure>
+
+<h3 id="当全局变量可变时"><a href="#当全局变量可变时" class="headerlink" title="当全局变量可变时"></a>当全局变量可变时</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">name=<span class="string">'全局'</span></span><br><span class="line">list=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]<span class="comment">#可变</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun1</span><span class="params">()</span>:</span></span><br><span class="line">    name=<span class="string">'局部'</span></span><br><span class="line">    print(<span class="string">'fun1:'</span>,name)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun2</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'fun2'</span>,name)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun3</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">global</span> name <span class="comment">#声明全局变量</span></span><br><span class="line">    list.append(<span class="number">6</span>)</span><br><span class="line">    name+=<span class="string">"hhhhh"</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'main:'</span>,name)</span><br><span class="line">    fun1()</span><br><span class="line">    fun2()</span><br><span class="line">    fun3()</span><br><span class="line">    print(name)</span><br><span class="line">    print(list)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">"__main__"</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+
+<p>结果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">main: 全局</span><br><span class="line">fun1: 局部</span><br><span class="line">fun2 全局</span><br><span class="line">全局hhhhh</span><br><span class="line">[1, 2, 3, 4, 6]</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
 <div class="card">
     
     <div class="card-content article ">
@@ -156,7 +239,7 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                python闭包
+                <a class="has-link-black-ter" href="/lzj-9090.liu.io/2020/04/01/python%E9%97%AD%E5%8C%85/">python闭包</a>
             
         </h1>
         <div class="content">
@@ -194,15 +277,6 @@
 
         </div>
         
-        <div class="level is-size-7 is-uppercase">
-            <div class="level-start">
-                <div class="level-item">
-                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/lzj-9090.liu.io/tags/python/" rel="tag">python</a>
-                </div>
-            </div>
-        </div>
-        
         
         
     </div>
@@ -210,57 +284,9 @@
 
 
 
-<div class="card">
-    <div class="card-content">
-        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
-        <div class="buttons is-centered">
-            
-                
-<a class="button is-info donate">
-    <span class="icon is-small">
-        <i class="fab fa-alipay"></i>
-    </span>
-    <span>支付宝</span>
-    <div class="qrcode"><img src="/lzj-9090.liu.io/images/zhi.jpg" alt="支付宝"></div>
-</a>
-
-                
-                
-<a class="button is-success donate">
-    <span class="icon is-small">
-        <i class="fab fa-weixin"></i>
-    </span>
-    <span>微信</span>
-    <div class="qrcode"><img src="/lzj-9090.liu.io/images/wei.png" alt="微信"></div>
-</a>
-
-                
-        </div>
-    </div>
-</div>
 
 
 
-<div class="card card-transparent">
-    <div class="level post-navigation is-flex-wrap is-mobile">
-        
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/lzj-9090.liu.io/2020/04/01/python%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">python全局变量和局部变量</span>
-            </a>
-        </div>
-        
-        
-        <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/lzj-9090.liu.io/2020/03/31/1%E3%80%81ftp%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE/">
-                <span class="level-item">ftp服务的搭建</span>
-                <i class="level-item fas fa-chevron-right"></i>
-            </a>
-        </div>
-        
-    </div>
-</div>
 
 
 
@@ -905,7 +931,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/lzj-9090.liu.io/">
                 
-                    <img src="/lzj-9090.liu.io/images/logo.svg" alt="python闭包" height="28">
+                    <img src="/lzj-9090.liu.io/images/logo.svg" alt="一叶知秋" height="28">
                 
                 </a>
                 <p class="is-size-7">
