@@ -10,16 +10,16 @@
 <title>yum安装http - 一叶知秋</title>
 
 
-    <meta name="description" content="# 1、http  1.1、yum安装的http的安装与使用1.、yum 安装httpd[root@lzj ssl]# yum install -y httpd 配置文件 [root@lzj ssl]# vim &#x2F;etc&#x2F;httpd&#x2F;conf&#x2F;httpd.conf DocumentRoot &quot;&#x2F;var&#x2F;www&#x2F;html&quot;           这是文件路径默认为&#x2F;var&#x2F;ww">
+    <meta name="description" content="# 1、http  1.1、yum安装的http的安装与使用1.、yum安装httpd1[root@lzj ssl]# yum install -y httpd  配置文件 123[root@lzj ssl]# vim &#x2F;etc&#x2F;httpd&#x2F;conf&#x2F;httpd.conf&#96;&#96;DocumentRoot &quot;&#x2F;var&#x2F;www&#x2F;html&quot;           这是文件路径默认为&#x2F;var&#x2F;www&#x2F;htm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="yum安装http">
 <meta property="og:url" content="http://yoursite.com/2019/03/01/1%E3%80%81http/index.html">
 <meta property="og:site_name" content="一叶知秋">
-<meta property="og:description" content="# 1、http  1.1、yum安装的http的安装与使用1.、yum 安装httpd[root@lzj ssl]# yum install -y httpd 配置文件 [root@lzj ssl]# vim &#x2F;etc&#x2F;httpd&#x2F;conf&#x2F;httpd.conf DocumentRoot &quot;&#x2F;var&#x2F;www&#x2F;html&quot;           这是文件路径默认为&#x2F;var&#x2F;ww">
+<meta property="og:description" content="# 1、http  1.1、yum安装的http的安装与使用1.、yum安装httpd1[root@lzj ssl]# yum install -y httpd  配置文件 123[root@lzj ssl]# vim &#x2F;etc&#x2F;httpd&#x2F;conf&#x2F;httpd.conf&#96;&#96;DocumentRoot &quot;&#x2F;var&#x2F;www&#x2F;html&quot;           这是文件路径默认为&#x2F;var&#x2F;www&#x2F;htm">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/lzj-9090.liu.io/images/og_image.png">
 <meta property="article:published_time" content="2019-02-28T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-04-01T05:25:57.591Z">
+<meta property="article:modified_time" content="2020-04-04T13:53:52.144Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
@@ -149,7 +149,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    3 分钟 读完 (大约 452 个字)
+                    9 分钟 读完 (大约 1350 个字)
                 </span>
                 
                 
@@ -165,12 +165,14 @@
              <meta name="referrer" content="no-referrer">
 # 1、http
 
-<h2 id="1-1、yum安装的http的安装与使用"><a href="#1-1、yum安装的http的安装与使用" class="headerlink" title="1.1、yum安装的http的安装与使用"></a>1.1、yum安装的http的安装与使用</h2><h3 id="1-、yum-安装httpd"><a href="#1-、yum-安装httpd" class="headerlink" title="1.、yum 安装httpd"></a>1.、yum 安装httpd</h3><p><code>[root@lzj ssl]# yum install -y httpd</code></p>
+<h2 id="1-1、yum安装的http的安装与使用"><a href="#1-1、yum安装的http的安装与使用" class="headerlink" title="1.1、yum安装的http的安装与使用"></a>1.1、yum安装的http的安装与使用</h2><h3 id="1-、yum安装httpd"><a href="#1-、yum安装httpd" class="headerlink" title="1.、yum安装httpd"></a>1.、<code>yum</code>安装<code>httpd</code></h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@lzj ssl]# yum install -y httpd</span><br></pre></td></tr></table></figure>
+
 <p>配置文件</p>
-<p><code>[root@lzj ssl]# vim /etc/httpd/conf/httpd.conf</code></p>
-<p><code>DocumentRoot &quot;/var/www/html&quot;           这是文件路径默认为/var/www/html</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@lzj ssl]# vim /etc/httpd/conf/httpd.conf`</span><br><span class="line"></span><br><span class="line">`DocumentRoot "/var/www/html"           这是文件路径默认为/var/www/html</span><br></pre></td></tr></table></figure>
+
 <p>启动httpd</p>
-<p><code>[root@lzj ssl]# systemctl start httpd</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@lzj ssl]# systemctl start httpd</span><br></pre></td></tr></table></figure>
+
 <p>输入Ip访问</p>
 <p><img src="https://lzj-9090.github.io/lzj-9090.liu.io/images/http01.png" alt="xxx"></p>
 <h3 id="1-1-2、yum安装的httpd的配置文件"><a href="#1-1-2、yum安装的httpd的配置文件" class="headerlink" title="1.1.2、yum安装的httpd的配置文件"></a>1.1.2、yum安装的httpd的配置文件</h3><table>
@@ -268,7 +270,88 @@
 <p>–limit-rate<rate>        设置传输速度</rate></p>
 </blockquote>
 <p>使用curl下载文件</p>
-<p>``[root@lzj ssl]# curl -o myblog.html <a href="http://blog.51cto.com/itchentao`">http://blog.51cto.com/itchentao`</a><br>  <code>% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current</code><br>                                 <code>Dload  Upload   Total   Spent    Left  Speed</code><br><code>100   180    0   180    0     0     67      0 --:--:--  0:00:02 --:--:--    67</code><br>[root@lzj ssl]#` </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@lzj ssl]# curl -o myblog.html http://blog.51cto.com/itchentao</span><br><span class="line">  `% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current`</span><br><span class="line">                                 `Dload  Upload   Total   Spent    Left  Speed`</span><br><span class="line">100   180    0   180    0     0     67      0 --:--:--  0:00:02 --:--:--    67</span><br></pre></td></tr></table></figure>
+
+<h1 id="源码安装httpd"><a href="#源码安装httpd" class="headerlink" title="源码安装httpd"></a>源码安装httpd</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">安装开发环境</span></span><br><span class="line">[root@localhost ~]# yum groupinstall "Development Tools"</span><br><span class="line"><span class="meta">#</span><span class="bash">下载必要的插件</span></span><br><span class="line">[root@localhost ~]# yum install -y opensll-devel pcre-devel expat-devel libtool</span><br><span class="line"><span class="meta">#</span><span class="bash">下载依赖和httpd</span></span><br><span class="line">[root@localhost ~]# ls</span><br><span class="line">anaconda-ks.cfg  apr-1.6.5.tar.gz  apr-util-1.6.1.tar.bz2  httpd-2.4.38.tar.bz2</span><br><span class="line">[root@localhost ~]# </span><br><span class="line"><span class="meta">#</span><span class="bash">创建apache用户和组（由于创建用户时顺便创建了组）</span></span><br><span class="line">[root@localhost ~]# useradd -r apache</span><br><span class="line">[root@localhost ~]# id apache</span><br><span class="line">uid=997(apache) gid=995(apache) groups=995(apache)</span><br><span class="line">[root@localhost ~]# </span><br><span class="line"><span class="meta">#</span><span class="bash">解压 apr-1.6.5.tar.gz、apr-util-1.6.1.tar.bz2、httpd-2.4.38.tar.bz2</span></span><br><span class="line">[root@localhost ~]# tar -xf apr-1.6.5.tar.gz </span><br><span class="line">[root@localhost ~]# ls</span><br><span class="line">anaconda-ks.cfg  apr-1.6.5  apr-1.6.5.tar.gz  apr-util-1.6.1.tar.bz2  httpd-2.4.38.tar.bz2</span><br><span class="line">[root@localhost ~]# tar -xf apr-util-1.6.1.tar.bz2 </span><br><span class="line">[root@localhost ~]# ls</span><br><span class="line">anaconda-ks.cfg  apr-1.6.5  apr-1.6.5.tar.gz  apr-util-1.6.1  apr-util-1.6.1.tar.bz2  httpd-2.4.38.tar.bz2</span><br><span class="line">[root@localhost ~]# tar -xf httpd-2.4.38.tar.bz2 </span><br><span class="line">[root@localhost ~]# ls</span><br><span class="line">anaconda-ks.cfg  apr-1.6.5  apr-1.6.5.tar.gz  apr-util-1.6.1  apr-util-1.6.1.tar.bz2  httpd-2.4.38  httpd-2.4.38.tar.bz2</span><br><span class="line">[root@localhost ~]# </span><br><span class="line"><span class="meta">#</span><span class="bash">进入apr-1.6.5进行编译安装</span></span><br><span class="line">[root@localhost ~]# cd apr-1.6.5</span><br><span class="line">[root@localhost apr-1.6.5]# vim configure</span><br><span class="line">    cfgfile=$&#123;ofile&#125;T</span><br><span class="line">    trap "$RM \"$cfgfile\"; exit 1" 1 2 15</span><br><span class="line"><span class="meta">#</span><span class="bash">    <span class="variable">$RM</span> <span class="string">"<span class="variable">$cfgfile</span>"</span> （添加注释或者删除）</span></span><br><span class="line">[root@localhost apr-1.6.5]# ./configure --prefix=/usr/local/apr</span><br><span class="line">[root@localhost apr-1.6.5]# make &amp;&amp; make install</span><br><span class="line"><span class="meta">#</span><span class="bash">进入apr-util-1.6.1 目录</span></span><br><span class="line">[root@localhost apr-1.6.5]# cd ..</span><br><span class="line">[root@localhost ~]# cd apr-util-1.6.1</span><br><span class="line">[root@localhost apr-util-1.6.1]# ./configure --prefix=/usr/local/apr-util --with-apr=/usr/local/apr/</span><br><span class="line">[root@localhost apr-util-1.6.1]# make &amp;&amp; make install</span><br><span class="line"><span class="meta">#</span><span class="bash">进入httpd，并且编译</span></span><br><span class="line">[root@localhost ~]# cd httpd-2.4.38</span><br><span class="line">[root@localhost httpd-2.4.37]# ./configure --prefix=/usr/local/apache  --sysconfdir=/etc/httpd24 --enable-so  --enable-ssl  --enable-cgi  --enable-rewrite  --with-zlib  --with-pcre  --with-apr=/usr/local/apr  --with-apr-util=/usr/local/apr-util/  --enable-modules=most  --enable-mpms-shared=all  --with-mpm=prefork</span><br><span class="line">[root@localhost httpd-2.4.38]# make &amp;&amp; make install</span><br><span class="line"><span class="meta">#</span><span class="bash">后续操作</span></span><br><span class="line">[root@localhost ~]#  echo 'export PATH=/usr/local/apache/bin:$PATH' &gt; /etc/profile.d/httpd.sh </span><br><span class="line">[root@localhost ~]# source /etc/profile.d/httpd.sh </span><br><span class="line">[root@localhost ~]#  ln -s /usr/local/apache/include/ /usr/include/httpd </span><br><span class="line">[root@localhost ~]#  sed -i '/#ServerName/s/#//g' /etc/httpd24/httpd.conf </span><br><span class="line">[root@localhost ~]# apachectl start</span><br><span class="line">httpd (pid 56851) already running</span><br><span class="line">[root@localhost ~]# ss -antl</span><br><span class="line">State      Recv-Q Send-Q                      Local Address:Port                                     Peer Address:Port              </span><br><span class="line">LISTEN     0      128                                     *:22                                                  *:*                  </span><br><span class="line">LISTEN     0      100                             127.0.0.1:25                                                  *:*                  </span><br><span class="line">LISTEN     0      128                                    :::80                                                 :::*                  </span><br><span class="line">LISTEN     0      32                                     :::21                                                 :::*                  </span><br><span class="line">LISTEN     0      128           :::22</span><br></pre></td></tr></table></figure>
+
+<h2 id="相关文件"><a href="#相关文件" class="headerlink" title="相关文件"></a>相关文件</h2><table>
+<thead>
+<tr>
+<th align="center">文件地址</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">/usr/local/apache/htdocs/</td>
+<td align="center">源码默认网页存放地址</td>
+</tr>
+<tr>
+<td align="center">/etc/httpd24/httpd.conf</td>
+<td align="center">源码安装主配置文件</td>
+</tr>
+<tr>
+<td align="center">/usr/local/apache/logs/</td>
+<td align="center">源码安装的日志文件</td>
+</tr>
+</tbody></table>
+<h1 id="控制访问"><a href="#控制访问" class="headerlink" title="控制访问"></a>控制访问</h1><table>
+<thead>
+<tr>
+<th align="center">权限</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Require all granted</td>
+<td align="center">允许所有主机访问</td>
+</tr>
+<tr>
+<td align="center">Require all deny</td>
+<td align="center">拒绝所有主机访问</td>
+</tr>
+<tr>
+<td align="center">Require ip IPADDR</td>
+<td align="center">允许指定ip访问</td>
+</tr>
+<tr>
+<td align="center">Require no ip IPADDR</td>
+<td align="center">不允许指定ip访问</td>
+</tr>
+<tr>
+<td align="center">Require host HOSTNAME</td>
+<td align="center">指定主机名访问</td>
+</tr>
+<tr>
+<td align="center">Require no host HOSTNAME</td>
+<td align="center">不允许指定的主机名访问</td>
+</tr>
+</tbody></table>
+<h2 id="只允许192-168-135-122访问"><a href="#只允许192-168-135-122访问" class="headerlink" title="只允许192.168.135.122访问"></a>只允许192.168.135.122访问</h2><h3 id="修改主配置文件"><a href="#修改主配置文件" class="headerlink" title="修改主配置文件"></a>修改主配置文件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# vim /etc/httpd24/httpd.conf </span><br><span class="line"><span class="meta">#</span><span class="bash">添加如下内容</span></span><br><span class="line">&lt;Directory "/usr/local/apache/htdocs/"&gt;</span><br><span class="line">    &lt;RequireAll&gt;</span><br><span class="line">        Require ip 192.168.135.122</span><br><span class="line">        Require all granted</span><br><span class="line">    &lt;/RequireAll&gt;</span><br><span class="line">&lt;/Directory&gt;</span><br><span class="line"><span class="meta">#</span><span class="bash">192。168.135.122客户端</span></span><br><span class="line">[root@localhost ~]# curl 192.168.135.145</span><br><span class="line">&lt;html&gt;&lt;body&gt;&lt;h1&gt;It works!&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;</span><br><span class="line">[root@localhost ~]#</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://lzj-9090.github.io/lzj-9090.liu.io/images/http03.jpg" alt></p>
+<h1 id="配置虚拟主机"><a href="#配置虚拟主机" class="headerlink" title="配置虚拟主机"></a>配置虚拟主机</h1><blockquote>
+<p>虚拟主机有三种：</p>
+<ul>
+<li>端口不同ip相同域名相同</li>
+<li>ip不同端口相同域名相同</li>
+<li>域名不同ip相同端口相同</li>
+</ul>
+</blockquote>
+<h2 id="端口相同ip相同域名不同"><a href="#端口相同ip相同域名不同" class="headerlink" title="端口相同ip相同域名不同"></a>端口相同ip相同域名不同</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# vim /etc/httpd24/httpd.conf </span><br><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">    DocumentRoot "/usr/local/apache/htdocs/"</span><br><span class="line">    ServerName demo1.example.com</span><br><span class="line">    ErrorLog "logs/demo1-error_log"</span><br><span class="line">    CustomLog "logs/demo1-access_log" common</span><br><span class="line">&lt;/VirtualHost&gt;</span><br><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">    DocumentRoot "/usr/local/apache/htdocs/"</span><br><span class="line">    ServerName demo2.example.com</span><br><span class="line">    ErrorLog "logs/demo2-error_log"</span><br><span class="line">    CustomLog "logs/demo2-access_log" common</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>由于没有购买域名和服务器所以需要host解析</p>
+</blockquote>
+<p><img src="https://lzj-9090.github.io/lzj-9090.liu.io/images/http04.jpg" alt></p>
+<p><img src="https://lzj-9090.github.io/lzj-9090.liu.io/images/http05.jpg" alt></p>
+<h2 id="端口不同ip相同"><a href="#端口不同ip相同" class="headerlink" title="端口不同ip相同"></a>端口不同ip相同</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# vim /etc/httpd24/httpd.conf </span><br><span class="line">Listen 70</span><br><span class="line">&lt;VirtualHost *:70&gt;</span><br><span class="line">    DocumentRoot "/usr/local/apache/htdocs/"</span><br><span class="line">    ServerName demo1.example.com</span><br><span class="line">    ErrorLog "logs/demo1-error_log"</span><br><span class="line">    CustomLog "logs/demo1-access_log" common</span><br><span class="line">&lt;/VirtualHost&gt;</span><br><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">    DocumentRoot "/usr/local/apache/htdocs/"</span><br><span class="line">    ServerName demo2.example.com</span><br><span class="line">    ErrorLog "logs/demo2-error_log"</span><br><span class="line">    CustomLog "logs/demo2-access_log" common</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://lzj-9090.github.io/lzj-9090.liu.io/images/http06.jpg" alt></p>
+<p><img src="https://lzj-9090.github.io/lzj-9090.liu.io/images/http07.jpg" alt></p>
+<h2 id="端口相同Ip不同"><a href="#端口相同Ip不同" class="headerlink" title="端口相同Ip不同"></a>端口相同Ip不同</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# ip addr add 192.168.135.7/24 dev ens33</span><br><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">    DocumentRoot "/usr/local/apache/htdocs/"</span><br><span class="line">    ServerName demo1.example.com</span><br><span class="line">    ErrorLog "logs/demo1-error_log"</span><br><span class="line">    CustomLog "logs/demo1-access_log" common</span><br><span class="line">&lt;/VirtualHost&gt;</span><br><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">    DocumentRoot "/usr/local/apache/htdocs/"</span><br><span class="line">    ServerName demo2.example.com</span><br><span class="line">    ErrorLog "logs/demo2-error_log"</span><br><span class="line">    CustomLog "logs/demo2-access_log" common</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://lzj-9090.github.io/lzj-9090.liu.io/images/http08.jpg" alt></p>
+<p><img src="https://lzj-9090.github.io/lzj-9090.liu.io/images/http09.jpg" alt></p>
 
         </div>
         
