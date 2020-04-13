@@ -133,17 +133,27 @@
     
 <div class="card">
     
+    <div class="card-image">
+        <a href="/lzj-9090.liu.io/2020/04/13/radhat7%E4%B8%AD%E9%85%8D%E7%BD%AEtomcat/" class="image is-7by1">
+            <img class="thumbnail" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2491647022,3900371976&amp;fm=26&amp;gp=0.jpg" alt="Linux配置tomcat">
+        </a>
+    </div>
+    
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-04-06T02:49:06.286Z">2020-04-06</time>
+                <time class="level-item has-text-grey" datetime="2020-04-12T16:00:00.000Z">2020-04-13</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E8%BF%90%E7%BB%B4/">运维</a>
+                </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    3 分钟 读完 (大约 513 个字)
+                    3 分钟 读完 (大约 499 个字)
                 </span>
                 
                 
@@ -152,21 +162,16 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/lzj-9090.liu.io/2020/04/06/radhat7%E4%B8%AD%E9%85%8D%E7%BD%AEtomcat/">radhat7中配置tomcat</a>
+                <a class="has-link-black-ter" href="/lzj-9090.liu.io/2020/04/13/radhat7%E4%B8%AD%E9%85%8D%E7%BD%AEtomcat/">Linux配置tomcat</a>
             
         </h1>
         <div class="content">
-            <hr>
-<p>title: 红帽7如何配置tomcat<br>date: 2020-4-5<br>categories:</p>
-<ul>
-<li><p>运维<br>tags:</p>
-</li>
-<li><h2 id="tomcat"><a href="#tomcat" class="headerlink" title="tomcat"></a>tomcat</h2><h1 id="红帽7如何配置tomcat"><a href="#红帽7如何配置tomcat" class="headerlink" title="红帽7如何配置tomcat"></a>红帽7如何配置tomcat</h1><h2 id="1、下载tomcat9-0和java-1-8"><a href="#1、下载tomcat9-0和java-1-8" class="headerlink" title="1、下载tomcat9.0和java-1.8"></a>1、下载<code>tomcat9.0</code>和<code>java-1.8</code></h2><h3 id="tomcat的下载地址："><a href="#tomcat的下载地址：" class="headerlink" title="tomcat的下载地址："></a><code>tomcat</code>的下载地址：</h3><p> <a href="https://tomcat.apache.org/">https://tomcat.apache.org/</a> </p>
-<h3 id="java1-8是radhat7自带："><a href="#java1-8是radhat7自带：" class="headerlink" title="java1.8是radhat7自带："></a><code>java1.8</code>是<code>radhat7</code>自带：</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost profile.d]# yum install -y java-1.8.0</span><br></pre></td></tr></table></figure>
+            <h1 id="红帽7如何配置tomcat"><a href="#红帽7如何配置tomcat" class="headerlink" title="红帽7如何配置tomcat"></a>红帽7如何配置tomcat</h1><h2 id="1、下载tomcat9-0和java-1-8"><a href="#1、下载tomcat9-0和java-1-8" class="headerlink" title="1、下载tomcat9.0和java-1.8"></a>1、下载<code>tomcat9.0</code>和<code>java-1.8</code></h2><h3 id="tomcat的下载地址："><a href="#tomcat的下载地址：" class="headerlink" title="tomcat的下载地址："></a><code>tomcat</code>的下载地址：</h3><p>   <a href="https://tomcat.apache.org/">https://tomcat.apache.org/</a> </p>
+<h3 id="java1-8是radhat7自带："><a href="#java1-8是radhat7自带：" class="headerlink" title="java1.8是radhat7自带："></a><code>java1.8</code>是<code>radhat7</code>自带：</h3>  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost profile.d]# yum install -y java-1.8.0</span><br></pre></td></tr></table></figure>
 
-<h2 id="2、解压tomcat并且放到-usr-locad-中"><a href="#2、解压tomcat并且放到-usr-locad-中" class="headerlink" title="2、解压tomcat并且放到/usr/locad/中"></a>2、解压<code>tomcat</code>并且放到<code>/usr/locad/</code>中</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost local]# tar -xf apache-tomcat-9.0.33-9.0.33.tar.gz</span><br></pre></td></tr></table></figure>
+<h2 id="2、解压tomcat并且放到-usr-locad-中"><a href="#2、解压tomcat并且放到-usr-locad-中" class="headerlink" title="2、解压tomcat并且放到/usr/locad/中"></a>2、解压<code>tomcat</code>并且放到<code>/usr/locad/</code>中</h2>  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost local]# tar -xf apache-tomcat-9.0.33-9.0.33.tar.gz</span><br></pre></td></tr></table></figure>
 
-<h2 id="3、配置tomcat环境变量并且启动"><a href="#3、配置tomcat环境变量并且启动" class="headerlink" title="3、配置tomcat环境变量并且启动"></a>3、配置<code>tomcat</code>环境变量并且启动</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost profile.d]# echo "export PATH=/usr/local/apache-tomcat-9.0.33/bin:$PATH" &gt; /etc/profile.d/tomcat.sh</span><br><span class="line">[root@localhost profile.d]# source /etc/profile.d/tomcat.sh </span><br><span class="line">[root@localhost profile.d]# startup.sh </span><br><span class="line">Using CATALINA_BASE:   /usr/local/apache-tomcat-9.0.33</span><br><span class="line">Using CATALINA_HOME:   /usr/local/apache-tomcat-9.0.33</span><br><span class="line">Using CATALINA_TMPDIR: /usr/local/apache-tomcat-9.0.33/temp</span><br><span class="line">Using JRE_HOME:        /usr</span><br><span class="line">Using CLASSPATH:       /usr/local/apache-tomcat-9.0.33/bin/bootstrap.jar:/usr/local/apache-tomcat-9.0.33/bin/tomcat-juli.jar</span><br><span class="line">Tomcat started.</span><br><span class="line"><span class="meta">#</span><span class="bash">tomcat的默认端口为8080</span></span><br><span class="line">[root@localhost profile.d]# ss -antl</span><br><span class="line">State      Recv-Q Send-Q                      Local Address:Port                                     Peer Address:Port              </span><br><span class="line">LISTEN     0      128                                     *:22                                                  *:*                  </span><br><span class="line">LISTEN     0      100                             127.0.0.1:25                                                  *:*                  </span><br><span class="line">LISTEN     0      100                                    :::8080                                               :::*                  </span><br><span class="line">LISTEN     0      128                                    :::22                                                 :::*                  </span><br><span class="line">LISTEN     0      100                                   ::1:25                                                 :::*                  </span><br><span class="line">LISTEN     0      1                        ::ffff:127.0.0.1:8005                                               :::*</span><br></pre></td></tr></table></figure>
+<h2 id="3、配置tomcat环境变量并且启动"><a href="#3、配置tomcat环境变量并且启动" class="headerlink" title="3、配置tomcat环境变量并且启动"></a>3、配置<code>tomcat</code>环境变量并且启动</h2>  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost profile.d]# echo "export PATH=/usr/local/apache-tomcat-9.0.33/bin:$PATH" &gt; /etc/profile.d/tomcat.sh</span><br><span class="line">[root@localhost profile.d]# source /etc/profile.d/tomcat.sh </span><br><span class="line">[root@localhost profile.d]# startup.sh </span><br><span class="line">Using CATALINA_BASE:   /usr/local/apache-tomcat-9.0.33</span><br><span class="line">Using CATALINA_HOME:   /usr/local/apache-tomcat-9.0.33</span><br><span class="line">Using CATALINA_TMPDIR: /usr/local/apache-tomcat-9.0.33/temp</span><br><span class="line">Using JRE_HOME:        /usr</span><br><span class="line">Using CLASSPATH:       /usr/local/apache-tomcat-9.0.33/bin/bootstrap.jar:/usr/local/apache-tomcat-9.0.33/bin/tomcat-juli.jar</span><br><span class="line">Tomcat started.</span><br><span class="line"><span class="meta">#</span><span class="bash">tomcat的默认端口为8080</span></span><br><span class="line">[root@localhost profile.d]# ss -antl</span><br><span class="line">State      Recv-Q Send-Q                      Local Address:Port                                     Peer Address:Port              </span><br><span class="line">LISTEN     0      128                                     *:22                                                  *:*                  </span><br><span class="line">LISTEN     0      100                             127.0.0.1:25                                                  *:*                  </span><br><span class="line">LISTEN     0      100                                    :::8080                                               :::*                  </span><br><span class="line">LISTEN     0      128                                    :::22                                                 :::*                  </span><br><span class="line">LISTEN     0      100                                   ::1:25                                                 :::*                  </span><br><span class="line">LISTEN     0      1                        ::ffff:127.0.0.1:8005                                               :::*</span><br></pre></td></tr></table></figure>
 
 <h2 id="4、tomcat相关配置文件"><a href="#4、tomcat相关配置文件" class="headerlink" title="4、tomcat相关配置文件"></a>4、<code>tomcat</code>相关配置文件</h2><table>
 <thead>
@@ -188,7 +193,7 @@
 <td align="center">用于存放web项目</td>
 </tr>
 </tbody></table>
-<p>tomcat的相关命令</p>
+<p>  tomcat的相关命令</p>
 <table>
 <thead>
 <tr>
@@ -209,14 +214,239 @@
 <td align="center">查看版本号</td>
 </tr>
 </tbody></table>
-<h3 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost bin]# startup.sh </span><br><span class="line">Using CATALINA_BASE:   /usr/local/apache-tomcat-9.0.33</span><br><span class="line">Using CATALINA_HOME:   /usr/local/apache-tomcat-9.0.33</span><br><span class="line">Using CATALINA_TMPDIR: /usr/local/apache-tomcat-9.0.33/temp</span><br><span class="line">Using JRE_HOME:        /usr</span><br><span class="line">Using CLASSPATH:       /usr/local/apache-tomcat-9.0.33/bin/bootstrap.jar:/usr/local/apache-tomcat-9.0.33/bin/tomcat-juli.jar</span><br><span class="line">Tomcat started.</span><br><span class="line">[root@localhost bin]# ss -antl</span><br><span class="line">State      Recv-Q Send-Q                      Local Address:Port                                     Peer Address:Port              </span><br><span class="line">LISTEN     0      128                                     *:22                                                  *:*                  </span><br><span class="line">LISTEN     0      100                             127.0.0.1:25                                                  *:*                  </span><br><span class="line">LISTEN     0      100                                    :::8080                                               :::*                  </span><br><span class="line">LISTEN     0      128                                    :::22                                                 :::*                  </span><br><span class="line">LISTEN     0      100                                   ::1:25                                                 :::*                  </span><br><span class="line">LISTEN     0      1                        ::ffff:127.0.0.1:8005                                               :::*                  </span><br><span class="line">[root@localhost bin]#</span><br></pre></td></tr></table></figure>
+<h3 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h3>  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost bin]# startup.sh </span><br><span class="line">Using CATALINA_BASE:   /usr/local/apache-tomcat-9.0.33</span><br><span class="line">Using CATALINA_HOME:   /usr/local/apache-tomcat-9.0.33</span><br><span class="line">Using CATALINA_TMPDIR: /usr/local/apache-tomcat-9.0.33/temp</span><br><span class="line">Using JRE_HOME:        /usr</span><br><span class="line">Using CLASSPATH:       /usr/local/apache-tomcat-9.0.33/bin/bootstrap.jar:/usr/local/apache-tomcat-9.0.33/bin/tomcat-juli.jar</span><br><span class="line">Tomcat started.</span><br><span class="line">[root@localhost bin]# ss -antl</span><br><span class="line">State      Recv-Q Send-Q                      Local Address:Port                                     Peer Address:Port              </span><br><span class="line">LISTEN     0      128                                     *:22                                                  *:*                  </span><br><span class="line">LISTEN     0      100                             127.0.0.1:25                                                  *:*                  </span><br><span class="line">LISTEN     0      100                                    :::8080                                               :::*                  </span><br><span class="line">LISTEN     0      128                                    :::22                                                 :::*                  </span><br><span class="line">LISTEN     0      100                                   ::1:25                                                 :::*                  </span><br><span class="line">LISTEN     0      1                        ::ffff:127.0.0.1:8005                                               :::*                  </span><br><span class="line">[root@localhost bin]#</span><br></pre></td></tr></table></figure>
 
-<h3 id="查看版本号"><a href="#查看版本号" class="headerlink" title="查看版本号"></a>查看版本号</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost bin]# version.sh </span><br><span class="line">Using CATALINA_BASE:   /usr/local/apache-tomcat-9.0.33</span><br><span class="line">Using CATALINA_HOME:   /usr/local/apache-tomcat-9.0.33</span><br><span class="line">Using CATALINA_TMPDIR: /usr/local/apache-tomcat-9.0.33/temp</span><br><span class="line">Using JRE_HOME:        /usr</span><br><span class="line">Using CLASSPATH:       /usr/local/apache-tomcat-9.0.33/bin/bootstrap.jar:/usr/local/apache-tomcat-9.0.33/bin/tomcat-juli.jar</span><br><span class="line">Server version: Apache Tomcat/9.0.33</span><br><span class="line">Server built:   Mar 11 2020 09:31:38 UTC</span><br><span class="line">Server number:  9.0.33.0</span><br><span class="line">OS Name:        Linux</span><br><span class="line">OS Version:     3.10.0-693.el7.x86_64</span><br><span class="line">Architecture:   amd64</span><br><span class="line">JVM Version:    1.8.0_242-b08</span><br><span class="line">JVM Vendor:     Oracle Corporation</span><br><span class="line">[root@localhost bin]#</span><br></pre></td></tr></table></figure>
+<h3 id="查看版本号"><a href="#查看版本号" class="headerlink" title="查看版本号"></a>查看版本号</h3>  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost bin]# version.sh </span><br><span class="line">Using CATALINA_BASE:   /usr/local/apache-tomcat-9.0.33</span><br><span class="line">Using CATALINA_HOME:   /usr/local/apache-tomcat-9.0.33</span><br><span class="line">Using CATALINA_TMPDIR: /usr/local/apache-tomcat-9.0.33/temp</span><br><span class="line">Using JRE_HOME:        /usr</span><br><span class="line">Using CLASSPATH:       /usr/local/apache-tomcat-9.0.33/bin/bootstrap.jar:/usr/local/apache-tomcat-9.0.33/bin/tomcat-juli.jar</span><br><span class="line">Server version: Apache Tomcat/9.0.33</span><br><span class="line">Server built:   Mar 11 2020 09:31:38 UTC</span><br><span class="line">Server number:  9.0.33.0</span><br><span class="line">OS Name:        Linux</span><br><span class="line">OS Version:     3.10.0-693.el7.x86_64</span><br><span class="line">Architecture:   amd64</span><br><span class="line">JVM Version:    1.8.0_242-b08</span><br><span class="line">JVM Vendor:     Oracle Corporation</span><br><span class="line">[root@localhost bin]#</span><br></pre></td></tr></table></figure>
 
-<h3 id="关闭服务"><a href="#关闭服务" class="headerlink" title="关闭服务"></a>关闭服务</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost bin]# shutdown.sh </span><br><span class="line">Using CATALINA_BASE:   /usr/local/apache-tomcat-9.0.33</span><br><span class="line">Using CATALINA_HOME:   /usr/local/apache-tomcat-9.0.33</span><br><span class="line">Using CATALINA_TMPDIR: /usr/local/apache-tomcat-9.0.33/temp</span><br><span class="line">Using JRE_HOME:        /usr</span><br><span class="line">Using CLASSPATH:       /usr/local/apache-tomcat-9.0.33/bin/bootstrap.jar:/usr/local/apache-tomcat-9.0.33/bin/tomcat-juli.jar</span><br><span class="line">[root@localhost bin]# ss -antl</span><br><span class="line">State      Recv-Q Send-Q                      Local Address:Port                                     Peer Address:Port              </span><br><span class="line">LISTEN     0      128                                     *:22                                                  *:*                  </span><br><span class="line">LISTEN     0      100                             127.0.0.1:25                                                  *:*                  </span><br><span class="line">LISTEN     0      128                                    :::22                                                 :::*                  </span><br><span class="line">LISTEN     0      100                                   ::1:25                                                 :::*                  </span><br><span class="line">[root@localhost bin]#</span><br></pre></td></tr></table></figure>
+<h3 id="关闭服务"><a href="#关闭服务" class="headerlink" title="关闭服务"></a>关闭服务</h3>  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost bin]# shutdown.sh </span><br><span class="line">Using CATALINA_BASE:   /usr/local/apache-tomcat-9.0.33</span><br><span class="line">Using CATALINA_HOME:   /usr/local/apache-tomcat-9.0.33</span><br><span class="line">Using CATALINA_TMPDIR: /usr/local/apache-tomcat-9.0.33/temp</span><br><span class="line">Using JRE_HOME:        /usr</span><br><span class="line">Using CLASSPATH:       /usr/local/apache-tomcat-9.0.33/bin/bootstrap.jar:/usr/local/apache-tomcat-9.0.33/bin/tomcat-juli.jar</span><br><span class="line">[root@localhost bin]# ss -antl</span><br><span class="line">State      Recv-Q Send-Q                      Local Address:Port                                     Peer Address:Port              </span><br><span class="line">LISTEN     0      128                                     *:22                                                  *:*                  </span><br><span class="line">LISTEN     0      100                             127.0.0.1:25                                                  *:*                  </span><br><span class="line">LISTEN     0      128                                    :::22                                                 :::*                  </span><br><span class="line">LISTEN     0      100                                   ::1:25                                                 :::*                  </span><br><span class="line">[root@localhost bin]#</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-image">
+        <a href="/lzj-9090.liu.io/2020/04/13/raync%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/" class="image is-7by1">
+            <img class="thumbnail" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1552099217,3201789165&amp;fm=15&amp;gp=0.jpg" alt="raync数据同步">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-04-12T16:00:00.000Z">2020-04-13</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E8%BF%90%E7%BB%B4/">运维</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 分钟 读完 (大约 497 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/lzj-9090.liu.io/2020/04/13/raync%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/">raync数据同步</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="raync数据同步"><a href="#raync数据同步" class="headerlink" title="raync数据同步"></a>raync数据同步</h1><h2 id="1-raync的作用"><a href="#1-raync的作用" class="headerlink" title="1.raync的作用"></a>1.raync的作用</h2><blockquote>
+<ul>
+<li>实现远程文件同步</li>
+<li>本地文件同步</li>
+<li>后台数据同步</li>
+</ul>
+</blockquote>
+<h2 id="2-raync的特点"><a href="#2-raync的特点" class="headerlink" title="2.raync的特点"></a>2.raync的特点</h2><blockquote>
+<ul>
+<li>可以保存整个目录树</li>
+<li>传输效率高，使得算法同步</li>
+<li>支持匿名传输，方便网站镜像。也可以做认证加强安全</li>
+<li>保留原有权限，包括时间，软连接。。。。</li>
+</ul>
+</blockquote>
+<h2 id="3、raync的兄弟"><a href="#3、raync的兄弟" class="headerlink" title="3、raync的兄弟"></a>3、raync的兄弟</h2><blockquote>
+<ul>
+<li>raync:刷新文件缓存，强制修改的数据更新到数据盘，更新超快</li>
+<li>async:异步缓存，先缓存，再周期性更新到磁盘</li>
+<li>raync:远程同步</li>
+</ul>
+</blockquote>
+<h2 id="4-常用选项"><a href="#4-常用选项" class="headerlink" title="4.常用选项"></a>4.常用选项</h2><blockquote>
+<p>-a:归档拷贝</p>
+<p>-v:详细模式输出啊</p>
+</blockquote>
+<h3 id="本地同步例子："><a href="#本地同步例子：" class="headerlink" title="本地同步例子："></a>本地同步例子：</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# ll /data/</span><br><span class="line">总用量 0</span><br><span class="line">-rw-r--r--. 1 root root 0 4月  12 19:59 1</span><br><span class="line">-rw-r--r--. 1 root root 0 4月  12 19:59 2</span><br><span class="line">-rw-r--r--. 1 root root 0 4月  12 19:59 3</span><br><span class="line">-rw-r--r--. 1 root root 0 4月  12 19:59 4</span><br><span class="line">[root@localhost ~]# rsync -va /data/ /tmp/</span><br><span class="line">sending incremental file list</span><br><span class="line"></span><br><span class="line">sent 54 bytes  received 12 bytes  132.00 bytes/sec</span><br><span class="line">total size is 0  speedup is 0.00</span><br><span class="line">[root@localhost ~]# ll /tmp/</span><br><span class="line">总用量 0</span><br><span class="line">-rw-r--r--. 1 root root 0 4月  12 19:59 1</span><br><span class="line">-rw-r--r--. 1 root root 0 4月  12 19:59 2</span><br><span class="line">-rw-r--r--. 1 root root 0 4月  12 19:59 3</span><br><span class="line">-rw-r--r--. 1 root root 0 4月  12 19:59 4</span><br><span class="line">[root@localhost ~]#</span><br></pre></td></tr></table></figure>
+
+<h4 id="增量同步"><a href="#增量同步" class="headerlink" title="增量同步"></a>增量同步</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# echo "123" &gt; /data/file1</span><br><span class="line">[root@localhost ~]# rsync -av /data/ /tmp/</span><br><span class="line">sending incremental file list</span><br><span class="line">./</span><br><span class="line">file1							#其只拷贝file1</span><br><span class="line"></span><br><span class="line">sent 122 bytes  received 34 bytes  312.00 bytes/sec</span><br><span class="line">total size is 4  speedup is 0.03</span><br><span class="line">[root@localhost ~]# ll /tmp/</span><br><span class="line">总用量 4</span><br><span class="line">-rw-r--r--. 1 root root 0 4月  12 19:59 1</span><br><span class="line">-rw-r--r--. 1 root root 0 4月  12 19:59 2</span><br><span class="line">-rw-r--r--. 1 root root 0 4月  12 19:59 3</span><br><span class="line">-rw-r--r--. 1 root root 0 4月  12 19:59 4</span><br><span class="line">-rw-r--r--. 1 root root 4 4月  12 20:06 file1</span><br><span class="line">[root@localhost ~]#</span><br></pre></td></tr></table></figure>
+
+<p>减量同步</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# rsync -av --delete /data/ /tmp/</span><br><span class="line">sending incremental file list</span><br><span class="line">./</span><br><span class="line">deleting 3</span><br><span class="line">deleting 2</span><br><span class="line">deleting 1</span><br><span class="line">file3</span><br><span class="line"></span><br><span class="line">sent 107 bytes  received 34 bytes  282.00 bytes/sec</span><br><span class="line">total size is 4  speedup is 0.03</span><br><span class="line">[root@localhost ~]# ll /tmp/</span><br><span class="line">总用量 4</span><br><span class="line">-rw-r--r--. 1 root root 0 4月  12 19:59 4</span><br><span class="line">-rw-r--r--. 1 root root 4 4月  12 20:06 file1</span><br><span class="line">-rw-r--r--. 1 root root 0 4月  12 20:12 file3</span><br><span class="line">[root@localhost ~]#</span><br></pre></td></tr></table></figure>
+
+<h3 id="远程同步"><a href="#远程同步" class="headerlink" title="远程同步"></a>远程同步</h3><table>
+<thead>
+<tr>
+<th align="center">跳板机</th>
+<th align="center">备份端</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">192.168.135.145</td>
+<td align="center">192.168.135.122</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>说明：两台机子做了，免密登录</p>
+<p>145：跳板</p>
+<p>122:备份</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">[root@145 ~]# rsync -vaR /data/ 192.168.135.122:/tmp</span><br><span class="line">sending incremental file list</span><br><span class="line">/data/</span><br><span class="line">/data/4</span><br><span class="line">/data/file1</span><br><span class="line">/data/file3</span><br><span class="line"></span><br><span class="line">sent 208 bytes  received 73 bytes  562.00 bytes/sec</span><br><span class="line">total size is 4  speedup is 0.01</span><br><span class="line">[root@145 ~]# </span><br><span class="line">[root@122 ~]# ll /tmp/</span><br><span class="line">总用量 0</span><br><span class="line">drwxr-xr-x. 2 root root 41 4月  12 20:12 data</span><br><span class="line">[root@122 ~]# ll /tmp/data</span><br><span class="line">总用量 4</span><br><span class="line">-rw-r--r--. 1 root root 0 4月  12 19:59 4</span><br><span class="line">-rw-r--r--. 1 root root 4 4月  12 20:06 file1</span><br><span class="line">-rw-r--r--. 1 root root 0 4月  12 20:12 file3</span><br><span class="line">[root@122 ~]#</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-image">
+        <a href="/lzj-9090.liu.io/2020/04/13/python%E4%B8%AD%E5%BC%82%E5%B8%B8%E6%8A%9B%E5%87%BA/" class="image is-7by1">
+            <img class="thumbnail" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2002889011,2994526377&amp;fm=26&amp;gp=0.jpg" alt="python异常抛出">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-04-12T16:00:00.000Z">2020-04-13</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E5%BC%80%E5%8F%91/">开发</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4 分钟 读完 (大约 657 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/lzj-9090.liu.io/2020/04/13/python%E4%B8%AD%E5%BC%82%E5%B8%B8%E6%8A%9B%E5%87%BA/">python异常抛出</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="1、异常抛出概念"><a href="#1、异常抛出概念" class="headerlink" title="1、异常抛出概念"></a>1、异常抛出概念</h2><blockquote>
+<ul>
+<li>异常：程序运行时，如果<code>python解释器</code>遇到一些错误，并且提示一些错误信息及其说明</li>
+<li>抛出：程序异常并且提示等动作</li>
+</ul>
+</blockquote>
+<h2 id="2、捕获异常"><a href="#2、捕获异常" class="headerlink" title="2、捕获异常"></a>2、捕获异常</h2><h3 id="2-1、最简单的捕获异常方式"><a href="#2-1、最简单的捕获异常方式" class="headerlink" title="2.1、最简单的捕获异常方式"></a>2.1、最简单的捕获异常方式</h3><ul>
+<li><p>在程序中捕获异常一般用<code>try</code>来捕获</p>
+</li>
+<li><p>最简单捕获方式</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    异常语法</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">    异常输出</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
+<h4 id="例子："><a href="#例子：" class="headerlink" title="例子："></a>例子：</h4><blockquote>
+<p>编写一个不能处0的案例</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">s1=int(input(<span class="string">"请输入一个数字："</span>))</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    result = <span class="number">9</span> / s1</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">    print(<span class="string">"不能为0"</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="结果："><a href="#结果：" class="headerlink" title="结果："></a>结果：</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">请输入一个数字：<span class="number">0</span></span><br><span class="line">不能为<span class="number">0</span></span><br><span class="line"></span><br><span class="line">Process finished <span class="keyword">with</span> exit code <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2、根据类型捕获异常"><a href="#2-2、根据类型捕获异常" class="headerlink" title="2.2、根据类型捕获异常"></a>2.2、根据类型捕获异常</h3><ul>
+<li><p>在程序中我们要根据不同的错误返回不同的信息</p>
+<p>代码格式如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    异常代码</span><br><span class="line"><span class="keyword">except</span> 异常类型:</span><br><span class="line">    提示</span><br><span class="line"><span class="keyword">except</span> 异常类型:</span><br><span class="line">    提示</span><br></pre></td></tr></table></figure>
+
+<h4 id="例子：-1"><a href="#例子：-1" class="headerlink" title="例子："></a>例子：</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    s1 = int(input(<span class="string">"请输入一个数字："</span>))</span><br><span class="line">    result = <span class="number">9</span> / s1</span><br><span class="line"><span class="keyword">except</span> ZeroDivisionError:</span><br><span class="line">    print(<span class="string">"不能为0"</span>)</span><br><span class="line"><span class="keyword">except</span> ValueError:</span><br><span class="line">    print(<span class="string">"请输入正确的整数"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>结果1：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">请输入一个数字：a</span><br><span class="line">请输入正确的整数</span><br><span class="line"></span><br><span class="line">Process finished with exit code 0</span><br></pre></td></tr></table></figure>
+
+<p>结果2：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">请输入一个数字：<span class="number">0</span></span><br><span class="line">不能为<span class="number">0</span></span><br><span class="line"></span><br><span class="line">Process finished <span class="keyword">with</span> exit code0</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="2-3、捕获未知异常"><a href="#2-3、捕获未知异常" class="headerlink" title="2.3、捕获未知异常"></a>2.3、捕获未知异常</h3><ul>
+<li><p>在程序中会遇到未知错误，又想让程序运行，所以我们要捕获斌输出</p>
+<p>格式：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    异常代码</span><br><span class="line"><span class="keyword">except</span> ZeroDivisionError:</span><br><span class="line">    错误提示</span><br><span class="line"><span class="keyword">except</span> Exception <span class="keyword">as</span> a:</span><br><span class="line">    未知信息</span><br></pre></td></tr></table></figure>
+
+<p>例子：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    s1 = int(input(<span class="string">"请输入一个数字："</span>))</span><br><span class="line">    result = <span class="number">9</span> / s1</span><br><span class="line"><span class="keyword">except</span> ZeroDivisionError:</span><br><span class="line">    print(<span class="string">"不能为0"</span>)</span><br><span class="line"><span class="keyword">except</span> Exception <span class="keyword">as</span> a:</span><br><span class="line">    print(<span class="string">f"错误提示<span class="subst">&#123;a&#125;</span>"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">请输入一个数字：a</span><br><span class="line">错误提示invalid literal <span class="keyword">for</span> int() <span class="keyword">with</span> base <span class="number">10</span>: <span class="string">'a'</span></span><br><span class="line">    </span><br><span class="line">Process finished <span class="keyword">with</span> exit code <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="2-4、异常抛出的完整语法"><a href="#2-4、异常抛出的完整语法" class="headerlink" title="2.4、异常抛出的完整语法"></a>2.4、异常抛出的完整语法</h3><ul>
+<li><p>实际开发中有些难度，下面为完整的格式</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    异常代码</span><br><span class="line"><span class="keyword">except</span> 异常类型:</span><br><span class="line">    提示信息</span><br><span class="line"><span class="keyword">except</span> Exception <span class="keyword">as</span> a:</span><br><span class="line">    提示信息</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    没有异常代码</span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">    有没有异常都会执行</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>例子：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    s1 = int(input(<span class="string">"请输入一个数字："</span>))</span><br><span class="line">    result = <span class="number">9</span> / s1</span><br><span class="line"><span class="keyword">except</span> ZeroDivisionError:</span><br><span class="line">    print(<span class="string">"不能为0"</span>)</span><br><span class="line"><span class="keyword">except</span> Exception <span class="keyword">as</span> a:</span><br><span class="line">    print(<span class="string">f"错误提示<span class="subst">&#123;a&#125;</span>"</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">"123"</span>)</span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">    print(<span class="string">"有没有都会执行"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">请输入一个数字：<span class="number">0</span></span><br><span class="line">不能为<span class="number">0</span></span><br><span class="line">有没有都会执行</span><br><span class="line"></span><br><span class="line">Process finished <span class="keyword">with</span> exit code <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-5、主动创建异常抛出"><a href="#2-5、主动创建异常抛出" class="headerlink" title="2.5、主动创建异常抛出"></a>2.5、主动创建异常抛出</h3><ul>
+<li>我们会在程序中设置一些为满足条件就出现异常，终止程序</li>
+</ul>
+<p>例子：</p>
+<blockquote>
+<p>输入的年龄大于0且小于100</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getAge</span><span class="params">()</span>:</span></span><br><span class="line">    age = int(input(<span class="string">"请输入年龄："</span>))</span><br><span class="line">    <span class="keyword">if</span> age&gt;<span class="number">0</span> &amp; age&lt;<span class="number">100</span>:</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    ex=Exception(<span class="string">"age输入错误"</span>)</span><br><span class="line">    <span class="keyword">return</span> ex;</span><br><span class="line">print(getAge())</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">请输入年龄：<span class="number">-1</span></span><br><span class="line">age输入错误</span><br><span class="line"></span><br><span class="line">Process finished <span class="keyword">with</span> exit code <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
 
         </div>
         
@@ -451,6 +681,116 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">yag_mail=yagmail.SMTP(user=<span class="string">"lzj159110@163.com"</span>,password=<span class="string">"py923350"</span>,host=<span class="string">"smtp.163.com"</span>)</span><br><span class="line">  con=<span class="string">"你好"</span></span><br><span class="line">  <span class="comment">#分别为发送邮箱、标题、内容</span></span><br><span class="line">  yag_mail.send(<span class="string">"liuzhijun9090@126.com"</span>,<span class="string">"警告"</span>,con)</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://lzj-9090.github.io/lzj-9090.liu.io/images/%E7%BD%91%E6%98%93.png" alt></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-image">
+        <a href="/lzj-9090.liu.io/2020/04/01/python%E6%96%87%E4%BB%B6/" class="image is-7by1">
+            <img class="thumbnail" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2002889011,2994526377&amp;fm=26&amp;gp=0.jpg" alt="python文件操作">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-03-31T16:00:00.000Z">2020-04-01</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E5%BC%80%E5%8F%91/">开发</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    5 分钟 读完 (大约 684 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/lzj-9090.liu.io/2020/04/01/python%E6%96%87%E4%BB%B6/">python文件操作</a>
+            
+        </h1>
+        <div class="content">
+            <p>date: 2020-4-4<br>categories:</p>
+<ul>
+<li>开发<br>tags:</li>
+<li>python</li>
+</ul>
+<hr>
+<h1 id="python文件操作"><a href="#python文件操作" class="headerlink" title="python文件操作"></a>python文件操作</h1><h2 id="1、文件读取"><a href="#1、文件读取" class="headerlink" title="1、文件读取"></a>1、文件读取</h2><blockquote>
+<p>读取文件：</p>
+<p>1、打开文件</p>
+<p>2、读取文件</p>
+<p>3、输出文件</p>
+</blockquote>
+<h3 id="1-1、读取普通文本文件"><a href="#1-1、读取普通文本文件" class="headerlink" title="1.1、读取普通文本文件"></a>1.1、读取普通文本文件</h3>  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">comment=open(<span class="string">"/home/user1/python/test.txt"</span>)</span><br><span class="line"><span class="comment">#prin=comment.read();</span></span><br><span class="line"><span class="comment">#print(prin)</span></span><br><span class="line"><span class="comment">#逐行读取</span></span><br><span class="line">line=comment.readlines()</span><br><span class="line">print(line)</span><br><span class="line"><span class="keyword">for</span> v <span class="keyword">in</span> line:</span><br><span class="line">    print(v)</span><br></pre></td></tr></table></figure>
+
+<p>  效果：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">富强</span><br><span class="line">民主</span><br><span class="line">自由</span><br><span class="line">和谐</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-2、读取二进制文件"><a href="#1-2、读取二进制文件" class="headerlink" title="1.2、读取二进制文件"></a>1.2、读取二进制文件</h3>  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">openb=<span class="string">"/home/user1/图片/未命名.png"</span></span><br><span class="line">strem=open(openb,<span class="string">'rb'</span>)</span><br><span class="line">prin=strem.read()</span><br><span class="line">print(prin)</span><br></pre></td></tr></table></figure>
+
+<p>  效果：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">16&#123;\xb4%\xa7K\xe4B\xa2\x96v\x87K\x1c1\x0bcH\x9c3\xca\x86Kj\x15\&#39;\&#39;D\xc4r\x0f\xe7\xbc\xac#7\x0f\xe7f\\\xafk\xed\xc7&#x3D;M\x13\x18V\x12,\xf28\x89Y\xa7\xcc\r\x81k(\xa7&#96;\xa4\x04\xf0\xb1N\xc8q?8&gt;\xf7\xc9\x0c\xd1XJ\xd9\xb1\x94\xb1w&#125;Y\xeb8,\x86\x8a\xa4\xd8\xc8F\x9d\x12\xc4Qmp\xd8\xe0\xdf!j\x80&#125;.\xb7\xf3\xbf&#123;fwwu\x0e\xedy\x93#I\x9a\x9d\xffL\x00\x96g\x99\xb2\x8c\xd3\xd0\x84\xc9\xcd \x040\xbb]\xd2J\x0e\x86D\xe2\x9cL\xca\xe7\xce\xf9\x9b\xc9\xc0:i\xedh\x8c\x815&#123;[\x9f\xe0#\xb6m\xc3e\xb9\xc34-\xd9(.\xf3\xd8\xc1P.z\xca\x13\x88\x84&lt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2、文件写和追加"><a href="#2、文件写和追加" class="headerlink" title="2、文件写和追加"></a>2、文件写和追加</h2><h3 id="2-1、文件写"><a href="#2-1、文件写" class="headerlink" title="2.1、文件写"></a>2.1、文件写</h3><h4 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h4><ul>
+<li>write：直接写</li>
+<li>writelines:可以迭代</li>
+</ul>
+<blockquote>
+<p>写文件：</p>
+<p>​    1、打开文件，操作w、a</p>
+<ul>
+<li>w: 写</li>
+<li>a:追加</li>
+</ul>
+<p>​    2、写入字符串</p>
+<p>​    3、关闭</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#文件写内容</span></span><br><span class="line"><span class="comment">#打开文件选择模式</span></span><br><span class="line">stream=open(<span class="string">"/home/user1/python/文件操作/test.txt"</span>,<span class="string">'w'</span>)</span><br><span class="line">string=<span class="string">'''</span></span><br><span class="line"><span class="string">你好！</span></span><br><span class="line"><span class="string">    你的有一个快递！</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line">stream.write(string)</span><br><span class="line"><span class="comment">#释放资源</span></span><br><span class="line">result=stream .close()</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[user1@lzj 文件操作]$ python write.py </span><br><span class="line">None</span><br><span class="line">[user1@lzj 文件操作]$ cat test.txt </span><br><span class="line"></span><br><span class="line">你好！</span><br><span class="line">    你的有一个快递！</span><br><span class="line">[user1@lzj 文件操作]$</span><br></pre></td></tr></table></figure>
+
+<h4 id="writelines方法"><a href="#writelines方法" class="headerlink" title="writelines方法"></a>writelines方法</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#文件写内容</span></span><br><span class="line"><span class="comment">#打开文件选择模式</span></span><br><span class="line">stream=open(<span class="string">"/home/user1/python/文件操作/test.txt"</span>,<span class="string">'w'</span>)</span><br><span class="line">list1=[<span class="string">"张三\n"</span>,<span class="string">"李四\n"</span>,<span class="string">"王五\n"</span>]</span><br><span class="line">stream.writelines(list1)</span><br><span class="line"></span><br><span class="line"><span class="comment">#释放资源</span></span><br><span class="line">result=stream .close()</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[user1@lzj 文件操作]$ python write.py </span><br><span class="line">None</span><br><span class="line">[user1@lzj 文件操作]$ cat test.txt </span><br><span class="line">张三</span><br><span class="line">李四</span><br><span class="line">王五</span><br></pre></td></tr></table></figure>
+
+<h3 id="追加"><a href="#追加" class="headerlink" title="追加"></a>追加</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#文件写内容</span></span><br><span class="line"><span class="comment">#打开文件选择模式</span></span><br><span class="line">stream=open(<span class="string">"/home/user1/python/文件操作/test.txt"</span>,<span class="string">'a'</span>)</span><br><span class="line">list1=[<span class="string">"第二遍\n"</span>,<span class="string">"张三\n"</span>,<span class="string">"李四\n"</span>,<span class="string">"王五\n"</span>]</span><br><span class="line">stream.writelines(list1)</span><br><span class="line"><span class="comment">#释放资源</span></span><br><span class="line">result=stream .close()</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[user1@lzj 文件操作]$ python write.py </span><br><span class="line">None</span><br><span class="line">[user1@lzj 文件操作]$ cat test.txt </span><br><span class="line">张三</span><br><span class="line">李四</span><br><span class="line">王五</span><br><span class="line">第二遍</span><br><span class="line">张三</span><br><span class="line">李四</span><br><span class="line">王五</span><br><span class="line">[user1@lzj 文件操作]$</span><br></pre></td></tr></table></figure>
+
+<h2 id="复制文件"><a href="#复制文件" class="headerlink" title="复制文件"></a>复制文件</h2><p><img src="https://lzj-9090.github.io/lzj-9090.liu.io/images/%E5%A4%8D%E5%88%B6%E6%93%8D%E4%BD%9C.png" alt></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#with可以实现自动释放资源</span></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">"/home/user1/图片/未命名.png"</span>,<span class="string">'rb'</span>) <span class="keyword">as</span> stream:</span><br><span class="line">    result=stream.read()</span><br><span class="line">    <span class="keyword">with</span> open(<span class="string">"/home/user1/01.png"</span>,<span class="string">'wb'</span>) <span class="keyword">as</span> stream2:</span><br><span class="line">        stream2.write(result)</span><br><span class="line">print(<span class="string">"完成"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[user1@lzj 文件操作]$ ls /home/user1/</span><br><span class="line">01.png   视频  图片  文档  下载  音乐  桌面 </span><br><span class="line">[user1@lzj 文件操作]$</span><br></pre></td></tr></table></figure>
+
 
         </div>
         
@@ -939,315 +1279,25 @@ tags:
 
 
 
+
     
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-02-28T16:00:00.000Z">2019-03-01</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E8%BF%90%E7%BB%B4/">运维</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1 分钟 读完 (大约 162 个字)
-                </span>
-                
-                
-            </div>
+<div class="card card-transparent">
+    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+        <div class="pagination-previous is-invisible is-hidden-mobile">
+            <a class="is-flex-grow has-text-black-ter" href="/lzj-9090.liu.io/page/0/">上一页</a>
         </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/lzj-9090.liu.io/2019/03/01/Linux%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AE%E9%9D%99Ip/">Linux如何配置静Ip</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="配置步骤"><a href="#配置步骤" class="headerlink" title="配置步骤"></a>配置步骤</h2><h3 id="修改-etc-sysconfig-network-scripts-ifcfg-eth0（eth0为网卡文件名称，一般都为ens33）"><a href="#修改-etc-sysconfig-network-scripts-ifcfg-eth0（eth0为网卡文件名称，一般都为ens33）" class="headerlink" title="修改/etc/sysconfig/network-scripts/ifcfg-eth0（eth0为网卡文件名称，一般都为ens33）"></a>修改<code>/etc/sysconfig/network-scripts/ifcfg-eth0</code>（eth0为网卡文件名称，一般都为ens33）</h3><pre><code>[root@lzj ~]# vim /etc/sysconfig/network-scripts/ifcfg-eth0
-[root@lzj ~]# cat /etc/sysconfig/network-scripts/ifcfg-eth0
-TYPE=Ethernet               ---网卡类型
-#UUID=30930cb0-2d69-4f81-9526-60bed337e547
-BOOTPROTO=static            ----静态
-NAME=eth0                   ----eth0为此配置文件名
-DEVICE=eth0                 ----eth0为此文件配置文件名
-IPADDR=192.168.135.145      -----ip地址
-PREFIX=24                   -----相当于子网掩码                  
-GATEWAY=192.168.135.2       -----网关
-DNS1=192.168.135.2          -----DNS地址
-ONBOOT=yes
-[root@lzj ~]# </code></pre><h3 id="重启网卡"><a href="#重启网卡" class="headerlink" title="重启网卡"></a>重启网卡</h3><pre><code>[root@lzj ~]# systemctl restart network
-[root@lzj ~]# </code></pre><h3 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h3><pre><code>[root@lzj ~]# ifconfig
-.....
-eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
-    inet 192.168.135.145  netmask 255.255.255.0  broadcast 192.168.135.255
-    inet6 fe80::20c:29ff:fe84:67f2  prefixlen 64  scopeid 0x20&lt;link&gt;
-    ether 00:0c:29:84:67:f2  txqueuelen 1000  (Ethernet)
-    RX packets 498  bytes 46129 (45.0 KiB)
-    RX errors 0  dropped 0  overruns 0  frame 0
-    TX packets 445  bytes 53121 (51.8 KiB)
-    TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-    ....</code></pre>
+        <div class="pagination-next">
+            <a class="is-flex-grow has-text-black-ter" href="/lzj-9090.liu.io/page/2/">下一页</a>
         </div>
-        
-        
-        
-    </div>
+        <ul class="pagination-list is-hidden-mobile">
+            
+            <li><a class="pagination-link is-current" href="/lzj-9090.liu.io/">1</a></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/lzj-9090.liu.io/page/2/">2</a></li>
+            
+        </ul>
+    </nav>
 </div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-image">
-        <a href="/lzj-9090.liu.io/2019/03/01/1%E3%80%81http/" class="image is-7by1">
-            <img class="thumbnail" src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1759165733,246267324&amp;fm=26&amp;gp=0.jpg" alt="yum安装http">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-02-28T16:00:00.000Z">2019-03-01</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E8%BF%90%E7%BB%B4/">运维</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    9 分钟 读完 (大约 1350 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/lzj-9090.liu.io/2019/03/01/1%E3%80%81http/">yum安装http</a>
-            
-        </h1>
-        <div class="content">
-             <meta name="referrer" content="no-referrer">
-# 1、http
-
-<h2 id="1-1、yum安装的http的安装与使用"><a href="#1-1、yum安装的http的安装与使用" class="headerlink" title="1.1、yum安装的http的安装与使用"></a>1.1、yum安装的http的安装与使用</h2><h3 id="1-、yum安装httpd"><a href="#1-、yum安装httpd" class="headerlink" title="1.、yum安装httpd"></a>1.、<code>yum</code>安装<code>httpd</code></h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@lzj ssl]# yum install -y httpd</span><br></pre></td></tr></table></figure>
-
-<p>配置文件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@lzj ssl]# vim /etc/httpd/conf/httpd.conf`</span><br><span class="line"></span><br><span class="line">`DocumentRoot "/var/www/html"           这是文件路径默认为/var/www/html</span><br></pre></td></tr></table></figure>
-
-<p>启动httpd</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@lzj ssl]# systemctl start httpd</span><br></pre></td></tr></table></figure>
-
-<p>输入Ip访问</p>
-<p><img src="https://lzj-9090.github.io/lzj-9090.liu.io/images/http01.png" alt="xxx"></p>
-<h3 id="1-1-2、yum安装的httpd的配置文件"><a href="#1-1-2、yum安装的httpd的配置文件" class="headerlink" title="1.1.2、yum安装的httpd的配置文件"></a>1.1.2、yum安装的httpd的配置文件</h3><table>
-<thead>
-<tr>
-<th align="center">配置文件地址</th>
-<th align="center">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">/var/log/httpd/access.log&amp;var/log/error_log</td>
-<td align="center">正确日志&amp;错误日志</td>
-</tr>
-<tr>
-<td align="center">/var/www/html</td>
-<td align="center">站点目录</td>
-</tr>
-<tr>
-<td align="center">/usr/lib64/httpd/modules/</td>
-<td align="center">文件模块路径</td>
-</tr>
-<tr>
-<td align="center">/etc/httpd/conf/httpd.conf</td>
-<td align="center">主配置文件</td>
-</tr>
-<tr>
-<td align="center">/etc/httpd/conf.modules.d/*.conf</td>
-<td align="center">模块配置文件</td>
-</tr>
-<tr>
-<td align="center">/etc/httpd/conf.d/*.conf</td>
-<td align="center">辅助配置文件</td>
-</tr>
-</tbody></table>
-<h3 id="1-1-3、httpd的常见选项"><a href="#1-1-3、httpd的常见选项" class="headerlink" title="1.1.3、httpd的常见选项"></a>1.1.3、httpd的常见选项</h3><blockquote>
-<p>语法   :     httpd        [选项]</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th align="center">选项</th>
-<th align="center">作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">-l</td>
-<td align="center">查看编译模块</td>
-</tr>
-<tr>
-<td align="center">-M</td>
-<td align="center">输出一个已经启用的模块</td>
-</tr>
-<tr>
-<td align="center">-V</td>
-<td align="center">显示版本</td>
-</tr>
-<tr>
-<td align="center">-X</td>
-<td align="center">以调试模式运行httpd</td>
-</tr>
-<tr>
-<td align="center">-t</td>
-<td align="center">检查配置文件是否有语法错误</td>
-</tr>
-</tbody></table>
-<p><code>[root@lzj ssl]# httpd -l
-  Compiled in modules:
-  core.c
-  mod_so.c
-  http_core.c
-  [root@lzj ssl]# httpd -v
-  Server version: Apache/2.4.38 (Unix)
-  Server built:   Mar  9 2020 17:09:44</code></p>
-<h2 id="1-2、curl命令"><a href="#1-2、curl命令" class="headerlink" title="1.2、curl命令"></a>1.2、curl命令</h2><p>curl是基于url语法在命令行方式下工作的文件传输工具，它支持FTP,FTPS,等协议。</p>
-<p>curl支持以下功能：</p>
-<ul>
-<li>https认证</li>
-<li>http的POST/PUT等方法</li>
-<li>ftp上传</li>
-<li>代理服务器</li>
-<li>cookies</li>
-<li>用户名/密码认证</li>
-<li>下载文件断电续传</li>
-<li>sockes5代理服务</li>
-<li>通过http代理服务器上传到ftp</li>
-</ul>
-<blockquote>
-<p>语法：curl [选项]    [url]</p>
-<p>常用选项：</p>
-<p>-A                设置代理发送服务器</p>
-<p>-basic         使用http基本认证</p>
-<p>–tcp-nodelay           使用TCP_NODRLAY选项</p>
-<p>-o                输出写到文件中</p>
-<p>-I                只显示报文信息</p>
-<p>–limit-rate<rate>        设置传输速度</rate></p>
-</blockquote>
-<p>使用curl下载文件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@lzj ssl]# curl -o myblog.html http://blog.51cto.com/itchentao</span><br><span class="line">  `% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current`</span><br><span class="line">                                 `Dload  Upload   Total   Spent    Left  Speed`</span><br><span class="line">100   180    0   180    0     0     67      0 --:--:--  0:00:02 --:--:--    67</span><br></pre></td></tr></table></figure>
-
-<h1 id="源码安装httpd"><a href="#源码安装httpd" class="headerlink" title="源码安装httpd"></a>源码安装httpd</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">安装开发环境</span></span><br><span class="line">[root@localhost ~]# yum groupinstall "Development Tools"</span><br><span class="line"><span class="meta">#</span><span class="bash">下载必要的插件</span></span><br><span class="line">[root@localhost ~]# yum install -y opensll-devel pcre-devel expat-devel libtool</span><br><span class="line"><span class="meta">#</span><span class="bash">下载依赖和httpd</span></span><br><span class="line">[root@localhost ~]# ls</span><br><span class="line">anaconda-ks.cfg  apr-1.6.5.tar.gz  apr-util-1.6.1.tar.bz2  httpd-2.4.38.tar.bz2</span><br><span class="line">[root@localhost ~]# </span><br><span class="line"><span class="meta">#</span><span class="bash">创建apache用户和组（由于创建用户时顺便创建了组）</span></span><br><span class="line">[root@localhost ~]# useradd -r apache</span><br><span class="line">[root@localhost ~]# id apache</span><br><span class="line">uid=997(apache) gid=995(apache) groups=995(apache)</span><br><span class="line">[root@localhost ~]# </span><br><span class="line"><span class="meta">#</span><span class="bash">解压 apr-1.6.5.tar.gz、apr-util-1.6.1.tar.bz2、httpd-2.4.38.tar.bz2</span></span><br><span class="line">[root@localhost ~]# tar -xf apr-1.6.5.tar.gz </span><br><span class="line">[root@localhost ~]# ls</span><br><span class="line">anaconda-ks.cfg  apr-1.6.5  apr-1.6.5.tar.gz  apr-util-1.6.1.tar.bz2  httpd-2.4.38.tar.bz2</span><br><span class="line">[root@localhost ~]# tar -xf apr-util-1.6.1.tar.bz2 </span><br><span class="line">[root@localhost ~]# ls</span><br><span class="line">anaconda-ks.cfg  apr-1.6.5  apr-1.6.5.tar.gz  apr-util-1.6.1  apr-util-1.6.1.tar.bz2  httpd-2.4.38.tar.bz2</span><br><span class="line">[root@localhost ~]# tar -xf httpd-2.4.38.tar.bz2 </span><br><span class="line">[root@localhost ~]# ls</span><br><span class="line">anaconda-ks.cfg  apr-1.6.5  apr-1.6.5.tar.gz  apr-util-1.6.1  apr-util-1.6.1.tar.bz2  httpd-2.4.38  httpd-2.4.38.tar.bz2</span><br><span class="line">[root@localhost ~]# </span><br><span class="line"><span class="meta">#</span><span class="bash">进入apr-1.6.5进行编译安装</span></span><br><span class="line">[root@localhost ~]# cd apr-1.6.5</span><br><span class="line">[root@localhost apr-1.6.5]# vim configure</span><br><span class="line">    cfgfile=$&#123;ofile&#125;T</span><br><span class="line">    trap "$RM \"$cfgfile\"; exit 1" 1 2 15</span><br><span class="line"><span class="meta">#</span><span class="bash">    <span class="variable">$RM</span> <span class="string">"<span class="variable">$cfgfile</span>"</span> （添加注释或者删除）</span></span><br><span class="line">[root@localhost apr-1.6.5]# ./configure --prefix=/usr/local/apr</span><br><span class="line">[root@localhost apr-1.6.5]# make &amp;&amp; make install</span><br><span class="line"><span class="meta">#</span><span class="bash">进入apr-util-1.6.1 目录</span></span><br><span class="line">[root@localhost apr-1.6.5]# cd ..</span><br><span class="line">[root@localhost ~]# cd apr-util-1.6.1</span><br><span class="line">[root@localhost apr-util-1.6.1]# ./configure --prefix=/usr/local/apr-util --with-apr=/usr/local/apr/</span><br><span class="line">[root@localhost apr-util-1.6.1]# make &amp;&amp; make install</span><br><span class="line"><span class="meta">#</span><span class="bash">进入httpd，并且编译</span></span><br><span class="line">[root@localhost ~]# cd httpd-2.4.38</span><br><span class="line">[root@localhost httpd-2.4.37]# ./configure --prefix=/usr/local/apache  --sysconfdir=/etc/httpd24 --enable-so  --enable-ssl  --enable-cgi  --enable-rewrite  --with-zlib  --with-pcre  --with-apr=/usr/local/apr  --with-apr-util=/usr/local/apr-util/  --enable-modules=most  --enable-mpms-shared=all  --with-mpm=prefork</span><br><span class="line">[root@localhost httpd-2.4.38]# make &amp;&amp; make install</span><br><span class="line"><span class="meta">#</span><span class="bash">后续操作</span></span><br><span class="line">[root@localhost ~]#  echo 'export PATH=/usr/local/apache/bin:$PATH' &gt; /etc/profile.d/httpd.sh </span><br><span class="line">[root@localhost ~]# source /etc/profile.d/httpd.sh </span><br><span class="line">[root@localhost ~]#  ln -s /usr/local/apache/include/ /usr/include/httpd </span><br><span class="line">[root@localhost ~]#  sed -i '/#ServerName/s/#//g' /etc/httpd24/httpd.conf </span><br><span class="line">[root@localhost ~]# apachectl start</span><br><span class="line">httpd (pid 56851) already running</span><br><span class="line">[root@localhost ~]# ss -antl</span><br><span class="line">State      Recv-Q Send-Q                      Local Address:Port                                     Peer Address:Port              </span><br><span class="line">LISTEN     0      128                                     *:22                                                  *:*                  </span><br><span class="line">LISTEN     0      100                             127.0.0.1:25                                                  *:*                  </span><br><span class="line">LISTEN     0      128                                    :::80                                                 :::*                  </span><br><span class="line">LISTEN     0      32                                     :::21                                                 :::*                  </span><br><span class="line">LISTEN     0      128           :::22</span><br></pre></td></tr></table></figure>
-
-<h2 id="相关文件"><a href="#相关文件" class="headerlink" title="相关文件"></a>相关文件</h2><table>
-<thead>
-<tr>
-<th align="center">文件地址</th>
-<th align="center">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">/usr/local/apache/htdocs/</td>
-<td align="center">源码默认网页存放地址</td>
-</tr>
-<tr>
-<td align="center">/etc/httpd24/httpd.conf</td>
-<td align="center">源码安装主配置文件</td>
-</tr>
-<tr>
-<td align="center">/usr/local/apache/logs/</td>
-<td align="center">源码安装的日志文件</td>
-</tr>
-</tbody></table>
-<h1 id="控制访问"><a href="#控制访问" class="headerlink" title="控制访问"></a>控制访问</h1><table>
-<thead>
-<tr>
-<th align="center">权限</th>
-<th align="center">作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">Require all granted</td>
-<td align="center">允许所有主机访问</td>
-</tr>
-<tr>
-<td align="center">Require all deny</td>
-<td align="center">拒绝所有主机访问</td>
-</tr>
-<tr>
-<td align="center">Require ip IPADDR</td>
-<td align="center">允许指定ip访问</td>
-</tr>
-<tr>
-<td align="center">Require no ip IPADDR</td>
-<td align="center">不允许指定ip访问</td>
-</tr>
-<tr>
-<td align="center">Require host HOSTNAME</td>
-<td align="center">指定主机名访问</td>
-</tr>
-<tr>
-<td align="center">Require no host HOSTNAME</td>
-<td align="center">不允许指定的主机名访问</td>
-</tr>
-</tbody></table>
-<h2 id="只允许192-168-135-122访问"><a href="#只允许192-168-135-122访问" class="headerlink" title="只允许192.168.135.122访问"></a>只允许192.168.135.122访问</h2><h3 id="修改主配置文件"><a href="#修改主配置文件" class="headerlink" title="修改主配置文件"></a>修改主配置文件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# vim /etc/httpd24/httpd.conf </span><br><span class="line"><span class="meta">#</span><span class="bash">添加如下内容</span></span><br><span class="line">&lt;Directory "/usr/local/apache/htdocs/"&gt;</span><br><span class="line">    &lt;RequireAll&gt;</span><br><span class="line">        Require ip 192.168.135.122</span><br><span class="line">        Require all granted</span><br><span class="line">    &lt;/RequireAll&gt;</span><br><span class="line">&lt;/Directory&gt;</span><br><span class="line"><span class="meta">#</span><span class="bash">192。168.135.122客户端</span></span><br><span class="line">[root@localhost ~]# curl 192.168.135.145</span><br><span class="line">&lt;html&gt;&lt;body&gt;&lt;h1&gt;It works!&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;</span><br><span class="line">[root@localhost ~]#</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://lzj-9090.github.io/lzj-9090.liu.io/images/http03.jpg" alt></p>
-<h1 id="配置虚拟主机"><a href="#配置虚拟主机" class="headerlink" title="配置虚拟主机"></a>配置虚拟主机</h1><blockquote>
-<p>虚拟主机有三种：</p>
-<ul>
-<li>端口不同ip相同域名相同</li>
-<li>ip不同端口相同域名相同</li>
-<li>域名不同ip相同端口相同</li>
-</ul>
-</blockquote>
-<h2 id="端口相同ip相同域名不同"><a href="#端口相同ip相同域名不同" class="headerlink" title="端口相同ip相同域名不同"></a>端口相同ip相同域名不同</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# vim /etc/httpd24/httpd.conf </span><br><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">    DocumentRoot "/usr/local/apache/htdocs/"</span><br><span class="line">    ServerName demo1.example.com</span><br><span class="line">    ErrorLog "logs/demo1-error_log"</span><br><span class="line">    CustomLog "logs/demo1-access_log" common</span><br><span class="line">&lt;/VirtualHost&gt;</span><br><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">    DocumentRoot "/usr/local/apache/htdocs/"</span><br><span class="line">    ServerName demo2.example.com</span><br><span class="line">    ErrorLog "logs/demo2-error_log"</span><br><span class="line">    CustomLog "logs/demo2-access_log" common</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>由于没有购买域名和服务器所以需要host解析</p>
-</blockquote>
-<p><img src="https://lzj-9090.github.io/lzj-9090.liu.io/images/http04.jpg" alt></p>
-<p><img src="https://lzj-9090.github.io/lzj-9090.liu.io/images/http05.jpg" alt></p>
-<h2 id="端口不同ip相同"><a href="#端口不同ip相同" class="headerlink" title="端口不同ip相同"></a>端口不同ip相同</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# vim /etc/httpd24/httpd.conf </span><br><span class="line">Listen 70</span><br><span class="line">&lt;VirtualHost *:70&gt;</span><br><span class="line">    DocumentRoot "/usr/local/apache/htdocs/"</span><br><span class="line">    ServerName demo1.example.com</span><br><span class="line">    ErrorLog "logs/demo1-error_log"</span><br><span class="line">    CustomLog "logs/demo1-access_log" common</span><br><span class="line">&lt;/VirtualHost&gt;</span><br><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">    DocumentRoot "/usr/local/apache/htdocs/"</span><br><span class="line">    ServerName demo2.example.com</span><br><span class="line">    ErrorLog "logs/demo2-error_log"</span><br><span class="line">    CustomLog "logs/demo2-access_log" common</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://lzj-9090.github.io/lzj-9090.liu.io/images/http06.jpg" alt></p>
-<p><img src="https://lzj-9090.github.io/lzj-9090.liu.io/images/http07.jpg" alt></p>
-<h2 id="端口相同Ip不同"><a href="#端口相同Ip不同" class="headerlink" title="端口相同Ip不同"></a>端口相同Ip不同</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# ip addr add 192.168.135.7/24 dev ens33</span><br><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">    DocumentRoot "/usr/local/apache/htdocs/"</span><br><span class="line">    ServerName demo1.example.com</span><br><span class="line">    ErrorLog "logs/demo1-error_log"</span><br><span class="line">    CustomLog "logs/demo1-access_log" common</span><br><span class="line">&lt;/VirtualHost&gt;</span><br><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">    DocumentRoot "/usr/local/apache/htdocs/"</span><br><span class="line">    ServerName demo2.example.com</span><br><span class="line">    ErrorLog "logs/demo2-error_log"</span><br><span class="line">    CustomLog "logs/demo2-access_log" common</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://lzj-9090.github.io/lzj-9090.liu.io/images/http08.jpg" alt></p>
-<p><img src="https://lzj-9090.github.io/lzj-9090.liu.io/images/http09.jpg" alt></p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
 </div>
                 
@@ -1294,7 +1344,7 @@ eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
                     </p>
                     <a href="/lzj-9090.liu.io/archives">
                         <p class="title has-text-weight-normal">
-                            9
+                            12
                         </p>
                     </a>
                 </div>
@@ -1435,7 +1485,7 @@ eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
                 <span class="level-item">开发</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">2</span>
+                <span class="level-item tag">4</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/lzj-9090.liu.io/categories/%E8%BF%90%E7%BB%B4/">
@@ -1443,7 +1493,7 @@ eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
                 <span class="level-item">运维</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">4</span>
+                <span class="level-item tag">6</span>
             </span>
         </a></li>
             </ul>
@@ -1471,18 +1521,56 @@ eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
         
         <article class="media">
             
-            <a href="/lzj-9090.liu.io/2020/04/06/radhat7%E4%B8%AD%E9%85%8D%E7%BD%AEtomcat/" class="media-left">
+            <a href="/lzj-9090.liu.io/2020/04/13/radhat7%E4%B8%AD%E9%85%8D%E7%BD%AEtomcat/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/lzj-9090.liu.io/images/thumbnail.svg" alt="radhat7中配置tomcat">
+                    <img class="thumbnail" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2491647022,3900371976&amp;fm=26&amp;gp=0.jpg" alt="Linux配置tomcat">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-06T02:49:06.286Z">2020-04-06</time></div>
-                    <a href="/lzj-9090.liu.io/2020/04/06/radhat7%E4%B8%AD%E9%85%8D%E7%BD%AEtomcat/" class="title has-link-black-ter is-size-6 has-text-weight-normal">radhat7中配置tomcat</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-12T16:00:00.000Z">2020-04-13</time></div>
+                    <a href="/lzj-9090.liu.io/2020/04/13/radhat7%E4%B8%AD%E9%85%8D%E7%BD%AEtomcat/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Linux配置tomcat</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E8%BF%90%E7%BB%B4/">运维</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/lzj-9090.liu.io/2020/04/13/raync%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1552099217,3201789165&amp;fm=15&amp;gp=0.jpg" alt="raync数据同步">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-12T16:00:00.000Z">2020-04-13</time></div>
+                    <a href="/lzj-9090.liu.io/2020/04/13/raync%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/" class="title has-link-black-ter is-size-6 has-text-weight-normal">raync数据同步</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E8%BF%90%E7%BB%B4/">运维</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/lzj-9090.liu.io/2020/04/13/python%E4%B8%AD%E5%BC%82%E5%B8%B8%E6%8A%9B%E5%87%BA/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2002889011,2994526377&amp;fm=26&amp;gp=0.jpg" alt="python异常抛出">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-12T16:00:00.000Z">2020-04-13</time></div>
+                    <a href="/lzj-9090.liu.io/2020/04/13/python%E4%B8%AD%E5%BC%82%E5%B8%B8%E6%8A%9B%E5%87%BA/" class="title has-link-black-ter is-size-6 has-text-weight-normal">python异常抛出</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E5%BC%80%E5%8F%91/">开发</a>
                     </p>
                 </div>
             </div>
@@ -1526,44 +1614,6 @@ eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/lzj-9090.liu.io/2020/04/01/python%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=341593753,2925500947&amp;fm=26&amp;gp=0.jpg" alt="python自动发送邮件">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-31T16:00:00.000Z">2020-04-01</time></div>
-                    <a href="/lzj-9090.liu.io/2020/04/01/python%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6/" class="title has-link-black-ter is-size-6 has-text-weight-normal">python自动发送邮件</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E8%BF%90%E7%BB%B4/">运维</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/lzj-9090.liu.io/2020/03/31/1%E3%80%81ftp%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1552099217,3201789165&amp;fm=15&amp;gp=0.jpg" alt="ftp服务的搭建">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-30T16:00:00.000Z">2020-03-31</time></div>
-                    <a href="/lzj-9090.liu.io/2020/03/31/1%E3%80%81ftp%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE/" class="title has-link-black-ter is-size-6 has-text-weight-normal">ftp服务的搭建</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E8%BF%90%E7%BB%B4/">运维</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
         
@@ -1581,7 +1631,7 @@ eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
                     <span class="level-item">四月 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">7</span>
                 </span>
             </a>
         </li>
@@ -1642,14 +1692,14 @@ eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
                 <div class="control">
                     <a class="tags has-addons" href="/lzj-9090.liu.io/tags/Linux/">
                         <span class="tag">Linux</span>
-                        <span class="tag is-grey">3</span>
+                        <span class="tag is-grey">5</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/lzj-9090.liu.io/tags/python/">
                         <span class="tag">python</span>
-                        <span class="tag is-grey">3</span>
+                        <span class="tag is-grey">5</span>
                     </a>
                 </div>
                 
@@ -1684,18 +1734,56 @@ eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
         
         <article class="media">
             
-            <a href="/lzj-9090.liu.io/2020/04/06/radhat7%E4%B8%AD%E9%85%8D%E7%BD%AEtomcat/" class="media-left">
+            <a href="/lzj-9090.liu.io/2020/04/13/radhat7%E4%B8%AD%E9%85%8D%E7%BD%AEtomcat/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/lzj-9090.liu.io/images/thumbnail.svg" alt="radhat7中配置tomcat">
+                    <img class="thumbnail" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2491647022,3900371976&amp;fm=26&amp;gp=0.jpg" alt="Linux配置tomcat">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-06T02:49:06.286Z">2020-04-06</time></div>
-                    <a href="/lzj-9090.liu.io/2020/04/06/radhat7%E4%B8%AD%E9%85%8D%E7%BD%AEtomcat/" class="title has-link-black-ter is-size-6 has-text-weight-normal">radhat7中配置tomcat</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-12T16:00:00.000Z">2020-04-13</time></div>
+                    <a href="/lzj-9090.liu.io/2020/04/13/radhat7%E4%B8%AD%E9%85%8D%E7%BD%AEtomcat/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Linux配置tomcat</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E8%BF%90%E7%BB%B4/">运维</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/lzj-9090.liu.io/2020/04/13/raync%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1552099217,3201789165&amp;fm=15&amp;gp=0.jpg" alt="raync数据同步">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-12T16:00:00.000Z">2020-04-13</time></div>
+                    <a href="/lzj-9090.liu.io/2020/04/13/raync%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/" class="title has-link-black-ter is-size-6 has-text-weight-normal">raync数据同步</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E8%BF%90%E7%BB%B4/">运维</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/lzj-9090.liu.io/2020/04/13/python%E4%B8%AD%E5%BC%82%E5%B8%B8%E6%8A%9B%E5%87%BA/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2002889011,2994526377&amp;fm=26&amp;gp=0.jpg" alt="python异常抛出">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-12T16:00:00.000Z">2020-04-13</time></div>
+                    <a href="/lzj-9090.liu.io/2020/04/13/python%E4%B8%AD%E5%BC%82%E5%B8%B8%E6%8A%9B%E5%87%BA/" class="title has-link-black-ter is-size-6 has-text-weight-normal">python异常抛出</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E5%BC%80%E5%8F%91/">开发</a>
                     </p>
                 </div>
             </div>
@@ -1739,44 +1827,6 @@ eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/lzj-9090.liu.io/2020/04/01/python%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=341593753,2925500947&amp;fm=26&amp;gp=0.jpg" alt="python自动发送邮件">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-31T16:00:00.000Z">2020-04-01</time></div>
-                    <a href="/lzj-9090.liu.io/2020/04/01/python%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6/" class="title has-link-black-ter is-size-6 has-text-weight-normal">python自动发送邮件</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E8%BF%90%E7%BB%B4/">运维</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/lzj-9090.liu.io/2020/03/31/1%E3%80%81ftp%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1552099217,3201789165&amp;fm=15&amp;gp=0.jpg" alt="ftp服务的搭建">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-30T16:00:00.000Z">2020-03-31</time></div>
-                    <a href="/lzj-9090.liu.io/2020/03/31/1%E3%80%81ftp%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE/" class="title has-link-black-ter is-size-6 has-text-weight-normal">ftp服务的搭建</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E8%BF%90%E7%BB%B4/">运维</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
     
@@ -1794,7 +1844,7 @@ eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
                     <span class="level-item">四月 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">7</span>
                 </span>
             </a>
         </li>
@@ -1855,14 +1905,14 @@ eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
                 <div class="control">
                     <a class="tags has-addons" href="/lzj-9090.liu.io/tags/Linux/">
                         <span class="tag">Linux</span>
-                        <span class="tag is-grey">3</span>
+                        <span class="tag is-grey">5</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/lzj-9090.liu.io/tags/python/">
                         <span class="tag">python</span>
-                        <span class="tag is-grey">3</span>
+                        <span class="tag is-grey">5</span>
                     </a>
                 </div>
                 

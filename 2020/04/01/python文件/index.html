@@ -7,20 +7,23 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>分类: 开发 - 一叶知秋</title>
+<title>python文件操作 - 一叶知秋</title>
 
 
-    <meta name="description" content="一叶知秋的博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="一叶知秋">
-<meta property="og:url" content="http://yoursite.com/categories/%E5%BC%80%E5%8F%91/index.html">
+    <meta name="description" content="date: 2020-4-4categories:  开发tags: python   python文件操作1、文件读取 读取文件： 1、打开文件 2、读取文件 3、输出文件  1.1、读取普通文本文件  12345678comment&#x3D;open(&quot;&#x2F;home&#x2F;user1&#x2F;python&#x2F;test.txt&quot;)#prin&#x3D;comment.read();#print(prin)#逐行读取line&#x3D;com">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python文件操作">
+<meta property="og:url" content="http://yoursite.com/2020/04/01/python%E6%96%87%E4%BB%B6/index.html">
 <meta property="og:site_name" content="一叶知秋">
-<meta property="og:description" content="一叶知秋的博客">
+<meta property="og:description" content="date: 2020-4-4categories:  开发tags: python   python文件操作1、文件读取 读取文件： 1、打开文件 2、读取文件 3、输出文件  1.1、读取普通文本文件  12345678comment&#x3D;open(&quot;&#x2F;home&#x2F;user1&#x2F;python&#x2F;test.txt&quot;)#prin&#x3D;comment.read();#print(prin)#逐行读取line&#x3D;com">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://yoursite.com/lzj-9090.liu.io/images/og_image.png">
+<meta property="og:image" content="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2002889011,2994526377&fm=26&gp=0.jpg">
+<meta property="article:published_time" content="2020-03-31T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-04-13T01:19:41.488Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/lzj-9090.liu.io/images/og_image.png">
+<meta name="twitter:image" content="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2002889011,2994526377&fm=26&gp=0.jpg">
 
 
 
@@ -80,7 +83,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/lzj-9090.liu.io/">
             
-                <img src="/lzj-9090.liu.io/images/logo.svg" alt="一叶知秋" height="28">
+                <img src="/lzj-9090.liu.io/images/logo.svg" alt="python文件操作" height="28">
             
             </a>
         </div>
@@ -129,312 +132,13 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/lzj-9090.liu.io/categories">分类</a></li>
-            
-            <li class="is-active"><a href="#" aria-current="page">开发</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-    
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
 <div class="card">
     
     <div class="card-image">
-        <a href="/lzj-9090.liu.io/2020/04/13/python%E4%B8%AD%E5%BC%82%E5%B8%B8%E6%8A%9B%E5%87%BA/" class="image is-7by1">
-            <img class="thumbnail" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2002889011,2994526377&amp;fm=26&amp;gp=0.jpg" alt="python异常抛出">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-04-12T16:00:00.000Z">2020-04-13</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E5%BC%80%E5%8F%91/">开发</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    4 分钟 读完 (大约 657 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/lzj-9090.liu.io/2020/04/13/python%E4%B8%AD%E5%BC%82%E5%B8%B8%E6%8A%9B%E5%87%BA/">python异常抛出</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="1、异常抛出概念"><a href="#1、异常抛出概念" class="headerlink" title="1、异常抛出概念"></a>1、异常抛出概念</h2><blockquote>
-<ul>
-<li>异常：程序运行时，如果<code>python解释器</code>遇到一些错误，并且提示一些错误信息及其说明</li>
-<li>抛出：程序异常并且提示等动作</li>
-</ul>
-</blockquote>
-<h2 id="2、捕获异常"><a href="#2、捕获异常" class="headerlink" title="2、捕获异常"></a>2、捕获异常</h2><h3 id="2-1、最简单的捕获异常方式"><a href="#2-1、最简单的捕获异常方式" class="headerlink" title="2.1、最简单的捕获异常方式"></a>2.1、最简单的捕获异常方式</h3><ul>
-<li><p>在程序中捕获异常一般用<code>try</code>来捕获</p>
-</li>
-<li><p>最简单捕获方式</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    异常语法</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">    异常输出</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="例子："><a href="#例子：" class="headerlink" title="例子："></a>例子：</h4><blockquote>
-<p>编写一个不能处0的案例</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">s1=int(input(<span class="string">"请输入一个数字："</span>))</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    result = <span class="number">9</span> / s1</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">    print(<span class="string">"不能为0"</span>)</span><br></pre></td></tr></table></figure>
-
-<h4 id="结果："><a href="#结果：" class="headerlink" title="结果："></a>结果：</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">请输入一个数字：<span class="number">0</span></span><br><span class="line">不能为<span class="number">0</span></span><br><span class="line"></span><br><span class="line">Process finished <span class="keyword">with</span> exit code <span class="number">0</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="2-2、根据类型捕获异常"><a href="#2-2、根据类型捕获异常" class="headerlink" title="2.2、根据类型捕获异常"></a>2.2、根据类型捕获异常</h3><ul>
-<li><p>在程序中我们要根据不同的错误返回不同的信息</p>
-<p>代码格式如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    异常代码</span><br><span class="line"><span class="keyword">except</span> 异常类型:</span><br><span class="line">    提示</span><br><span class="line"><span class="keyword">except</span> 异常类型:</span><br><span class="line">    提示</span><br></pre></td></tr></table></figure>
-
-<h4 id="例子：-1"><a href="#例子：-1" class="headerlink" title="例子："></a>例子：</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    s1 = int(input(<span class="string">"请输入一个数字："</span>))</span><br><span class="line">    result = <span class="number">9</span> / s1</span><br><span class="line"><span class="keyword">except</span> ZeroDivisionError:</span><br><span class="line">    print(<span class="string">"不能为0"</span>)</span><br><span class="line"><span class="keyword">except</span> ValueError:</span><br><span class="line">    print(<span class="string">"请输入正确的整数"</span>)</span><br></pre></td></tr></table></figure>
-
-<p>结果1：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">请输入一个数字：a</span><br><span class="line">请输入正确的整数</span><br><span class="line"></span><br><span class="line">Process finished with exit code 0</span><br></pre></td></tr></table></figure>
-
-<p>结果2：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">请输入一个数字：<span class="number">0</span></span><br><span class="line">不能为<span class="number">0</span></span><br><span class="line"></span><br><span class="line">Process finished <span class="keyword">with</span> exit code0</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h3 id="2-3、捕获未知异常"><a href="#2-3、捕获未知异常" class="headerlink" title="2.3、捕获未知异常"></a>2.3、捕获未知异常</h3><ul>
-<li><p>在程序中会遇到未知错误，又想让程序运行，所以我们要捕获斌输出</p>
-<p>格式：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    异常代码</span><br><span class="line"><span class="keyword">except</span> ZeroDivisionError:</span><br><span class="line">    错误提示</span><br><span class="line"><span class="keyword">except</span> Exception <span class="keyword">as</span> a:</span><br><span class="line">    未知信息</span><br></pre></td></tr></table></figure>
-
-<p>例子：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    s1 = int(input(<span class="string">"请输入一个数字："</span>))</span><br><span class="line">    result = <span class="number">9</span> / s1</span><br><span class="line"><span class="keyword">except</span> ZeroDivisionError:</span><br><span class="line">    print(<span class="string">"不能为0"</span>)</span><br><span class="line"><span class="keyword">except</span> Exception <span class="keyword">as</span> a:</span><br><span class="line">    print(<span class="string">f"错误提示<span class="subst">&#123;a&#125;</span>"</span>)</span><br></pre></td></tr></table></figure>
-
-<p>结果：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">请输入一个数字：a</span><br><span class="line">错误提示invalid literal <span class="keyword">for</span> int() <span class="keyword">with</span> base <span class="number">10</span>: <span class="string">'a'</span></span><br><span class="line">    </span><br><span class="line">Process finished <span class="keyword">with</span> exit code <span class="number">0</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h3 id="2-4、异常抛出的完整语法"><a href="#2-4、异常抛出的完整语法" class="headerlink" title="2.4、异常抛出的完整语法"></a>2.4、异常抛出的完整语法</h3><ul>
-<li><p>实际开发中有些难度，下面为完整的格式</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    异常代码</span><br><span class="line"><span class="keyword">except</span> 异常类型:</span><br><span class="line">    提示信息</span><br><span class="line"><span class="keyword">except</span> Exception <span class="keyword">as</span> a:</span><br><span class="line">    提示信息</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    没有异常代码</span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">    有没有异常都会执行</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<p>例子：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    s1 = int(input(<span class="string">"请输入一个数字："</span>))</span><br><span class="line">    result = <span class="number">9</span> / s1</span><br><span class="line"><span class="keyword">except</span> ZeroDivisionError:</span><br><span class="line">    print(<span class="string">"不能为0"</span>)</span><br><span class="line"><span class="keyword">except</span> Exception <span class="keyword">as</span> a:</span><br><span class="line">    print(<span class="string">f"错误提示<span class="subst">&#123;a&#125;</span>"</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">"123"</span>)</span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">    print(<span class="string">"有没有都会执行"</span>)</span><br></pre></td></tr></table></figure>
-
-<p>结果：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">请输入一个数字：<span class="number">0</span></span><br><span class="line">不能为<span class="number">0</span></span><br><span class="line">有没有都会执行</span><br><span class="line"></span><br><span class="line">Process finished <span class="keyword">with</span> exit code <span class="number">0</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="2-5、主动创建异常抛出"><a href="#2-5、主动创建异常抛出" class="headerlink" title="2.5、主动创建异常抛出"></a>2.5、主动创建异常抛出</h3><ul>
-<li>我们会在程序中设置一些为满足条件就出现异常，终止程序</li>
-</ul>
-<p>例子：</p>
-<blockquote>
-<p>输入的年龄大于0且小于100</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getAge</span><span class="params">()</span>:</span></span><br><span class="line">    age = int(input(<span class="string">"请输入年龄："</span>))</span><br><span class="line">    <span class="keyword">if</span> age&gt;<span class="number">0</span> &amp; age&lt;<span class="number">100</span>:</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    ex=Exception(<span class="string">"age输入错误"</span>)</span><br><span class="line">    <span class="keyword">return</span> ex;</span><br><span class="line">print(getAge())</span><br></pre></td></tr></table></figure>
-
-<p>结果：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">请输入年龄：<span class="number">-1</span></span><br><span class="line">age输入错误</span><br><span class="line"></span><br><span class="line">Process finished <span class="keyword">with</span> exit code <span class="number">0</span></span><br></pre></td></tr></table></figure>
-
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-image">
-        <a href="/lzj-9090.liu.io/2020/04/01/python%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F/" class="image is-7by1">
-            <img class="thumbnail" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=743791614,1712685624&amp;fm=26&amp;gp=0.jpg" alt="python全局变量和局部变量">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-03-31T16:00:00.000Z">2020-04-01</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E5%BC%80%E5%8F%91/">开发</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2 分钟 读完 (大约 361 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/lzj-9090.liu.io/2020/04/01/python%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F/">python全局变量和局部变量</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="全局变量和局部变量"><a href="#全局变量和局部变量" class="headerlink" title="全局变量和局部变量"></a>全局变量和局部变量</h1><h2 id="1、局部变量"><a href="#1、局部变量" class="headerlink" title="1、局部变量"></a>1、局部变量</h2><blockquote>
-<p>局部变量就是python函数内定义的变量</p>
-<p>其作用范围也就是函数内部有效而且优先，出了此函数就无效</p>
-</blockquote>
-<h3 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">name=<span class="string">'全局'</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun1</span><span class="params">()</span>:</span></span><br><span class="line">    name=<span class="string">'局部'</span></span><br><span class="line">    print(<span class="string">'fun1:'</span>,name)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun2</span><span class="params">()</span>:</span></span><br><span class="line">    print(name)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    fun1()</span><br><span class="line">    fun2()</span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">"__main__"</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
-
-<p>结果</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fun1: 局部</span><br><span class="line">fun2 全局</span><br></pre></td></tr></table></figure>
-
-<p>我们可以看出局部变量作用范围有限</p>
-<h2 id="2、全局变量"><a href="#2、全局变量" class="headerlink" title="2、全局变量"></a>2、全局变量</h2><blockquote>
-<p>从创建开始到程序结束都有效果</p>
-</blockquote>
-<h3 id="操作-1"><a href="#操作-1" class="headerlink" title="操作"></a>操作</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">name=<span class="string">'全局'</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun1</span><span class="params">()</span>:</span></span><br><span class="line">    name=<span class="string">'局部'</span></span><br><span class="line">    print(<span class="string">'fun1:'</span>,name)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun2</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'fun2'</span>,name)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'main:'</span>,name)</span><br><span class="line">    fun1()</span><br><span class="line">    fun2()</span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">"__main__"</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
-
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">main: 全局</span><br><span class="line">fun1: 局部</span><br><span class="line">fun2 全局</span><br></pre></td></tr></table></figure>
-
-<h2 id="global声明变量"><a href="#global声明变量" class="headerlink" title="global声明变量"></a>global声明变量</h2><blockquote>
-<p>在python中全局变量不像java或者c语言一样直接可在函数中修改全局变量</p>
-<p>所以，python中修改全局变量需要 用global声明(只限于全局变量为不可变）</p>
-</blockquote>
-<h3 id="操作-2"><a href="#操作-2" class="headerlink" title="操作"></a>操作</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">name=<span class="string">'全局'</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun1</span><span class="params">()</span>:</span></span><br><span class="line">    name=<span class="string">'局部'</span></span><br><span class="line">    print(<span class="string">'fun1:'</span>,name)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun2</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'fun2'</span>,name)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun3</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">global</span> name <span class="comment">#声明全局变量</span></span><br><span class="line">    name+=<span class="string">"hhhhh"</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'main:'</span>,name)</span><br><span class="line">    fun1()</span><br><span class="line">    fun2()</span><br><span class="line">    fun3()</span><br><span class="line">    print(name)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">"__main__"</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
-
-<h3 id="结果-1"><a href="#结果-1" class="headerlink" title="结果"></a>结果</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">main: 全局</span><br><span class="line">fun1: 局部</span><br><span class="line">fun2 全局</span><br><span class="line">全局hhhhh</span><br></pre></td></tr></table></figure>
-
-<h3 id="当全局变量可变时"><a href="#当全局变量可变时" class="headerlink" title="当全局变量可变时"></a>当全局变量可变时</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">name=<span class="string">'全局'</span></span><br><span class="line">list=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]<span class="comment">#可变</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun1</span><span class="params">()</span>:</span></span><br><span class="line">    name=<span class="string">'局部'</span></span><br><span class="line">    print(<span class="string">'fun1:'</span>,name)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun2</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'fun2'</span>,name)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun3</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">global</span> name <span class="comment">#声明全局变量</span></span><br><span class="line">    list.append(<span class="number">6</span>)</span><br><span class="line">    name+=<span class="string">"hhhhh"</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'main:'</span>,name)</span><br><span class="line">    fun1()</span><br><span class="line">    fun2()</span><br><span class="line">    fun3()</span><br><span class="line">    print(name)</span><br><span class="line">    print(list)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">"__main__"</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
-
-<p>结果</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">main: 全局</span><br><span class="line">fun1: 局部</span><br><span class="line">fun2 全局</span><br><span class="line">全局hhhhh</span><br><span class="line">[1, 2, 3, 4, 6]</span><br></pre></td></tr></table></figure>
-
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-image">
-        <a href="/lzj-9090.liu.io/2020/04/01/python%E9%97%AD%E5%8C%85/" class="image is-7by1">
-            <img class="thumbnail" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2002889011,2994526377&amp;fm=26&amp;gp=0.jpg" alt="python闭包">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-03-31T16:00:00.000Z">2020-04-01</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E5%BC%80%E5%8F%91/">开发</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2 分钟 读完 (大约 357 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/lzj-9090.liu.io/2020/04/01/python%E9%97%AD%E5%8C%85/">python闭包</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="1、闭包的概念及作用"><a href="#1、闭包的概念及作用" class="headerlink" title="1、闭包的概念及作用"></a>1、闭包的概念及作用</h2><blockquote>
-<p>闭包是内部函数的一种，其满足的条件有：</p>
-<ul>
-<li>其为内部函数</li>
-<li>外部函数有返回值</li>
-<li>其外部函数的返回值为内部函数的地址</li>
-</ul>
-</blockquote>
-<h3 id="举例："><a href="#举例：" class="headerlink" title="举例："></a>举例：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">person_fun</span><span class="params">()</span>:</span></span><br><span class="line">    num_1=<span class="number">1</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">sum</span><span class="params">()</span>:</span></span><br><span class="line">        num_2=<span class="number">3</span></span><br><span class="line">        print(num_1,num_2)</span><br><span class="line">    <span class="keyword">return</span> sum</span><br><span class="line">s1=person_fun()</span><br><span class="line">s1()</span><br></pre></td></tr></table></figure>
-
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 3</span><br></pre></td></tr></table></figure>
-
-<h2 id="2、闭包保存参数的作用"><a href="#2、闭包保存参数的作用" class="headerlink" title="2、闭包保存参数的作用"></a>2、闭包保存参数的作用</h2><blockquote>
-<p>闭包的作用是用来保存原有数据，而不会受到其他函数调用的影响</p>
-</blockquote>
-<h3 id="举例1"><a href="#举例1" class="headerlink" title="举例1"></a>举例1</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(a,b)</span>:</span></span><br><span class="line">    c=<span class="number">10</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fun_2</span><span class="params">()</span>:</span></span><br><span class="line">        s=a+b+c</span><br><span class="line">        print(<span class="string">f"a,b,c相加的结果为:<span class="subst">&#123;s&#125;</span>"</span>)</span><br><span class="line">    <span class="keyword">return</span> fun_2</span><br><span class="line">s1=fun(<span class="number">1</span>,<span class="number">2</span>)</span><br><span class="line">s2=fun(<span class="number">3</span>,<span class="number">2</span>)</span><br><span class="line">s1()</span><br></pre></td></tr></table></figure>
-
-<h3 id="结果："><a href="#结果：" class="headerlink" title="结果："></a>结果：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a,b,c相加的结果为:<span class="number">13</span></span><br><span class="line"></span><br><span class="line">Process finished <span class="keyword">with</span> exit code <span class="number">0</span></span><br><span class="line"><span class="comment">#可以看出s2调用根本就不影响s1</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="举例2："><a href="#举例2：" class="headerlink" title="举例2："></a>举例2：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(a,b)</span>:</span></span><br><span class="line">    c=<span class="number">10</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fun_2</span><span class="params">()</span>:</span></span><br><span class="line">        s=a+b+c</span><br><span class="line">        print(<span class="string">f"a,b,c相加的结果为:<span class="subst">&#123;s&#125;</span>"</span>)</span><br><span class="line">    <span class="keyword">return</span> fun_2</span><br><span class="line">s2=fun(<span class="number">3</span>,<span class="number">2</span>)</span><br><span class="line">s1=fun(<span class="number">1</span>,<span class="number">2</span>)</span><br><span class="line">s1()</span><br><span class="line">s2()</span><br></pre></td></tr></table></figure>
-
-<h3 id="结果：-1"><a href="#结果：-1" class="headerlink" title="结果："></a>结果：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a,b,c相加的结果为:<span class="number">13</span></span><br><span class="line">a,b,c相加的结果为:<span class="number">15</span></span><br><span class="line"></span><br><span class="line">Process finished <span class="keyword">with</span> exit code <span class="number">0</span></span><br><span class="line"><span class="comment">#s1不影响s2,s2不影响s1</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="3、计时器"><a href="#3、计时器" class="headerlink" title="3、计时器"></a>3、计时器</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">time_fun</span><span class="params">()</span>:</span></span><br><span class="line">    list=[<span class="number">0</span>]</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fun2</span><span class="params">()</span>:</span></span><br><span class="line">        list[<span class="number">0</span>]=list[<span class="number">0</span>]+<span class="number">1</span></span><br><span class="line">        print(<span class="string">f'第<span class="subst">&#123;list[<span class="number">0</span>]&#125;</span>次访问'</span>)</span><br><span class="line">    <span class="keyword">return</span> fun2</span><br><span class="line">s1=time_fun()</span><br><span class="line">s1()</span><br><span class="line">s1()</span><br><span class="line">s1()</span><br></pre></td></tr></table></figure>
-
-<h3 id="结果-1"><a href="#结果-1" class="headerlink" title="结果"></a>结果</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">第1次访问</span><br><span class="line">第2次访问</span><br><span class="line">第3次访问</span><br></pre></td></tr></table></figure>
-
-<h2 id="4、带返回值的闭包"><a href="#4、带返回值的闭包" class="headerlink" title="4、带返回值的闭包"></a>4、带返回值的闭包</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun1</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fun2</span><span class="params">()</span>:</span></span><br><span class="line">        print(<span class="string">"你好"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fun3</span><span class="params">()</span>:</span></span><br><span class="line">        fun2()</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"滚！"</span></span><br><span class="line">    <span class="keyword">return</span> fun3</span><br><span class="line">f=fun1()</span><br><span class="line">print(<span class="string">f"<span class="subst">&#123;f&#125;</span>\n"</span>)</span><br><span class="line">f2=f()</span><br><span class="line">print(<span class="string">f'闭包返回：<span class="subst">&#123;f2&#125;</span>\n'</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="结果：-2"><a href="#结果：-2" class="headerlink" title="结果："></a>结果：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">你好</span><br><span class="line">闭包返回：滚！</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Process finished with exit code 0</span><br></pre></td></tr></table></figure>
-
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-image">
-        <a href="/lzj-9090.liu.io/2020/04/01/python%E6%96%87%E4%BB%B6/" class="image is-7by1">
+        <span  class="image is-7by1">
             <img class="thumbnail" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2002889011,2994526377&amp;fm=26&amp;gp=0.jpg" alt="python文件操作">
-        </a>
+        </span>
     </div>
     
     <div class="card-content article ">
@@ -460,7 +164,7 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/lzj-9090.liu.io/2020/04/01/python%E6%96%87%E4%BB%B6/">python文件操作</a>
+                python文件操作
             
         </h1>
         <div class="content">
@@ -526,6 +230,15 @@
 
         </div>
         
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/lzj-9090.liu.io/tags/python/" rel="tag">python</a>
+                </div>
+            </div>
+        </div>
+        
         
         
     </div>
@@ -533,11 +246,80 @@
 
 
 
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>支付宝</span>
+    <div class="qrcode"><img src="/lzj-9090.liu.io/images/zhi.jpg" alt="支付宝"></div>
+</a>
+
+                
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="/lzj-9090.liu.io/images/wei.png" alt="微信"></div>
+</a>
+
+                
+        </div>
+    </div>
+</div>
 
 
 
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/lzj-9090.liu.io/2020/04/01/python%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">python自动发送邮件</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/lzj-9090.liu.io/2020/03/31/1%E3%80%81ftp%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE/">
+                <span class="level-item">ftp服务的搭建</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
 
 
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<div id="valine-thread" class="content"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#valine-thread' ,
+        notify: false,
+        verify: false,
+        app_id: 'KJD5qzuBLXfkYQ7POlQyQT1E-gzGzoHsz',
+        app_key: 'kR8AWmWa0bRADXWHVwOtKQhU',
+        placeholder: '要不要说点啥...'
+    });
+</script>
+
+    </div>
+</div>
 
 </div>
                 
@@ -1180,7 +962,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/lzj-9090.liu.io/">
                 
-                    <img src="/lzj-9090.liu.io/images/logo.svg" alt="一叶知秋" height="28">
+                    <img src="/lzj-9090.liu.io/images/logo.svg" alt="python文件操作" height="28">
                 
                 </a>
                 <p class="is-size-7">
