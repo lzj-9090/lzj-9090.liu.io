@@ -145,6 +145,59 @@
 <div class="card">
     
     <div class="card-image">
+        <a href="/lzj-9090.liu.io/2020/04/22/%E5%A4%9A%E5%AE%9E%E5%88%97%E9%83%A8%E7%BD%B2/" class="image is-7by1">
+            <img class="thumbnail" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2925318642,1990276519&amp;fm=26&amp;gp=0.jpg" alt="多实列部署">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-04-21T16:00:00.000Z">2020-04-22</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E8%BF%90%E7%BB%B4/">运维</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4 分钟 读完 (大约 641 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/lzj-9090.liu.io/2020/04/22/%E5%A4%9A%E5%AE%9E%E5%88%97%E9%83%A8%E7%BD%B2/">多实列部署</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="mysql多实列部署"><a href="#mysql多实列部署" class="headerlink" title="mysql多实列部署"></a>mysql多实列部署</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line">[root@server0 ~]#  wget https://downloads.mysql.com/archives/get/file/mysql-5.7.22-linux-glibc2.12-x86_64.tar.gz </span><br><span class="line">[root@server0 ~]# ln -sv /usr/local/mysql-5.7.22-linux-glibc2.12-x86_64/ /usr/local/mysql</span><br><span class="line">[root@server0 ~]# ll /usr/local/</span><br><span class="line">lrwxrwxrwx. 1 mysql mysql  36 4月  21 16:57 mysql -&gt; mysql-5.7.22-linux-glibc2.12-x86_64/</span><br><span class="line">drwxr-xr-x. 9 root  root  129 4月  21 16:57 mysql-5.7.22-linux-glibc2.12-x86_64</span><br><span class="line">[root@server0 ~]# mkdir -p /opt/data&#123;3306,3307,3308&#125;</span><br><span class="line">[root@server0 ~]#  chown -R mysql.mysql /opt/data/</span><br><span class="line">[root@server0 ~]# echo 'export PATH=/usr/local/mysql/bin/:$PATH' &gt; /etc/profile.d/mysql.sh</span><br><span class="line">[root@server0 ~]# source /etc/profile.d/mysql.sh </span><br><span class="line">[root@server0 ~]# mysqld --initialize --datadir=/opt/data/3306 --user=mysql</span><br><span class="line">2020-04-21T09:30:46.706971Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).</span><br><span class="line">2020-04-21T09:30:47.763489Z 0 [Warning] InnoDB: New log files created, LSN=45790</span><br><span class="line">2020-04-21T09:30:47.944572Z 0 [Warning] InnoDB: Creating foreign key constraint system tables.</span><br><span class="line">2020-04-21T09:30:48.018816Z 0 [Warning] No existing UUID has been found, so we assume that this is the first time that this server has been started. Generating a new UUID: c88af205-83b2-11ea-b84d-000c2983da8b.</span><br><span class="line">2020-04-21T09:30:48.020357Z 0 [Warning] Gtid table is not ready to be used. Table 'mysql.gtid_executed' cannot be opened.</span><br><span class="line">2020-04-21T09:30:48.021846Z 1 [Note] A temporary password is generated for root@localhost: yVPxIkqBG6:(</span><br><span class="line">[root@server0 ~]# echo 'yVPxIkqBG6:(' &gt; 3306 </span><br><span class="line">[root@server0 ~]# mysqld --initialize --datadir=/opt/data/3307 --user=mysql</span><br><span class="line">2020-04-21T09:31:49.694520Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).</span><br><span class="line">2020-04-21T09:31:51.106797Z 0 [Warning] InnoDB: New log files created, LSN=45790</span><br><span class="line">2020-04-21T09:31:51.208726Z 0 [Warning] InnoDB: Creating foreign key constraint system tables.</span><br><span class="line">2020-04-21T09:31:51.269570Z 0 [Warning] No existing UUID has been found, so we assume that this is the first time that this server has been started. Generating a new UUID: ee3e3e95-83b2-11ea-ba2b-000c2983da8b.</span><br><span class="line">2020-04-21T09:31:51.271046Z 0 [Warning] Gtid table is not ready to be used. Table 'mysql.gtid_executed' cannot be opened.</span><br><span class="line">2020-04-21T09:31:51.272716Z 1 [Note] A temporary password is generated for root@localhost: WSmU-hgKs5qV</span><br><span class="line">[root@server0 ~]# echo 'WSmU-hgKs5qV' &gt; 3307 </span><br><span class="line">[root@server0 ~]# mysqld --initialize --datadir=/opt/data/3308 --user=mysql</span><br><span class="line">2020-04-21T09:32:23.922818Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).</span><br><span class="line">2020-04-21T09:32:27.369899Z 0 [Warning] InnoDB: New log files created, LSN=45790</span><br><span class="line">2020-04-21T09:32:28.018253Z 0 [Warning] InnoDB: Creating foreign key constraint system tables.</span><br><span class="line">2020-04-21T09:32:28.081067Z 0 [Warning] No existing UUID has been found, so we assume that this is the first time that this server has been started. Generating a new UUID: 042f3bf4-83b3-11ea-bb8a-000c2983da8b.</span><br><span class="line">2020-04-21T09:32:28.082101Z 0 [Warning] Gtid table is not ready to be used. Table 'mysql.gtid_executed' cannot be opened.</span><br><span class="line">2020-04-21T09:32:28.082850Z 1 [Note] A temporary password is generated for root@localhost: jp#tSkoey6QK</span><br><span class="line">[root@server0 ~]# echo 'jp#tSkoey6QK' &gt; 3308 </span><br><span class="line">[root@server0 ~]# yum install -y perl</span><br><span class="line">[root@server0 ~]# mysqld_multi start 3306</span><br><span class="line">[root@server0 ~]# mysqld_multi start 3307</span><br><span class="line">[root@server0 ~]# mysqld_multi start 3308</span><br><span class="line">[root@server0 ~]# ss -antl</span><br><span class="line">State      Recv-Q Send-Q     Local Address:Port                    Peer Address:Port              </span><br><span class="line">LISTEN     0      50                     *:139                                *:*                  </span><br><span class="line">LISTEN     0      128                    *:22                                 *:*                  </span><br><span class="line">LISTEN     0      50                     *:445                                *:*                  </span><br><span class="line">LISTEN     0      80                    :::3307                              :::*                  </span><br><span class="line">LISTEN     0      50                    :::139                               :::*                  </span><br><span class="line">LISTEN     0      80                    :::3308                              :::*                  </span><br><span class="line">LISTEN     0      128                   :::22                                :::*                  </span><br><span class="line">LISTEN     0      50                    :::445                               :::*                  </span><br><span class="line">LISTEN     0      80                    :::3306                              :::*                  </span><br><span class="line">[root@server0 ~]# </span><br><span class="line">[root@server0 ~]# mysql -uroot -p'jp#tSkoey6QK' -P3308</span><br><span class="line">mysql: [Warning] Using a password on the command line interface can be insecure.</span><br><span class="line">ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)</span><br><span class="line">[root@server0 ~]#  mysql -uroot -p'yVPxIkqBG6:(' -S /tmp/mysql3306.sock </span><br><span class="line">mysql: [Warning] Using a password on the command line interface can be insecure.</span><br><span class="line">Welcome to the MySQL monitor.  Commands end with ; or \g.</span><br><span class="line">Your MySQL connection id is 2</span><br><span class="line">Server version: 5.7.22</span><br><span class="line"></span><br><span class="line">Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.</span><br><span class="line"></span><br><span class="line">Oracle is a registered trademark of Oracle Corporation and/or its</span><br><span class="line">affiliates. Other names may be trademarks of their respective</span><br><span class="line">owners.</span><br><span class="line"></span><br><span class="line">Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.</span><br><span class="line"></span><br><span class="line"><span class="meta">mysql&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-image">
         <a href="/lzj-9090.liu.io/2020/04/13/radhat7%E4%B8%AD%E9%85%8D%E7%BD%AEtomcat/" class="image is-7by1">
             <img class="thumbnail" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2491647022,3900371976&amp;fm=26&amp;gp=0.jpg" alt="Linux配置tomcat">
         </a>
@@ -1085,7 +1138,7 @@ eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
                     </p>
                     <a href="/lzj-9090.liu.io/archives">
                         <p class="title has-text-weight-normal">
-                            13
+                            14
                         </p>
                     </a>
                 </div>
@@ -1234,7 +1287,7 @@ eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
                 <span class="level-item">运维</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">6</span>
+                <span class="level-item tag">7</span>
             </span>
         </a></li>
             </ul>
@@ -1247,7 +1300,7 @@ eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/lzj-9090.liu.io/tags/%E5%B0%8F%E7%9F%A5%E8%AF%86/" style="font-size: 10px;">-小知识</a> <a href="/lzj-9090.liu.io/tags/Linux/" style="font-size: 20px;">Linux</a> <a href="/lzj-9090.liu.io/tags/java/" style="font-size: 10px;">java</a> <a href="/lzj-9090.liu.io/tags/python/" style="font-size: 20px;">python</a> <a href="/lzj-9090.liu.io/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 10px;">网络</a>
+        <a href="/lzj-9090.liu.io/tags/%E5%B0%8F%E7%9F%A5%E8%AF%86/" style="font-size: 10px;">-小知识</a> <a href="/lzj-9090.liu.io/tags/Linux/" style="font-size: 20px;">Linux</a> <a href="/lzj-9090.liu.io/tags/java/" style="font-size: 10px;">java</a> <a href="/lzj-9090.liu.io/tags/python/" style="font-size: 15px;">python</a> <a href="/lzj-9090.liu.io/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 10px;">网络</a>
     </div>
 </div>
     
@@ -1259,6 +1312,25 @@ eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/lzj-9090.liu.io/2020/04/22/%E5%A4%9A%E5%AE%9E%E5%88%97%E9%83%A8%E7%BD%B2/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2925318642,1990276519&amp;fm=26&amp;gp=0.jpg" alt="多实列部署">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-21T16:00:00.000Z">2020-04-22</time></div>
+                    <a href="/lzj-9090.liu.io/2020/04/22/%E5%A4%9A%E5%AE%9E%E5%88%97%E9%83%A8%E7%BD%B2/" class="title has-link-black-ter is-size-6 has-text-weight-normal">多实列部署</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E8%BF%90%E7%BB%B4/">运维</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -1336,25 +1408,6 @@ eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/lzj-9090.liu.io/2020/04/01/python%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=743791614,1712685624&amp;fm=26&amp;gp=0.jpg" alt="python全局变量和局部变量">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-31T16:00:00.000Z">2020-04-01</time></div>
-                    <a href="/lzj-9090.liu.io/2020/04/01/python%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F/" class="title has-link-black-ter is-size-6 has-text-weight-normal">python全局变量和局部变量</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E5%BC%80%E5%8F%91/">开发</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
         
@@ -1372,7 +1425,7 @@ eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
                     <span class="level-item">四月 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">8</span>
+                    <span class="level-item tag">9</span>
                 </span>
             </a>
         </li>
@@ -1433,7 +1486,7 @@ eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
                 <div class="control">
                     <a class="tags has-addons" href="/lzj-9090.liu.io/tags/Linux/">
                         <span class="tag">Linux</span>
-                        <span class="tag is-grey">5</span>
+                        <span class="tag is-grey">6</span>
                     </a>
                 </div>
                 
@@ -1482,6 +1535,25 @@ eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
         
         <article class="media">
             
+            <a href="/lzj-9090.liu.io/2020/04/22/%E5%A4%9A%E5%AE%9E%E5%88%97%E9%83%A8%E7%BD%B2/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2925318642,1990276519&amp;fm=26&amp;gp=0.jpg" alt="多实列部署">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-21T16:00:00.000Z">2020-04-22</time></div>
+                    <a href="/lzj-9090.liu.io/2020/04/22/%E5%A4%9A%E5%AE%9E%E5%88%97%E9%83%A8%E7%BD%B2/" class="title has-link-black-ter is-size-6 has-text-weight-normal">多实列部署</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E8%BF%90%E7%BB%B4/">运维</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/lzj-9090.liu.io/2020/04/13/radhat7%E4%B8%AD%E9%85%8D%E7%BD%AEtomcat/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2491647022,3900371976&amp;fm=26&amp;gp=0.jpg" alt="Linux配置tomcat">
@@ -1556,25 +1628,6 @@ eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/lzj-9090.liu.io/2020/04/01/python%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=743791614,1712685624&amp;fm=26&amp;gp=0.jpg" alt="python全局变量和局部变量">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-31T16:00:00.000Z">2020-04-01</time></div>
-                    <a href="/lzj-9090.liu.io/2020/04/01/python%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F/" class="title has-link-black-ter is-size-6 has-text-weight-normal">python全局变量和局部变量</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/lzj-9090.liu.io/categories/%E5%BC%80%E5%8F%91/">开发</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
     
@@ -1592,7 +1645,7 @@ eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
                     <span class="level-item">四月 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">8</span>
+                    <span class="level-item tag">9</span>
                 </span>
             </a>
         </li>
@@ -1653,7 +1706,7 @@ eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
                 <div class="control">
                     <a class="tags has-addons" href="/lzj-9090.liu.io/tags/Linux/">
                         <span class="tag">Linux</span>
-                        <span class="tag is-grey">5</span>
+                        <span class="tag is-grey">6</span>
                     </a>
                 </div>
                 
