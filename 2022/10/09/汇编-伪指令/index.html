@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <title>汇编-伪指令 | 归元元&amp;笔记</title>
+        <meta name="author" content="归元元">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link rel="icon" href="https://lzj-bucket.oss-cn-hangzhou.aliyuncs.com/myblog_img/blog_head.jpeg">
+        <script src="https://cdn.staticfile.org/instant.page/5.1.0/instantpage.min.js" type="module"></script>
+        <script src="https://cdn.staticfile.org/font-awesome/6.2.0/js/all.min.js"></script>
+        
+        <link rel="stylesheet" href="/lzj-9090.liu.io/css/fonts.min.css">
+        <link rel="stylesheet" href="/lzj-9090.liu.io/css/particlex.css">
+        
+        <script src="https://cdn.staticfile.org/vue/3.2.33/vue.global.prod.min.js"></script>
+    <meta name="generator" content="Hexo 6.3.0"></head>
+    <body>
+        <div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:200;justify-content:space-between;background:#fff;transition:opacity 0.3s ease-out"><div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center"><div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center"><div><h2>LOADING...</h2><p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p><div><img alt="loading" src="/lzj-9090.liu.io/loading.gif"></div></div></div></div></div>
+        <div id="layout">
+            <i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i>
+            <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i>
+            <i data-fa-symbol="tags-solid" class="fa-solid fa-tags fa-fw"></i>
+            <transition name="into">
+                <div v-show="show_page" style="display: -not-none">
+                    <div id="menu_show">
+                         
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/lzj-9090.liu.io/">
+            <span class="title">归元元&笔记</span>
+        </a>
+        
+        <a href="/lzj-9090.liu.io/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;home</span>
+        </a>
+        
+        <a href="/lzj-9090.liu.io/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;about</span>
+        </a>
+        
+        <a href="/lzj-9090.liu.io/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;archives</span>
+        </a>
+        
+        <a href="/lzj-9090.liu.io/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;categories</span>
+        </a>
+        
+        <a href="/lzj-9090.liu.io/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;tags</span>
+        </a>
+        
+    </div>
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div class="curtain" @click="menu_show = !menu_show" v-show="menu_show"></div>
+        <div :class="'title'" @click="menu_show = !menu_show">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;归元元&笔记</span>
+        </div>
+        <transition name="slide">
+        <div class="items" v-show="menu_show">
+            
+            <a href="/lzj-9090.liu.io/">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-house fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">home</div>
+                </div>
+            </a>
+            
+            <a href="/lzj-9090.liu.io/about">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-id-card fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">about</div>
+                </div>
+            </a>
+            
+            <a href="/lzj-9090.liu.io/archives">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-box-archive fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">archives</div>
+                </div>
+            </a>
+            
+            <a href="/lzj-9090.liu.io/categories">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-bookmark fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">categories</div>
+                </div>
+            </a>
+            
+            <a href="/lzj-9090.liu.io/tags">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">tags</div>
+                </div>
+            </a>
+            
+        </div>
+        </transition>
+    </div>
+</nav>
+                    </div>
+                    <div id="main">
+                        
+<div class="article">
+    <div>
+        <h1>汇编-伪指令 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/10/9
+        </span>
+        
+        <span class="category">
+            <a href="/lzj-9090.liu.io/categories/开发/">
+                <span class="icon">
+                    <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
+                </span>
+                开发
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/lzj-9090.liu.io/tags/汇编/" style="color: #00a596">
+                    汇编
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    <div class="content" v-pre>
+        <h1 id="汇编-伪指令"><a href="#汇编-伪指令" class="headerlink" title="汇编-伪指令"></a>汇编-伪指令</h1><h2 id="常用伪指令命令"><a href="#常用伪指令命令" class="headerlink" title="常用伪指令命令"></a>常用伪指令命令</h2><p>1、DB</p>
+<p>定义字节伪指令</p>
+<p>2、DW</p>
+<p>定义字的伪指令</p>
+<p>3、DD</p>
+<span id="more"></span>
+
+<p>定义双字的伪指令</p>
+<blockquote>
+<p>一个字节&#x3D;8bit</p>
+<p>一个字&#x3D;两个字</p>
+<p>一个双子&#x3D;2个字</p>
+</blockquote>
+<h2 id="伪指令作用"><a href="#伪指令作用" class="headerlink" title="伪指令作用"></a>伪指令作用</h2><h3 id="1、DB"><a href="#1、DB" class="headerlink" title="1、DB"></a>1、DB</h3><blockquote>
+<p>定义字节伪指令,</p>
+<p>初值表，每个数据一定是字节量，存放8位数据</p>
+<ul>
+<li>0-255的无符号</li>
+<li>-127-+128带符号</li>
+<li>也可以是字符串常数</li>
+</ul>
+</blockquote>
+<pre><code class="masm">data segment
+X   db &#39;a&#39;,-5 
+    db  2 dup (100),?
+Y	db  &#39;ABC&#39;
+data end
+</code></pre>
+<h3 id="2、DW"><a href="#2、DW" class="headerlink" title="2、DW"></a>2、DW</h3><blockquote>
+<p>定义字</p>
+<p>初始值表中每个数据一定是字的量，一个单元可以存放16位数据</p>
+<ul>
+<li>一个段地址</li>
+<li>一个偏移地址</li>
+<li>两个字符</li>
+<li>0~65535之间的无符号数</li>
+<li>-32768~+32767之间的带符号数</li>
+</ul>
+</blockquote>
+<pre><code class="asm">data segment
+count dw 8000h,&#39;?&#39;,&#39;AB&#39;
+maxint equ 64h
+number dw maxint
+array dw maxint dup(0)
+data ends
+</code></pre>
+<h3 id="3、DD"><a href="#3、DD" class="headerlink" title="3、DD"></a>3、DD</h3><blockquote>
+<p>初值表中每个数据是32位的双子量</p>
+<ul>
+<li>可以是有符号或无符号32位整数</li>
+<li>也可以是16位段地址和16位的偏移地址的远指针</li>
+</ul>
+</blockquote>
+<pre><code class="asm">var DD 0,?,122333444h
+farpoint DD 004000078h
+</code></pre>
+<h2 id="3、符号定义伪指令助记符"><a href="#3、符号定义伪指令助记符" class="headerlink" title="3、符号定义伪指令助记符"></a>3、符号定义伪指令助记符</h2><h3 id="1、equ"><a href="#1、equ" class="headerlink" title="1、equ"></a>1、equ</h3><p>符号名 equ 数值表达式</p>
+<p>符号名 equ 字符串</p>
+<blockquote>
+<p>类似于：符号名&#x3D;数值表达式</p>
+</blockquote>
+
+    </div>
+    
+    
+</div>
+                         
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 20xx - 2022 归元元&amp;笔记
+            <span class="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            @归元元
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                href="https://github.com/argvchs/hexo-theme-particlex">ParticleX Theme</a></div>
+        
+    </div>
+</footer>
+                    </div>
+                </div>
+            </transition>
+            <div id="img_show">
+                <img id="img_content" alt="img_show">
+            </div>
+        </div>
+        <script src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script>
+        <script src="/lzj-9090.liu.io/js/particlex.js"></script>
+        <script src="/lzj-9090.liu.io/js/showimg.js"></script>
+        
+
+    </body>
+</html>

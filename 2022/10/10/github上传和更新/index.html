@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <title>Github上传操作 | 归元元&amp;笔记</title>
+        <meta name="author" content="归元元">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link rel="icon" href="https://lzj-bucket.oss-cn-hangzhou.aliyuncs.com/myblog_img/blog_head.jpeg">
+        <script src="https://cdn.staticfile.org/instant.page/5.1.0/instantpage.min.js" type="module"></script>
+        <script src="https://cdn.staticfile.org/font-awesome/6.2.0/js/all.min.js"></script>
+        
+        <link rel="stylesheet" href="/lzj-9090.liu.io/css/fonts.min.css">
+        <link rel="stylesheet" href="/lzj-9090.liu.io/css/particlex.css">
+        
+        <script src="https://cdn.staticfile.org/vue/3.2.33/vue.global.prod.min.js"></script>
+    <meta name="generator" content="Hexo 6.3.0"></head>
+    <body>
+        <div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:200;justify-content:space-between;background:#fff;transition:opacity 0.3s ease-out"><div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center"><div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center"><div><h2>LOADING...</h2><p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p><div><img alt="loading" src="/lzj-9090.liu.io/loading.gif"></div></div></div></div></div>
+        <div id="layout">
+            <i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i>
+            <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i>
+            <i data-fa-symbol="tags-solid" class="fa-solid fa-tags fa-fw"></i>
+            <transition name="into">
+                <div v-show="show_page" style="display: -not-none">
+                    <div id="menu_show">
+                         
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/lzj-9090.liu.io/">
+            <span class="title">归元元&笔记</span>
+        </a>
+        
+        <a href="/lzj-9090.liu.io/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;home</span>
+        </a>
+        
+        <a href="/lzj-9090.liu.io/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;about</span>
+        </a>
+        
+        <a href="/lzj-9090.liu.io/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;archives</span>
+        </a>
+        
+        <a href="/lzj-9090.liu.io/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;categories</span>
+        </a>
+        
+        <a href="/lzj-9090.liu.io/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;tags</span>
+        </a>
+        
+    </div>
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div class="curtain" @click="menu_show = !menu_show" v-show="menu_show"></div>
+        <div :class="'title'" @click="menu_show = !menu_show">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;归元元&笔记</span>
+        </div>
+        <transition name="slide">
+        <div class="items" v-show="menu_show">
+            
+            <a href="/lzj-9090.liu.io/">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-house fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">home</div>
+                </div>
+            </a>
+            
+            <a href="/lzj-9090.liu.io/about">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-id-card fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">about</div>
+                </div>
+            </a>
+            
+            <a href="/lzj-9090.liu.io/archives">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-box-archive fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">archives</div>
+                </div>
+            </a>
+            
+            <a href="/lzj-9090.liu.io/categories">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-bookmark fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">categories</div>
+                </div>
+            </a>
+            
+            <a href="/lzj-9090.liu.io/tags">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">tags</div>
+                </div>
+            </a>
+            
+        </div>
+        </transition>
+    </div>
+</nav>
+                    </div>
+                    <div id="main">
+                        
+<div class="article">
+    <div>
+        <h1>Github上传操作 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/10/10
+        </span>
+        
+        <span class="category">
+            <a href="/lzj-9090.liu.io/categories/开发/">
+                <span class="icon">
+                    <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
+                </span>
+                开发
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/lzj-9090.liu.io/tags/git/" style="color: #03a9f4">
+                    git
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/lzj-9090.liu.io/tags/linux/" style="color: #00bcd4">
+                    linux
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    <div class="content" v-pre>
+        <h2 id="1、创建账号"><a href="#1、创建账号" class="headerlink" title="1、创建账号"></a>1、创建账号</h2><blockquote>
+<p>这个就不细说了</p>
+</blockquote>
+<h2 id="2、建立本地和github账号的联系"><a href="#2、建立本地和github账号的联系" class="headerlink" title="2、建立本地和github账号的联系"></a>2、建立本地和github账号的联系</h2><h3 id="在git上设置自己github用户名、邮箱、密码"><a href="#在git上设置自己github用户名、邮箱、密码" class="headerlink" title="在git上设置自己github用户名、邮箱、密码"></a>在git上设置自己github用户名、邮箱、密码</h3><pre><code class="shell">git config --global user.email &quot;github 邮箱&quot;
+git config --global user.password &quot;github 密码&quot;
+ssh git@github.com
+git config --global user.name &quot;github 名称&quot;
+</code></pre>
+<h3 id="生成密钥"><a href="#生成密钥" class="headerlink" title="生成密钥"></a>生成密钥</h3><pre><code class="shell">ssh-keygen -t rsa -C &quot;github 邮箱&quot;
+</code></pre>
+<h3 id="复制公钥在github中"><a href="#复制公钥在github中" class="headerlink" title="复制公钥在github中"></a>复制公钥在github中</h3><h3 id="测试连接"><a href="#测试连接" class="headerlink" title="测试连接"></a>测试连接</h3><pre><code class="shell">ssh -T git@github.com
+</code></pre>
+<h2 id="3、上传文件"><a href="#3、上传文件" class="headerlink" title="3、上传文件"></a>3、上传文件</h2><h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><pre><code class="shell">git init
+</code></pre>
+<h3 id="查看状态"><a href="#查看状态" class="headerlink" title="查看状态"></a>查看状态</h3><pre><code class="shell">git status
+</code></pre>
+<h3 id="添加上传的目录"><a href="#添加上传的目录" class="headerlink" title="添加上传的目录"></a>添加上传的目录</h3><pre><code class="shell">#全部上传
+git add .
+</code></pre>
+<h3 id="添加上传内容介绍"><a href="#添加上传内容介绍" class="headerlink" title="添加上传内容介绍"></a>添加上传内容介绍</h3><pre><code class="shell"> git commit -m &quot;hexo&quot;
+</code></pre>
+<h3 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h3><pre><code class="shell">git push -u origin master
+</code></pre>
+
+    </div>
+    
+    
+</div>
+                         
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 20xx - 2022 归元元&amp;笔记
+            <span class="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            @归元元
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                href="https://github.com/argvchs/hexo-theme-particlex">ParticleX Theme</a></div>
+        
+    </div>
+</footer>
+                    </div>
+                </div>
+            </transition>
+            <div id="img_show">
+                <img id="img_content" alt="img_show">
+            </div>
+        </div>
+        <script src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script>
+        <script src="/lzj-9090.liu.io/js/particlex.js"></script>
+        <script src="/lzj-9090.liu.io/js/showimg.js"></script>
+        
+
+    </body>
+</html>
