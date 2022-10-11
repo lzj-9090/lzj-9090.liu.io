@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-        <title>Tags: 汇编 | 归元元&amp;笔记</title>
+        <title>Mysql的用户和权限 | 归元元&amp;笔记</title>
         <meta name="author" content="归元元">
         <meta name="description" content="">
         <meta name="keywords" content="">
@@ -119,122 +119,189 @@
 </nav>
                     </div>
                     <div id="main">
-                         
-<div class="categories-tags">
-    
-    <div class="all-s">
-        
-        
-        <span>
-            <a href="/lzj-9090.liu.io/tags/java/" style="background: #00bcd4">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                </span>
-                java
-            </a>
-        </span>
-        
-        
-        <span>
-            <a href="/lzj-9090.liu.io/tags/springboot/" style="background: #00a596">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                </span>
-                springboot
-            </a>
-        </span>
-        
-        
-        <span>
-            <a href="/lzj-9090.liu.io/tags/文件上传/" style="background: #03a9f4">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                </span>
-                文件上传
-            </a>
-        </span>
-        
-        
-        <span>
-            <a href="/lzj-9090.liu.io/tags/git/" style="background: #00bcd4">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                </span>
-                git
-            </a>
-        </span>
-        
-        
-        <span>
-            <a href="/lzj-9090.liu.io/tags/linux/" style="background: #03a9f4">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                </span>
-                linux
-            </a>
-        </span>
-        
-        
-        <span>
-            <a href="/lzj-9090.liu.io/tags/mysql/" style="background: #03a9f4">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                </span>
-                mysql
-            </a>
-        </span>
-        
-        
-        <span>
-            <a href="/lzj-9090.liu.io/tags/汇编/" style="background: linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                </span>
-                汇编
-            </a>
-        </span>
-        
+                        
+<div class="article">
+    <div>
+        <h1>Mysql的用户和权限 </h1>
     </div>
-    <div id="archives">
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/10/11
+        </span>
         
-        <div class="timeline">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2022/10/9</div>
-                <a href="/lzj-9090.liu.io/2022/10/09/汇编-伪指令/">
-                    <h3>汇编-伪指令</h3>
+        <span class="category">
+            <a href="/lzj-9090.liu.io/categories/数据库/">
+                <span class="icon">
+                    <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
+                </span>
+                数据库
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/lzj-9090.liu.io/tags/linux/" style="color: #03a9f4">
+                    linux
                 </a>
-                <div class="info">
-                    
-                    <span class="category">
-                        <a href="/lzj-9090.liu.io/categories/开发/">
-                            <span class="icon">
-                                <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
-                            </span>
-                            开发
-                        </a>
-                    </span>
-                    
-                    
-                    <span class="tags">
-                        <span class="icon">
-                            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                        </span>
-                        
-                        <span class="tag">
-                            
-                            <a href="/lzj-9090.liu.io/tags/汇编/" style="color: #00a596">
-                                汇编
-                            </a>
-                        </span>
-                        
-                    </span>
-                    
-                </div>
-            </div>
-        </div>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/lzj-9090.liu.io/tags/mysql/" style="color: #ff7d73">
+                    mysql
+                </a>
+            </span>
+            
+        </span>
         
     </div>
+    <div class="content" v-pre>
+        <h2 id="1、User表"><a href="#1、User表" class="headerlink" title="1、User表"></a>1、User表</h2><p>​     user表示mysql中最重要的一个权限表，用来记录允许连接到服务器的账号信息。需要注意的是</p>
+<p>，在user表里启动的所有权限都是全局级的，适用于所有的数据库。</p>
+<p>​    user表中的字段大致可以分为4类：</p>
+<ul>
+<li>用户列</li>
+<li>权限列</li>
+<li>安全列</li>
+<li>资源控制列</li>
+</ul>
+<h3 id="用户列"><a href="#用户列" class="headerlink" title="用户列"></a>用户列</h3><table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>类型</th>
+<th>是否为空</th>
+<th>默认值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>user</td>
+<td>char(60)</td>
+<td>no</td>
+<td></td>
+<td>用户</td>
+</tr>
+<tr>
+<td>host</td>
+<td>char(32)</td>
+<td>no</td>
+<td></td>
+<td>主机</td>
+</tr>
+<tr>
+<td>authentication string</td>
+<td>Text</td>
+<td>yes</td>
+<td></td>
+<td>密码</td>
+</tr>
+</tbody></table>
+<p>只有这三个全部匹配才能登入mysql</p>
+<h3 id="权限列"><a href="#权限列" class="headerlink" title="权限列"></a>权限列</h3><p>权限列的字段决定了用户的权限，用来描述在全局范围内允许对数据和数据库进行的操作。</p>
+<p>权限大致分为两大类，分别是高级管理权限和普通权限：</p>
+<p>• 高级管理权限主要对数据库进行管理，例如关闭服务的权限、超级权限和加载用户等；</p>
+<p>• 普通权限主要操作数据库，例如查询权限、修改权限等。</p>
+<p>​	user 表的权限列包括 Select_priv、Insert_ priv 等以 priv 结尾的字段，这些字段值的数据类型为 ENUM，可取的值只有 Y 和 N：Y 表示该用户有对应的权限，N 表示该用户没有对应的权限。从安全角度考虑，这些字段的默认值都为 N</p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>类型</th>
+<th>默认值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Select_priv</td>
+<td>enum(‘Y’,’N’)</td>
+<td>N</td>
+<td>查询功能</td>
+</tr>
+<tr>
+<td>Update_priv</td>
+<td>enum(‘Y’,’N’)</td>
+<td>N</td>
+<td>修改</td>
+</tr>
+<tr>
+<td>Delete_priv</td>
+<td>enum(‘Y’,’N’)</td>
+<td>N</td>
+<td>删除</td>
+</tr>
+<tr>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+</tbody></table>
+<h3 id="安全列"><a href="#安全列" class="headerlink" title="安全列"></a>安全列</h3><p><img src="https://lzj-bucket.oss-cn-hangzhou.aliyuncs.com/myblog_img/%E6%95%B0%E6%8D%AE%E5%BA%93/auth_lie.png"></p>
+<h3 id="资源控制列"><a href="#资源控制列" class="headerlink" title="资源控制列"></a>资源控制列</h3><p><img src="https://lzj-bucket.oss-cn-hangzhou.aliyuncs.com/myblog_img/2022/10/11/661ef11d-7fc6-431e-b068-60ecc8f59a4f.png"></p>
+<blockquote>
+<p>​    以上字段的默认值为 0，表示没有限制。一个小时内用户查询或者连接数量超过资源控制限制，用户将被锁定，直到下一个小时才可以在此执行对应的操作。可以使用 GRANT 语句更新这些字段的值。</p>
+</blockquote>
+<h2 id="2、DB表"><a href="#2、DB表" class="headerlink" title="2、DB表"></a>2、DB表</h2><p><img src="https://lzj-bucket.oss-cn-hangzhou.aliyuncs.com/myblog_img/2022/10/11/45e5b1b4-ad06-47ce-93b8-feabbad6a176.png"></p>
+<h2 id="3、用户登录的过程"><a href="#3、用户登录的过程" class="headerlink" title="3、用户登录的过程"></a>3、用户登录的过程</h2><p>host-&gt;user-&gt;password</p>
+<p>用户操作数据库</p>
+<p><img src="https://lzj-bucket.oss-cn-hangzhou.aliyuncs.com/myblog_img/2022/10/11/8817e67d-d825-4ea7-b55f-9c7b8c11e370.png"></p>
+<h3 id="4、用户权限操作"><a href="#4、用户权限操作" class="headerlink" title="4、用户权限操作"></a>4、用户权限操作</h3><h3 id="添加用户"><a href="#添加用户" class="headerlink" title="添加用户"></a>添加用户</h3><p>CREATE USER [用户名称]@[主机名称] [IDENTIFIED] [BY] [密码]</p>
+<pre><code class="sql">create user &#39;lzj&#39;@&#39;localhost&#39; identified by &quot;123456&quot;;
+</code></pre>
+<h3 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h3><pre><code class="sql">drop user &#39;lzj&#39;@&#39;localhost&#39;
+</code></pre>
+<h3 id="用户权限设置"><a href="#用户权限设置" class="headerlink" title="用户权限设置"></a>用户权限设置</h3><p>GRANT [权限],… on [数据库].[表名称] to ‘[用户名称]‘@[主机名]</p>
+<pre><code class="sql"> grant select on aurora.* to &#39;lal&#39;@&#39;%&#39;;
+</code></pre>
+<h4 id="权限"><a href="#权限" class="headerlink" title="权限"></a>权限</h4><p>常用权限表</p>
+<table>
+<thead>
+<tr>
+<th>权限</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>增删改查</td>
+<td>不做说明</td>
+</tr>
+<tr>
+<td>supper|ALL | all privlages</td>
+<td>超级权限</td>
+</tr>
+<tr>
+<td>REFERENCES</td>
+<td>设置外键</td>
+</tr>
+<tr>
+<td>INDEX</td>
+<td>检索</td>
+</tr>
+<tr>
+<td>drop</td>
+<td>在禁锢的数据库内删除表</td>
+</tr>
+<tr>
+<td>。。。</td>
+<td>。。。</td>
+</tr>
+</tbody></table>
+<h3 id="修改用户名称"><a href="#修改用户名称" class="headerlink" title="修改用户名称"></a>修改用户名称</h3><pre><code class="sql">rename user &#39;lal&#39;@&#39;%&#39; to &#39;lc&#39;@&#39;%&#39;;
+</code></pre>
+
+    </div>
+    
+    
 </div>
                          
 <footer id="footer">
