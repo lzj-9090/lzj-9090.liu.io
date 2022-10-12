@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-        <title>Tags: Git | 归元元&amp;笔记</title>
+        <title>Mysql表的操作 | 归元元&amp;笔记</title>
         <meta name="author" content="归元元">
         <meta name="description" content="">
         <meta name="keywords" content="">
@@ -119,129 +119,91 @@
 </nav>
                     </div>
                     <div id="main">
-                         
-<div class="categories-tags">
-    
-    <div class="all-s">
-        
-        
-        <span>
-            <a href="/lzj-9090.liu.io/tags/java/" style="background: #ff7d73">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                </span>
-                java
-            </a>
-        </span>
-        
-        
-        <span>
-            <a href="/lzj-9090.liu.io/tags/springboot/" style="background: #00bcd4">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                </span>
-                springboot
-            </a>
-        </span>
-        
-        
-        <span>
-            <a href="/lzj-9090.liu.io/tags/文件上传/" style="background: #ff7d73">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                </span>
-                文件上传
-            </a>
-        </span>
-        
-        
-        <span>
-            <a href="/lzj-9090.liu.io/tags/git/" style="background: linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                </span>
-                git
-            </a>
-        </span>
-        
-        
-        <span>
-            <a href="/lzj-9090.liu.io/tags/linux/" style="background: #ffa2c4">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                </span>
-                linux
-            </a>
-        </span>
-        
-        
-        <span>
-            <a href="/lzj-9090.liu.io/tags/mysql/" style="background: #00a596">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                </span>
-                mysql
-            </a>
-        </span>
-        
-        
-        <span>
-            <a href="/lzj-9090.liu.io/tags/汇编/" style="background: #ffa2c4">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                </span>
-                汇编
-            </a>
-        </span>
-        
+                        
+<div class="article">
+    <div>
+        <h1>Mysql表的操作 </h1>
     </div>
-    <div id="archives">
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/10/12
+        </span>
         
-        <div class="timeline">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2022/10/10</div>
-                <a href="/lzj-9090.liu.io/2022/10/10/github上传和更新/">
-                    <h3>Github上传操作</h3>
+        <span class="category">
+            <a href="/lzj-9090.liu.io/categories/数据库/">
+                <span class="icon">
+                    <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
+                </span>
+                数据库
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/lzj-9090.liu.io/tags/linux/" style="color: #ff7d73">
+                    linux
                 </a>
-                <div class="info">
-                    
-                    <span class="category">
-                        <a href="/lzj-9090.liu.io/categories/开发/">
-                            <span class="icon">
-                                <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
-                            </span>
-                            开发
-                        </a>
-                    </span>
-                    
-                    
-                    <span class="tags">
-                        <span class="icon">
-                            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                        </span>
-                        
-                        <span class="tag">
-                            
-                            <a href="/lzj-9090.liu.io/tags/git/" style="color: #00a596">
-                                git
-                            </a>
-                        </span>
-                        
-                        <span class="tag">
-                            
-                            <a href="/lzj-9090.liu.io/tags/linux/" style="color: #ffa2c4">
-                                linux
-                            </a>
-                        </span>
-                        
-                    </span>
-                    
-                </div>
-            </div>
-        </div>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/lzj-9090.liu.io/tags/mysql/" style="color: #00bcd4">
+                    mysql
+                </a>
+            </span>
+            
+        </span>
         
     </div>
+    <div class="content" v-pre>
+        <p>一个数据库由多个表组成</p>
+<h2 id="1、创建表"><a href="#1、创建表" class="headerlink" title="1、创建表"></a>1、创建表</h2><p>CREATE TABLE <code>表名称</code>(<code>字段名称</code> <code>类型</code>，…)</p>
+<pre><code class="sql">create table t_user(
+id int primary key auto_increment,
+username varchar(10) not null comment &quot;用户名称&quot;,
+create_time date not null comment &quot;最近登录时间&quot;
+)
+</code></pre>
+<h3 id="主键"><a href="#主键" class="headerlink" title="主键"></a>主键</h3><p><code>primary key</code></p>
+<pre><code>create table t_user(
+id int primary key auto_increment,
+)
+</code></pre>
+<h3 id="外键"><a href="#外键" class="headerlink" title="外键"></a>外键</h3><p>添加</p>
+<p>alter <code>表名称</code> add  constraint <code>外键名称</code> foreign key (<code>外键</code>) references <code>参考表</code>(<code>参考字段</code>);</p>
+<pre><code class="mysql">alter t_user_role add constraint u_r_fk foreign key (uid) references t_user(id);
+</code></pre>
+<p>删除外键</p>
+<p>alter table  <code>表名称</code>  drop foreign key <code>外键名称</code>;</p>
+<pre><code class="mysql">alter table t_user_role drop foreign key u_r_fk;
+</code></pre>
+<h2 id="2、修改表"><a href="#2、修改表" class="headerlink" title="2、修改表"></a>2、修改表</h2><h3 id="修改表名"><a href="#修改表名" class="headerlink" title="修改表名"></a>修改表名</h3><pre><code class="mysql">alter table t_user rename to t_users;
+</code></pre>
+<h3 id="修改表字段"><a href="#修改表字段" class="headerlink" title="修改表字段"></a>修改表字段</h3><pre><code class="mysql">alter table t_user modify username varchar(20)
+</code></pre>
+<h3 id="删除表字段"><a href="#删除表字段" class="headerlink" title="删除表字段"></a>删除表字段</h3><pre><code class="mysql">alter table t_user drop create_time
+</code></pre>
+<h3 id="添加表字段"><a href="#添加表字段" class="headerlink" title="添加表字段"></a>添加表字段</h3><pre><code class="mysql">alter table t_user add password varchar(15) not null;
+</code></pre>
+<h2 id="3、删除表"><a href="#3、删除表" class="headerlink" title="3、删除表"></a>3、删除表</h2><pre><code class="mysql">drop table t_users;
+</code></pre>
+<h2 id="4、查询"><a href="#4、查询" class="headerlink" title="4、查询"></a>4、查询</h2><p>查询表结构方式有两种：<code>desc</code>和<code>show create table &lt;表名称&gt;</code></p>
+<pre><code class="mysql">desc t_users;
+show create table t_users;
+</code></pre>
+
+    </div>
+    
+    
 </div>
                          
 <footer id="footer">
