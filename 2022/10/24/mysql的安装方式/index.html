@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-        <title>Tags: Git | 归元元&amp;笔记</title>
+        <title>Mysql二进制的方式安装 | 归元元&amp;笔记</title>
         <meta name="author" content="归元元">
         <meta name="description" content="">
         <meta name="keywords" content="">
@@ -119,129 +119,110 @@
 </nav>
                     </div>
                     <div id="main">
-                         
-<div class="categories-tags">
-    
-    <div class="all-s">
-        
-        
-        <span>
-            <a href="/lzj-9090.liu.io/tags/java/" style="background: #03a9f4">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                </span>
-                java
-            </a>
-        </span>
-        
-        
-        <span>
-            <a href="/lzj-9090.liu.io/tags/springboot/" style="background: #ff7d73">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                </span>
-                springboot
-            </a>
-        </span>
-        
-        
-        <span>
-            <a href="/lzj-9090.liu.io/tags/文件上传/" style="background: #03a9f4">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                </span>
-                文件上传
-            </a>
-        </span>
-        
-        
-        <span>
-            <a href="/lzj-9090.liu.io/tags/git/" style="background: linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                </span>
-                git
-            </a>
-        </span>
-        
-        
-        <span>
-            <a href="/lzj-9090.liu.io/tags/linux/" style="background: #ff7d73">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                </span>
-                linux
-            </a>
-        </span>
-        
-        
-        <span>
-            <a href="/lzj-9090.liu.io/tags/mysql/" style="background: #ff7d73">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                </span>
-                mysql
-            </a>
-        </span>
-        
-        
-        <span>
-            <a href="/lzj-9090.liu.io/tags/汇编/" style="background: #03a9f4">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                </span>
-                汇编
-            </a>
-        </span>
-        
+                        
+<div class="article">
+    <div>
+        <h1>Mysql二进制的方式安装 </h1>
     </div>
-    <div id="archives">
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/10/24
+        </span>
         
-        <div class="timeline">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2022/10/10</div>
-                <a href="/lzj-9090.liu.io/2022/10/10/github上传和更新/">
-                    <h3>Github上传操作</h3>
+        <span class="category">
+            <a href="/lzj-9090.liu.io/categories/数据库/">
+                <span class="icon">
+                    <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
+                </span>
+                数据库
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/lzj-9090.liu.io/tags/linux/" style="color: #ffa2c4">
+                    linux
                 </a>
-                <div class="info">
-                    
-                    <span class="category">
-                        <a href="/lzj-9090.liu.io/categories/开发/">
-                            <span class="icon">
-                                <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
-                            </span>
-                            开发
-                        </a>
-                    </span>
-                    
-                    
-                    <span class="tags">
-                        <span class="icon">
-                            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                        </span>
-                        
-                        <span class="tag">
-                            
-                            <a href="/lzj-9090.liu.io/tags/git/" style="color: #ffa2c4">
-                                git
-                            </a>
-                        </span>
-                        
-                        <span class="tag">
-                            
-                            <a href="/lzj-9090.liu.io/tags/linux/" style="color: #00bcd4">
-                                linux
-                            </a>
-                        </span>
-                        
-                    </span>
-                    
-                </div>
-            </div>
-        </div>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/lzj-9090.liu.io/tags/mysql/" style="color: #ffa2c4">
+                    mysql
+                </a>
+            </span>
+            
+        </span>
         
     </div>
+    <div class="content" v-pre>
+        <h2 id="mysql的二进制安装方式"><a href="#mysql的二进制安装方式" class="headerlink" title="mysql的二进制安装方式"></a>mysql的二进制安装方式</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>下载地址：</p>
+<p>依赖：<code>gcc</code>、<code>libtinfo.so.5</code></p>
+<p>1、创建mysql用户和组</p>
+<pre><code class="shell">groupadd -r mysql
+useradd -M -s /sbin/nologin -g mysql mysql
+</code></pre>
+<p>2、解压二进制安装包</p>
+<pre><code class="shell">tar -xf mysql-8.0.31-linux-glibc2.12-x86_64.gz -C /usr/local
+</code></pre>
+<p>3、创建软连接</p>
+<pre><code>ln -sv mysql-8.0.31-linux-glibc2.12-x86_64.gz /usr/local/mysql
+</code></pre>
+<p>4、创建数据存储地址</p>
+<pre><code class="shell">mkdir -p /opt/mysql/data
+</code></pre>
+<p>5、赋予权限</p>
+<pre><code>chown -R mysql.mysql /usr/local/mysql
+chown -R mysql.mysql /opt/mysql
+</code></pre>
+<p>6、初始化配置文件</p>
+<pre><code> mysqld --initialize --user=mysql --datadir=/opt/mysql/data
+</code></pre>
+<p>7、编写配置文件</p>
+<pre><code class="shell"> cat /etc/my.cnf
+[mysqld]
+basedir = /usr/local/mysql
+datadir = /opt/mysql/data
+socket = /tmp/mysql.sock
+port = 3306
+pid-file = /opt/mysql/data/mysql.pid
+user = mysql
+skip-name-resolve
+#skip-grant-tables			用于免密登录
+</code></pre>
+<p>8、将mysql写入Linux自动管理</p>
+<pre><code class="shell">cp -a /usr/local/mysql/support-files/mysql.server /etc/init.d/mysqld
+sed -ri &#39;s#^(basedir).*#\1/usr/local/mysql#g&#39; /etc/init.d/mysqld
+sed -ri &#39;s#^(datadir).*#\1/opt/mysql/data#g&#39; /etc/init.d/mysqld
+</code></pre>
+<p>9、启动mysql</p>
+<pre><code class="shell">service mysql start
+</code></pre>
+<p>10、登入修改密码</p>
+<pre><code class="shell">mysql -uroot -p&quot;初始密码&quot;
+</code></pre>
+<p>11、修改密码</p>
+<pre><code class="shell">update user set authentication_string=&#39;&#39; where user=&#39;root&#39;;
+flush privileges;
+alter user &#39;root&#39;@&#39;localhost&#39; identified with mysql_native_password by &#39;rt1234&#39;;
+</code></pre>
+<h2 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h2><p>1、在初始化的时候报错</p>
+<p>解决：删除关于mysql配置文件my.cnf、data下面的文件</p>
+<p>2、mysql修改完密码还是不能登录</p>
+<p>解决：建议重启</p>
+
+    </div>
+    
+    
 </div>
                          
 <footer id="footer">

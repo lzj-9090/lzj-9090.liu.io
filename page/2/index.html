@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-        <title>Mysql查询操作 | 归元元&amp;笔记</title>
+        <title>归元元&amp;笔记</title>
         <meta name="author" content="归元元">
         <meta name="description" content="">
         <meta name="keywords" content="">
@@ -119,119 +119,150 @@
 </nav>
                     </div>
                     <div id="main">
-                        
-<div class="article">
-    <div>
-        <h1>Mysql查询操作 </h1>
+                        <div id="home-head">
+    <div id="home-background" style="background-image: url(https://lzj-bucket.oss-cn-hangzhou.aliyuncs.com/myblog_img/backgroup.jpeg)"></div>
+    
+    <div id="home-info" class="home-info" @click="home_click">
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="info">
+            <div class="wrap">
+                <h1>归元元&amp;笔记</h1>
+                <h3></h3>
+                <h5></h5>
+            </div>
+        </span>
     </div>
-    <div class="info">
+    
+</div>
+
+<div id="home-posts-wrap" class="">
+    <div id="home-posts">
+        <div id="posts">
+            
+
+<div class="post">
+    <a href="/lzj-9090.liu.io/2022/10/09/汇编-伪指令/">
+        <h2 class="post-title">汇编-伪指令</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/lzj-9090.liu.io/categories/开发/">
+                <span class="icon">
+                    <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
+                </span>
+                开发
+            </a>
+        </span>
+        
         <span class="date">
             <span class="icon">
                 <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
             </span>
-            2022/10/11
+            2022/10/9
+        </span>
+    </div>
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p>应付考试用的</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
         </span>
         
-        <span class="category">
-            <a href="/lzj-9090.liu.io/categories/数据库/">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
-                </span>
-                数据库
+        
+        <span class="tag">
+            
+            <a href="/lzj-9090.liu.io/tags/汇编/" style="color: #ffa2c4">
+                汇编
             </a>
         </span>
         
+    </div>
+    <a href="/lzj-9090.liu.io/2022/10/09/汇编-伪指令/" class="go-post">阅读全文</a>
+</div>
+
+             
+<div class="page-current">
+    <div class="prev">
         
-        <span class="tags">
-            <span class="icon">
-                <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+        <a href="/lzj-9090.liu.io/">
+            <span class="page-num">
+                <i class="fa-solid fa-caret-left fa-fw"></i>
             </span>
+        </a>
+        
+    </div>
+    <div class="page-index">
+        
+        <span>
             
-            <span class="tag">
-                
-                <a href="/lzj-9090.liu.io/tags/linux/" style="color: #03a9f4">
-                    linux
-                </a>
-            </span>
             
-            <span class="tag">
-                
-                <a href="/lzj-9090.liu.io/tags/mysql/" style="color: #00a596">
-                    mysql
-                </a>
-            </span>
-            
+            <a href="/lzj-9090.liu.io/">
+                <span class="page-num">
+                    1
+                </span>
+            </a>
+        </span>
+        
+        <span class="current">
+            2
         </span>
         
     </div>
-    <div class="content" v-pre>
-        <h2 id="1、普通查询"><a href="#1、普通查询" class="headerlink" title="1、普通查询"></a>1、普通查询</h2><pre><code>select * from t_user;
-</code></pre>
-<h3 id="条件查询"><a href="#条件查询" class="headerlink" title="条件查询"></a>条件查询</h3><p>关键字<code>where</code></p>
-<table>
-<thead>
-<tr>
-<th>符号</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>AND</td>
-<td>与</td>
-</tr>
-<tr>
-<td>OR|IN(OBJECT,….)</td>
-<td>或</td>
-</tr>
-</tbody></table>
-<p>查询id&#x3D;1的</p>
-<pre><code class="mysql">
-select * from t_user where id=1;
-</code></pre>
-<p>查询age&#x3D;18且username&#x3D;lzj</p>
-<pre><code class="mysql">select * from t_user where age=18 and username=lzj;
-</code></pre>
-<p>查询username为lisi,zhangsan</p>
-<pre><code class="mysql">select * from t_user where username in (lisi,zhangsan)
-</code></pre>
-<h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><table>
-<thead>
-<tr>
-<th>关键字</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>desc</td>
-<td>降序</td>
-</tr>
-<tr>
-<td>asc</td>
-<td>升序</td>
-</tr>
-</tbody></table>
-<pre><code class="mysql">select * from t_user order by id desc;
-</code></pre>
-<p>模糊查询</p>
-<pre><code class="mysql">SELECT * from users WHERE username LIKE &#39;张%&#39;;
-</code></pre>
-<h2 id="4、联表查询"><a href="#4、联表查询" class="headerlink" title="4、联表查询"></a>4、联表查询</h2><pre><code class="mysql">select * from users,user_role,role where users.id=user_role.uid and role.id=user_role.id
-</code></pre>
-<h2 id="5、左右连接查询"><a href="#5、左右连接查询" class="headerlink" title="5、左右连接查询"></a>5、左右连接查询</h2><h3 id="左连接"><a href="#左连接" class="headerlink" title="左连接"></a>左连接</h3><p>左边显示完全，右边根据左表显示。</p>
-<p>SELECT [返回] FROM <TABLE_NAME> LEFT OUTER JOIN <TABLE_NAME2> ON &lt;条件&gt; </p>
-<pre><code class="MYSQL">SELECT * from users LEFT outer join user_role on users.id=user_role.uid;
-</code></pre>
-<p>结果：</p>
-<p><img src="https://lzj-bucket.oss-cn-hangzhou.aliyuncs.com/myblog_img/2022/10/13/e623e73b-47da-4991-ae73-79afc2aa0f20.png"></p>
-<h3 id="右连接"><a href="#右连接" class="headerlink" title="右连接"></a>右连接</h3><p>右边显示完全，左边根据右表显示。</p>
-<p>SELECT [返回] FROM <TABLE_NAME> RIGHT OUTER JOIN <TABLE_NAME2> ON &lt;条件&gt; </p>
-<pre><code class="mysql">SELECT * from users right outer join user_role on users.id=user_role.uid;
-</code></pre>
-<p>结果：</p>
-<h2 id="6、分页查询"><a href="#6、分页查询" class="headerlink" title="6、分页查询"></a>6、分页查询</h2><p><img src="https://lzj-bucket.oss-cn-hangzhou.aliyuncs.com/myblog_img/2022/10/13/834227ac-cb00-4393-bb10-a5b1caf98bff.png"></p>
-
+    <div class="next">
+        
+    </div>
+</div>
+        </div>
     </div>
     
+    <div id="home-card">
+        <div id="card-div">
+    <div class="card-style" style="width: 300px">
+        <div class="avatar">
+            <img src="https://lzj-bucket.oss-cn-hangzhou.aliyuncs.com/myblog_img/blog_head.jpeg " alt="avatar">
+        </div>
+        <div class="name">
+            归元元
+        </div>
+        <div class="descriptions">
+            
+            <div class="description">
+                深巷中的求知者
+            </div>
+            
+        </div>
+        <div class="icon-links">
+            
+            <span class="icon-link">
+                <a href="https://github.com/lzj-9090">
+                    <i class="fa-brands fa-github fa-fw"></i>
+                </a>
+            </span>
+            
+            <span class="icon-link">
+                <a href="/">
+                    <i class="fa-brands fa-fa-qq fa-fw"></i>
+                </a>
+            </span>
+            
+        </div>
+        <div class="friend-links">
+            
+        </div>
+    </div>
+</div>
+    </div>
     
 </div>
                          
